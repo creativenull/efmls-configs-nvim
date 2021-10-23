@@ -82,6 +82,20 @@ efmls.setup {
 }
 ```
 
+## Advanced Setup
+
+If you want to change some settings that are not provided in the default config, you can change them with `vim.tbl_extend`.
+These configs take the same keys referenced in the [efm-langserver schema file][schema-file] in json format, aka
+`camelCase`.
+
+```lua
+local eslint = require 'efmls-configs.linters.eslint'
+eslint = vim.tbl_extend('force', eslint, {
+  prefix = 'new eslint prefix',
+  lintCommand = 'eslint --format visualstudio --stdin',
+})
+```
+
 ## Implementation Details (TODO)
 
 + [ ] Tests to ensure proper linter/formatter config
@@ -612,6 +626,7 @@ Credits goes to the following projects for inspiration:
 + [ale][ale] - for a huge list of supported linters/formatters to look through
 
 [efm-langserver]: https://github.com/mattn/efm-langserver
+[schema-file]: https://github.com/mattn/efm-langserver/blob/master/schema.json
 [ale]: https://github.com/dense-analyses/ale
 [nvim-lsp]: https://neovim.io/doc/user/lsp.html
 [neovim]: https://github.com/neovim/neovim
