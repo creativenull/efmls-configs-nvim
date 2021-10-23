@@ -57,6 +57,10 @@ format, aka camelCase.
       prefix = 'new eslint prefix',
       lintCommand = 'eslint --format visualstudio --stdin',
     })
+
+    efmls.setup {
+      javascript = { linter = eslint },
+    }
 <
 
 Link to the schema file: https://github.com/mattn/efm-langserver/blob/master/schema.json

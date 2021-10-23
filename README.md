@@ -8,6 +8,8 @@ Current Status: __Alpha__
 Note, given the current status, things are prone to break. I would highly encourage you create an issue with good
 reproduction steps in order to properly debug.
 
+PRs are welcome 😊!
+
 Docs can also be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt)
 
 ## Features
@@ -49,8 +51,8 @@ git clone https://github.com/creativenull/efmls-configs-nvim.git ~/.local/share/
 
 ## Setup
 
-You need to first initialize the plugin with the `init()`, this is where you pass your LSP options like `on_attach`,
-`capabilities`, etc.
+You need to first initialize the plugin with the `init()` function, this is where you can pass your LSP options like
+`on_attach`, `capabilities`, `init_options`,  etc.
 
 ```lua
 local function on_attach(client)
@@ -96,6 +98,10 @@ eslint = vim.tbl_extend('force', eslint, {
   prefix = 'new eslint prefix',
   lintCommand = 'eslint --format visualstudio --stdin',
 })
+
+efmls.setup {
+  javascript = { linter = eslint },
+}
 ```
 
 ## Implementation Details (TODO)
