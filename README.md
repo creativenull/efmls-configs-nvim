@@ -155,10 +155,10 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [gcc](https://gcc.gnu.org/)
   + [X] [uncrustify](https://github.com/uncrustify/uncrustify)
 + C#
-  + [ ] [csc](http://www.mono-project.com/docs/about-mono/languages/csharp/)  see:`help ale-cs-csc` for details and configuration
+  + [ ] [csc](http://www.mono-project.com/docs/about-mono/languages/csharp/)
   + [X] [dotnet-format](https://github.com/dotnet/format)
-  + [X] [mcs](http://www.mono-project.com/docs/about-mono/languages/csharp/) see:`help ale-cs-mcs` for details
-  + [ ] [mcsc](http://www.mono-project.com/docs/about-mono/languages/csharp/)  see:`help ale-cs-mcsc` for details and configuration
+  + [X] [mcs](http://www.mono-project.com/docs/about-mono/languages/csharp/)
+  + [ ] [mcsc](http://www.mono-project.com/docs/about-mono/languages/csharp/)
   + [X] [uncrustify](https://github.com/uncrustify/uncrustify)
 + C++ (filetype cpp)
   + [X] [astyle](http://astyle.sourceforge.net/)
@@ -266,7 +266,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + Hack
   + [ ] [hack](http://hacklang.org/)
   + [ ] [hackfmt](https://github.com/facebook/hhvm/tree/master/hphp/hack/hackfmt)
-  + [ ] [hhast](https://github.com/hhvm/hhast)  (see `:help ale-integration-hack`)
+  + [ ] [hhast](https://github.com/hhvm/hhast)
 + Haml
   + [ ] [haml-lint](https://github.com/brigade/haml-lint)
 + Handlebars
@@ -404,7 +404,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [clang](http://clang.llvm.org/)
   + [X] [uncrustify](https://github.com/uncrustify/uncrustify)
 + OCaml
-  + [ ] [merlin](https://github.com/the-lambda-church/merlin) see `:help ale-ocaml-merlin` for configuration instructions
+  + [ ] [merlin](https://github.com/the-lambda-church/merlin)
   + [ ] [ocamlformat](https://github.com/ocaml-ppx/ocamlformat)
   + [ ] [ocp-indent](https://github.com/OCamlPro/ocp-indent)
 + OpenApi
@@ -422,7 +422,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + Perl6
   + [ ] [perl6 -c](https://perl6.org)
 + PHP
-  + [X] [phan](https://github.com/phan/phan) see `:help ale-php-phan` to instructions
+  + [X] [phan](https://github.com/phan/phan)
   + [X] [php -l](https://secure.php.net/)
   + [X] [php-cs-fixer](http://cs.sensiolabs.org/)
   + [X] [phpcbf](https://github.com/squizlabs/PHP_CodeSniffer)
@@ -489,7 +489,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + Re:VIEW
   + [X] [redpen](http://redpen.cc/)
 + ReasonML
-  + [ ] [merlin](https://github.com/the-lambda-church/merlin) see `:help ale-reasonml-ols` for configuration instructions
+  + [ ] [merlin](https://github.com/the-lambda-church/merlin)
   + [ ] [refmt](https://github.com/reasonml/reason-cli)
 + reStructuredText
   + [X] [alex](https://github.com/wooorm/alex)
@@ -502,7 +502,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + Robot
   + [ ] [rflint](https://github.com/boakley/robotframework-lint)
 + RPM spec
-  + [ ] [rpmlint](https://github.com/rpm-software-management/rpmlint)  (see `:help ale-integration-spec`)
+  + [ ] [rpmlint](https://github.com/rpm-software-management/rpmlint)
 + Ruby
   + [ ] [brakeman](http://brakemanscanner.org/)
   + [X] [debride](https://github.com/seattlerb/debride)
@@ -515,7 +515,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [sorbet](https://github.com/sorbet/sorbet)
   + [ ] [standardrb](https://github.com/testdouble/standard)
 + Rust
-  + [ ] [cargo](https://github.com/rust-lang/cargo)  (see `:help ale-integration-rust` for configuration instructions)
+  + [ ] [cargo](https://github.com/rust-lang/cargo)
   + [ ] [rustc](https://www.rust-lang.org/)
   + [ ] [rustfmt](https://github.com/rust-lang-nursery/rustfmt)
 + Salt
