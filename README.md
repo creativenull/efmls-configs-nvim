@@ -8,6 +8,8 @@ Current Status: __Alpha__
 Note, given the current status, things are prone to break. I would highly encourage you create an issue with good
 reproduction steps in order to properly debug.
 
+Docs can also be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt)
+
 ## Features
 
 + Out-of-box configurations for your linter/formatter with options for customization.
