@@ -22,7 +22,7 @@ reproduction steps in order to properly debug.
 
 ## Installation
 
-Install with your favorite plugin manager or just use builtin `packages`.
+Install with your favorite plugin manager or just use builtin package.
 
 ### vim-plug
 
@@ -37,7 +37,7 @@ Plug 'creativenull/efmls-configs-nvim'
 use { 'creativenull/efmls-configs-nvim', requires = { 'neovim/nvim-lspconfig' } }
 ```
 
-### Builtin `package` (`:help packages`)
+### Builtin pack (`:help packages`)
 
 Here is an how to install this plugin for Linux/MacOS machines:
 
@@ -99,7 +99,7 @@ eslint = vim.tbl_extend('force', eslint, {
 ## Implementation Details (TODO)
 
 + [ ] Tests to ensure proper linter/formatter config
-+ [ ] Tests to run separate linters/formatters a docker container
++ [ ] Tests to run separate linters/formatters in a docker container
 
 ## Language Support (TODO)
 
