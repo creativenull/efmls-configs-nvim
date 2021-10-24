@@ -16,9 +16,9 @@ PRs are welcome 😊!
 + Intelligently detect linter/formatter tools installed globally or within the project (currently supports node npm, php composer, and ruby bundler).
 + Provide both errors and warnings where possible by default.
 
-## Documentation
+## Vim Docs
 
-Docs can be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt) or [further below](#documentation)
+Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt) or [further below](#documentation).
 
 ## Requirements
 
