@@ -10,13 +10,15 @@ reproduction steps in order to properly debug.
 
 PRs are welcome 😊!
 
-Docs can also be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt)
-
 ## Features
 
 + Out-of-box configurations for your linter/formatter with options for customization.
 + Intelligently detect linter/formatter tools installed globally or within the project (currently supports node npm, php composer, and ruby bundler).
 + Provide both errors and warnings where possible by default.
+
+## Documentation
+
+Docs can be accessed via [`:help efmls-configs`](./doc/efmls-configs.txt) or [further below](#documentation)
 
 ## Requirements
 
@@ -38,18 +40,23 @@ Plug 'creativenull/efmls-configs-nvim'
 ### packer.nvim
 
 ```lua
-use { 'creativenull/efmls-configs-nvim', requires = { 'neovim/nvim-lspconfig' } }
+use {
+  'creativenull/efmls-configs-nvim',
+  requires = { 'neovim/nvim-lspconfig' },
+}
 ```
 
 ### Builtin pack (`:help packages`)
 
-Here is an how to install this plugin for Linux/MacOS machines:
+Here is how to install this plugin for Linux/MacOS machines with the builtin package:
 
 ```sh
 git clone https://github.com/creativenull/efmls-configs-nvim.git ~/.local/share/nvim/site/pack/creativenull/start/efmls-configs-nvim
 ```
 
-## Setup
+## Documentation
+
+### Setup
 
 You need to first initialize the plugin with the `init()` function, this is where you can pass your LSP options like
 `on_attach`, `capabilities`, `init_options`,  etc.
@@ -86,7 +93,7 @@ efmls.setup {
 }
 ```
 
-## Advanced Setup
+### Advanced Setup
 
 If you want to change some settings that are not provided in the default config, you can change them with `vim.tbl_extend`.
 These configs take the same keys referenced in the [efm-langserver schema file][schema-file] in json format, aka
@@ -310,7 +317,6 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [javac](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
   + [X] [uncrustify](https://github.com/uncrustify/uncrustify)
 + JavaScript
-  + [ ] [deno](https://deno.land/)
   + [X] [eslint](http://eslint.org/)
   + [ ] [fecs](http://fecs.baidu.com/)
   + [ ] [flow](https://flowtype.org/)

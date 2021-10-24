@@ -48,8 +48,7 @@ ADVANCED SETUP                                 *efmls-configs-advanced*
 
 If you want to change some settings that are not provided in the
 default config, you can change them with vim.tbl_extend. These configs
-take the same keys referenced in the efm-langserver schema file in json
-format, aka camelCase.
+take the same keys referenced in the schema file (|efmls-configs-schema|)
 
 >
     local eslint = require 'efmls-configs.linters.eslint'
@@ -63,11 +62,11 @@ format, aka camelCase.
     }
 <
 
-Link to the schema file: https://github.com/mattn/efm-langserver/blob/master/schema.json
+EFM-LANGSERVER SCHEMA FILE                       *efmls-configs-schema*
+
+https://github.com/mattn/efm-langserver/blob/master/schema.json
 
 SUPPORTED LINTERS AND FORMATTERS               *efmls-configs-supported*
-
-Check out the repo readme for supported linters and formatters:
 
 https://github.com/creativenull/efmls-configs-nvim#language-support-todo
 
