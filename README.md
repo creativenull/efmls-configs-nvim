@@ -13,7 +13,8 @@ PRs are welcome 😊!
 ## Features
 
 + Out-of-box configurations for your linter/formatter with options for customization.
-+ Intelligently detect linter/formatter tools installed globally or within the project (currently supports node npm, php composer, and ruby bundler).
++ Intelligently detect linter/formatter tools installed globally or within the project (currently supports node `npm`,
+  php `composer`, and ruby `bundler`).
 + Provide both errors and warnings where possible by default.
 
 ## Vim Docs
@@ -51,7 +52,8 @@ use {
 Here is how to install this plugin for Linux/MacOS machines with the builtin package:
 
 ```sh
-git clone https://github.com/creativenull/efmls-configs-nvim.git ~/.local/share/nvim/site/pack/creativenull/start/efmls-configs-nvim
+git clone https://github.com/creativenull/efmls-configs-nvim.git \
+  ~/.local/share/nvim/site/pack/creativenull/start/efmls-configs-nvim
 ```
 
 ## Documentation
@@ -121,7 +123,7 @@ efmls.setup {
 Languages to support, list based on ALE with LSP servers omitted:
 
 + Ada
-  + [ ] [gcc](https://gcc.gnu.org)
+  + [X] [gcc](https://gcc.gnu.org)
   + [ ] [gnatpp](https://docs.adacore.com/gnat_ugn-docs/html/gnat_ugn/gnat_ugn/gnat_utility_programs.html#the-gnat-pretty-printer-gnatpp)
 + Ansible
   + [X] [ansible-lint](https://github.com/willthames/ansible-lint)
@@ -134,7 +136,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [vale](https://github.com/ValeLint/vale)
   + [X] [write-good](https://github.com/btford/write-good)
 + ASM
-  + [ ] [gcc](https://gcc.gnu.org)
+  + [X] [gcc](https://gcc.gnu.org)
 + Awk
   + [ ] [gawk](https://www.gnu.org/software/gawk/)
 + Bash
@@ -250,7 +252,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] fish [-n flag](https://linux.die.net/man/1/fish)
   + [ ] [fish_indent](https://fishshell.com/docs/current/cmds/fish_indent.html)
 + Fortran
-  + [ ] [gcc](https://gcc.gnu.org/)
+  + [ ] [fortran-linter](https://github.com/cphyc/fortran-linter)
 + Fountain
   + [X] [proselint](http://proselint.com/)
 + FusionScript
