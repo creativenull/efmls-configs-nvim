@@ -1,7 +1,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'eslint'
-local bin = fs.get_executable(linter, fs.Scope.NODE)
+local bin = fs.executable(linter, fs.Scope.NODE)
 local args = '--no-color --format visualstudio --stdin'
 local command = string.format('%s %s', bin, args)
 
