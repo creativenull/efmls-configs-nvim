@@ -6,7 +6,7 @@ Please create an Pull Request if you see any mismatched documentation or typos.
 
 Here is a list of languages that are automatically set and configured when `default_config` is enabled. For information
 on how to set `default_config` check the docs:
-[`:help efmls-configs-defaults`](https://github.com/creativenull/diagnosticls-configs-nvim#default-configuration).
+[`:help efmls-configs-defaults`](https://github.com/creativenull/efmls-configs-nvim#default-configuration).
 
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
