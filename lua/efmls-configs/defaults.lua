@@ -1,52 +1,59 @@
 -- Defaults as defined in: supported-linters-and-formatters.md
 return {
   ['css'] = {
-    linter = require('diagnosticls-configs.linters.stylelint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.stylelint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
-  ['go'] = { linter = require('diagnosticls-configs.linters.golangci_lint') },
-  ['html'] = { linter = require('diagnosticls-configs.linters.stylelint') },
+  ['go'] = {
+    linter = require('efmls-configs.linters.golangci_lint'),
+  },
+  ['html'] = {
+    linter = require('efmls-configs.linters.stylelint'),
+  },
   ['javascript'] = {
-    linter = require('diagnosticls-configs.linters.eslint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.eslint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
   ['javascriptreact'] = {
-    linter = require('diagnosticls-configs.linters.eslint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.eslint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
   ['less'] = {
-    linter = require('diagnosticls-configs.linters.stylelint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.stylelint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
   ['lua'] = {
-    linter = require('diagnosticls-configs.linters.luacheck'),
-    formatter = require('diagnosticls-configs.formatters.stylua'),
+    linter = require('efmls-configs.linters.luacheck'),
+    formatter = require('efmls-configs.formatters.stylua'),
   },
   ['php'] = {
-    linter = require('diagnosticls-configs.linters.phpcs'),
-    formatter = require('diagnosticls-configs.formatters.phpcbf'),
+    linter = require('efmls-configs.linters.phpcs'),
+    formatter = require('efmls-configs.formatters.phpcbf'),
   },
   ['python'] = {
-    linter = require('diagnosticls-configs.linters.flake8'),
-    formatter = require('diagnosticls-configs.formatters.autopep8'),
+    linter = require('efmls-configs.linters.flake8'),
+    formatter = require('efmls-configs.formatters.autopep8'),
   },
-  ['ruby'] = { linter = require('diagnosticls-configs.linters.reek') },
+  ['ruby'] = {
+    linter = require('efmls-configs.linters.reek'),
+  },
   ['sass'] = {
-    linter = require('diagnosticls-configs.linters.stylelint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.stylelint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
   ['scss'] = {
-    linter = require('diagnosticls-configs.linters.stylelint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.stylelint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
-  ['swift'] = { linter = require('diagnosticls-configs.linters.swiftlint') },
   ['typescript'] = {
-    linter = require('diagnosticls-configs.linters.eslint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.eslint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
   ['typescriptreact'] = {
-    linter = require('diagnosticls-configs.linters.eslint'),
-    formatter = require('diagnosticls-configs.formatters.prettier'),
+    linter = require('efmls-configs.linters.eslint'),
+    formatter = require('efmls-configs.formatters.prettier'),
   },
-  ['vim'] = { linter = require('diagnosticls-configs.linters.vint') },
+  ['vim'] = {
+    linter = require('efmls-configs.linters.vint'),
+  },
 }
