@@ -1,20 +1,30 @@
-local lspconfig = require('lspconfig')
+local lspconfig_ok, lspconfig = pcall(require, 'lspconfig')
+if not lspconfig_ok then
+  local errmsg = '[efmls-configs] `nvim-lspconfig` plugin not installed! Please install via your plugin manager.'
+  vim.api.nvim_err_writeln(errmsg)
+  return
+end
+
 local M = {}
 
--- Default efm-langserver LSP options
+---@class EfmLSConfig
 local efmls_setup = {
   root_dir = lspconfig.util.root_pattern('.git'),
-  init_options = { documentFormatting = true },
+  init_options = {
+    documentFormatting = false,
+  },
   settings = {
     rootMarkers = { '.git' },
     languages = {},
   },
+
+  -- Plugin options
+  default_config = false,
 }
 
--- Insert the relevant linter/formatter into the source provided
---
--- @param source table
--- @param tools table
+---Insert the relevant linter/formatter into the source provided
+---@param source table
+---@param tools table
 local insert_settings = function(source, tools)
   if vim.tbl_islist(tools) then
     for _, tool in pairs(tools) do
@@ -25,19 +35,33 @@ local insert_settings = function(source, tools)
   end
 end
 
--- Initalize efm-langserver LSP options for user
---
--- @param user_efmls_opts table
+---Initalize efm-langserver LSP options for user
+---@param user_efmls_opts EfmLSConfig
 M.init = function(user_efmls_opts)
   if user_efmls_opts ~= nil or user_efmls_opts ~= {} then
     efmls_setup = vim.tbl_extend('force', efmls_setup, user_efmls_opts)
   end
 end
 
--- Setup efm-langserver settings for each filetype provided
---
--- @param filetypes table
+---Setup efm-langserver settings for each filetype provided
+---@param filetypes table
 M.setup = function(filetypes)
+  -- Merge default config if required
+  -- but priority on filetypes specified first
+  if efmls_setup.default_config then
+    local default_filetypes = require('efmls-configs.defaults')
+    if filetypes == nil then
+      filetypes = default_filetypes
+    else
+      filetypes = vim.tbl_extend('force', default_filetypes, filetypes)
+    end
+  end
+
+  if vim.tbl_isempty(filetypes) and not efmls_setup.default_config then
+    vim.api.nvim_err_writeln('[efmls-configs] Provided setup() is invalid')
+    return
+  end
+
   efmls_setup.filetypes = vim.tbl_keys(filetypes)
 
   for ft, features in pairs(filetypes) do
