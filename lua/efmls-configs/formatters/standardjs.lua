@@ -1,11 +1,9 @@
 local fs = require('efmls-configs.fs')
 
-local linter = 'standard'
-local bin = fs.get_executable(linter, fs.Scope.NODE)
-local args = '--fix --stdin'
-local cmd = string.format('%s %s', bin, args)
+local formatter = 'standard'
+local command = string.format('%s --fix --stdin', fs.executable(formatter, fs.Scope.NODE))
 
 return {
-  formatCommand = cmd,
+  formatCommand = command,
   formatStdin = true,
 }

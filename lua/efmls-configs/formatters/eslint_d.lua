@@ -1,11 +1,10 @@
 local fs = require('efmls-configs.fs')
 
 local formatter = 'eslint_d'
-local bin = fs.get_executable(formatter, fs.Scope.NODE)
 local args = '--fix-to-std --stdin --stdin-filename ${INPUT}'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s %s', fs.executable(formatter, fs.Scope.NODE), args)
 
 return {
-  formatCommand = cmd,
+  formatCommand = command,
   formatStdin = true,
 }

@@ -1,4 +1,9 @@
+local fs = require('efmls-configs.fs')
+
+local formatter = 'dfmt'
+local command = string.format('%s -', fs.executable(formatter))
+
 return {
-  formatCommand = 'dfmt -',
+  formatCommand = command,
   formatStdin = true,
 }

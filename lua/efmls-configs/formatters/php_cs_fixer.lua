@@ -1,11 +1,10 @@
 local fs = require('efmls-configs.fs')
 
-local linter = 'php-cs-fixer'
-local bin = fs.get_executable(linter, fs.Scope.COMPOSER)
+local formatter = 'php-cs-fixer'
 local args = 'fix --no-ansi --using-cache=no --quiet ${INPUT}'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s %s', fs.get_executable(formatter, fs.Scope.COMPOSER), args)
 
 return {
-  formatCommand = cmd,
+  formatCommand = command,
   formatStdin = false,
 }

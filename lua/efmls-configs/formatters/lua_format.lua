@@ -1,4 +1,9 @@
+local fs = require('efmls-configs.fs')
+
+local formatter = 'lua-format'
+local command = string.format('%s ${INPUT}', fs.executable(formatter))
+
 return {
-  formatCommand = 'lua-format ${INPUT}',
+  formatCommand = command,
   formatStdin = true,
 }

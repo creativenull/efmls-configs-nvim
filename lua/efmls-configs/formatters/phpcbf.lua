@@ -1,11 +1,9 @@
 local fs = require('efmls-configs.fs')
 
-local linter = 'phpcbf'
-local bin = fs.get_executable(linter, fs.Scope.COMPOSER)
-local args = '-'
-local cmd = string.format('%s %s', bin, args)
+local formatter = 'phpcbf'
+local command = string.format('%s -', fs.get_executable(formatter, fs.Scope.COMPOSER))
 
 return {
-  formatCommand = cmd,
+  formatCommand = command,
   formatStdin = true,
 }
