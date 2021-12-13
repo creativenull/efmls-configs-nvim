@@ -6,7 +6,7 @@ built-in [nvim-lsp][nvim-lsp]. Works only for neovim >= 0.5.
 ## Supported linters and formatters
 
 Check out [supported-linters-and-formatters.md](supported-linters-and-formatters.md) (UNDER CONSTRUCTION, check the
-[supported list further below](#language-support-todo))
+[supported list further below](#language-support-todo-move-to-separate-md-file-when-ready))
 
 ## Features
 
