@@ -1,83 +1,80 @@
-local log = require('efmls-configs.logger')
 local M = {}
 
--- Enums
-local Scope = {
-  NODE = 'node',
-  COMPOSER = 'composer',
-  BUNDLE = 'bundle',
-}
+---@alias ScopeType
+---| 'BUNDLE'
+---| 'COMPOSER'
+---| 'NODE'
 
--- Expose it for other modules to use
-M.Scope = Scope
+---Add error to :checkhealth issues
+---@param name string
+---@return nil
+local add_checkhealth_error = function(name)
+  local errmsg = string.format('%q: no executable found, check |efmls-configs-issues| for help', name)
+  table.insert(_G.efmls_healthcheck, errmsg)
+end
 
-local FsScopePath = {
+local FilepathByScope = {
   NODE = 'node_modules/.bin',
   COMPOSER = 'vendor/bin',
   BUNDLE = 'vendor/bundle',
 }
 
-local get_exec_fullpath = function(bin, scope)
-  local binpath = string.format('%s/%s/%s', vim.fn.getcwd(), scope, bin)
-  if vim.fn.filereadable(binpath) == 1 then
-    return binpath
+---Get the full path to project local executable
+---@param name string
+---@param context ScopeType
+---@return string
+local get_local_exec = function(name, context)
+  local local_bin_path = FilepathByScope[context]
+  local current_working_dir = vim.loop.cwd()
+  local binpath = string.format('%s/%s/%s', current_working_dir, local_bin_path, name)
+
+  if vim.fn.filereadable(binpath) == 0 then
+    add_checkhealth_error(name)
   end
 
-  return ''
+  return binpath
 end
 
--- Get the project scoped executable linter/formatter
---
--- @param bin
--- @param scope
--- @return string
-local get_scoped_executable = function(bin, scope)
-  if scope == Scope.NODE then
-    return get_exec_fullpath(bin, FsScopePath.NODE)
+---Get the full path to project local executable
+---@param name string
+---@return string
+local get_global_exec = function(name)
+  if vim.fn.executable(name) == 1 then
+    return vim.fn.exepath(name)
+  else
+    add_checkhealth_error(name)
+    return name
   end
-
-  if scope == Scope.COMPOSER then
-    return get_exec_fullpath(bin, FsScopePath.COMPOSER)
-  end
-
-  if scope == Scope.BUNDLE then
-    return get_exec_fullpath(bin, FsScopePath.BUNDLE)
-  end
-
-  return ''
 end
 
--- Get the executable linter/formater depending on the scope, if provided
---
--- @param bin
--- @param scope
--- @return string
-M.get_executable = function(bin, scope)
-  local executable_bin = ''
-
-  if scope ~= nil then
-    executable_bin = get_scoped_executable(bin, scope)
+---Get the full path to executable, search for project installed
+---binary, else search for globally install binary. If no executable
+---found, then add to the health check, but post no error
+---@param name string
+---@param context ScopeType
+M.executable = function(name, context)
+  -- Track linter/formatter status
+  if _G.efmls_healthcheck == nil then
+    _G.efmls_healthcheck = {}
   end
 
-  if vim.fn.executable(bin) and executable_bin == '' then
-    executable_bin = vim.fn.exepath(bin)
-  end
+  if context ~= nil then
+    local local_binpath = get_local_exec(name, context)
 
-  if executable_bin == '' then
-    log.error(string.format('[efmls-configs] No executable found for %q', bin))
-    return
-  end
+    if local_binpath == '' then
+      return get_global_exec(name)
+    end
 
-  return executable_bin
+    return local_binpath
+  else
+    return get_global_exec(name)
+  end
 end
 
--- Get the project root relative to where nvim was opened,
--- this depends on if it finds it as a git project
--- ref: https://vi.stackexchange.com/questions/20605/find-project-root-relative-to-the-active-buffer
---
--- @return string
-M.get_project_root = function()
-  return vim.fn.finddir('.git/..', vim.fn.expand('%:p:h') .. ';')
-end
+M.Scope = {
+  NODE = 'NODE',
+  COMPOSER = 'COMPOSER',
+  BUNDLE = 'BUNDLE',
+}
 
 return M
