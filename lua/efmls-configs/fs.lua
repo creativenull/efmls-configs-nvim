@@ -5,6 +5,18 @@ local M = {}
 ---| 'COMPOSER'
 ---| 'NODE'
 
+M.Scope = {
+  NODE = 'NODE',
+  COMPOSER = 'COMPOSER',
+  BUNDLE = 'BUNDLE',
+}
+
+local FilepathByScope = {
+  NODE = 'node_modules/.bin',
+  COMPOSER = 'vendor/bin',
+  BUNDLE = 'vendor/bundle',
+}
+
 ---Add error to :checkhealth issues
 ---@param name string
 ---@return nil
@@ -12,12 +24,6 @@ local add_checkhealth_error = function(name)
   local errmsg = string.format('%q: no executable found, check |efmls-configs-issues| for help', name)
   table.insert(_G.efmls_healthcheck, errmsg)
 end
-
-local FilepathByScope = {
-  NODE = 'node_modules/.bin',
-  COMPOSER = 'vendor/bin',
-  BUNDLE = 'vendor/bundle',
-}
 
 ---Get the full path to project local executable
 ---@param name string
@@ -71,10 +77,5 @@ M.executable = function(name, context)
   end
 end
 
-M.Scope = {
-  NODE = 'NODE',
-  COMPOSER = 'COMPOSER',
-  BUNDLE = 'BUNDLE',
-}
 
 return M
