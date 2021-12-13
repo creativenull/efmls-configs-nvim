@@ -1,21 +1,19 @@
 # efmls-configs-nvim
 
 An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] to work with the
-builtin [nvim-lsp][nvim-lsp]. Have a look at the [currently supported linters/formatters](#language-support-todo).
+built-in [nvim-lsp][nvim-lsp]. Works only for neovim >= 0.5.
 
-Current Status: __Alpha__
+## Supported linters and formatters
 
-Note, given the current status, things are prone to break. I would highly encourage you create an issue with good
-reproduction steps in order to properly debug.
-
-PRs are welcome 😊!
+Check out [supported-linters-and-formatters.md](supported-linters-and-formatters.md) (UNDER CONSTRUCTION, check the
+[supported list further below](#language-support-todo)
 
 ## Features
 
-+ Out-of-box configurations for your linter/formatter with options for customization.
-+ Intelligently detect linter/formatter tools installed globally or within the project (currently supports node `npm`,
-  php `composer`, and ruby `bundler`).
-+ Provide both errors and warnings where possible by default.
++ Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
+  ruby/bundler, additional support for other build tools coming soon.
++ Use `:checkhealth` to see any missing tools.
++ Customize configs for your project needs.
 
 ## Vim Docs
 
@@ -95,7 +93,29 @@ efmls.setup {
 }
 ```
 
-### Advanced Setup
+### Default Configuration
+
+A default configuration for the supported filetypes is provided but not activated by default.
+
+To activate the default configuration you can pass the default_config flag as true in the init function. Below are the
+default values for init:
+
+```lua
+efmls.init {
+  -- Use a list of default configurations
+  -- set by this plugin
+  -- (Default: false)
+  default_config = false,
+}
+
+efmls.setup()
+```
+
+You will still need to call the `setup()` after `init()` for the changes to take effect. You can still pass your custom
+configurations to `setup()` as show in the [Setup section](#setup) and it will override any default configuration set
+by `default_config` if it's the same filetype.
+
+### Advanced Configuration Setup
 
 If you want to change some settings that are not provided in the default config, you can change them with `vim.tbl_extend`.
 These configs take the same keys referenced in the [efm-langserver schema file][schema-file] in json format, aka
@@ -115,10 +135,9 @@ efmls.setup {
 
 ## Implementation Details (TODO)
 
-+ [ ] Tests to ensure proper linter/formatter config
-+ [ ] Tests to run separate linters/formatters in a docker container
++ [ ] Testing
 
-## Language Support (TODO)
+## Language Support (TODO: Move to separate md file when ready)
 
 Languages to support, list based on ALE with LSP servers omitted:
 

@@ -44,6 +44,31 @@ filetype.
     }
 <
 
+DEFAULT CONFIGURATIONS                          *efmls-configs-defaults*
+
+A default configuration for the supported filetypes is provided but not
+activated by default.
+
+To activate the default configuration you can pass the default_config flag
+as true in the init function. Below are the default values for init:
+
+>
+    efmls.init {
+      -- Use a list of default configurations
+      -- set by this plugin
+      -- (Default: false)
+      default_config = false,
+    }
+
+    efmls.setup()
+<
+
+You will still need to call the `setup()` after `init()` for the
+changes to take effect. You can still pass your custom configurations
+to `setup()` as show in the |efmls-configs-setup| section and it will
+override any default configuration set by `default_config` if it's the
+same filetype.
+
 ADVANCED SETUP                                 *efmls-configs-advanced*
 
 If you want to change some settings that are not provided in the
@@ -61,6 +86,16 @@ take the same keys referenced in the schema file (|efmls-configs-schema|)
       javascript = { linter = eslint },
     }
 <
+
+TROUBLESHOOTING                                 *efmls-configs-issues*
+
+If you get "no executable found" issues in `:checkhealth`,
+this means that the linter or formatter was not found in the provided
+filepath. Ensure that it is installed globally or in a valid filepath.
+
+For nodejs/npm, php/composer, ruby/bundler: check if the linter or
+formatter is installed in your node_modules (npm), vendor
+(composer/bundler) project folder, or installed globally.
 
 EFM-LANGSERVER SCHEMA FILE                       *efmls-configs-schema*
 
