@@ -1,13 +1,11 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'xo'
-local bin = fs.get_executable(linter, fs.Scope.NODE)
-local args = '--reporter visualstudio --stdin'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s --reporter visualstudio --stdin', fs.executable(linter, fs.Scope.NODE))
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = true,
   lintFormats = { '<text>(%l,%c): %trror %m', '<text>(%l,%c): %tarning %m' },
   rootMarkers = {

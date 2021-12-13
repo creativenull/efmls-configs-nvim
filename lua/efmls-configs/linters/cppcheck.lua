@@ -1,6 +1,11 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'cppcheck'
+local command = string.format('%s --enable=warning ${INPUT}', fs.executable(linter))
+
 return {
-  prefix = 'cppcheck',
-  lintCommand = 'cppcheck --enable=warning ${INPUT}',
+  prefix = linter,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%c: %trror: %m', '%.%#:%l:%c: %tarning: %m', '%.%#:%l:%c: %tote: %m' },
   rootMarkers = {},

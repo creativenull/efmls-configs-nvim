@@ -1,6 +1,11 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'staticcheck'
+local command = string.format('%s -f text ${INPUT}', fs.executable(linter))
+
 return {
-  prefix = 'staticcheck',
-  lintCommand = 'staticcheck -f text ${INPUT}',
+  prefix = linter,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%c: %m' },
   rootMarkers = {},

@@ -1,6 +1,11 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'pylint'
+local command = string.format('%s --score=no ${INPUT}', fs.executable(linter))
+
 return {
-  prefix = 'pylint',
-  lintCommand = 'pylint --score=no ${INPUT}',
+  prefix = linter,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%c: %t%.%#: %m' },
   rootMarkers = {},

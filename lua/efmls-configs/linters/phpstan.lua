@@ -1,13 +1,12 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'phpstan'
-local bin = fs.get_executable(linter, fs.Scope.COMPOSER)
 local args = 'analyse --no-progress --no-ansi --error-format=raw ${INPUT}'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s %s', fs.executable(linter, fs.Scope.COMPOSER), args)
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%m' },
   rootMarkers = { 'phpstan.neon', 'phpstan.neon.dist', 'composer.json' },

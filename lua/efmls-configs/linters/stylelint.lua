@@ -1,13 +1,12 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'stylelint'
-local bin = fs.get_executable(linter, fs.Scope.NODE)
 local args = '--no-color --formatter compact --stdin --stdin-filename ${INPUT}'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s %s', fs.executable(linter, fs.Scope.NODE), args)
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = true,
   lintFormats = { '%.%#: line %l, col %c, %trror - %m', '%.%#: line %l, col %c, %tarning - %m' },
   rootMarkers = { '.stylelintrc' }

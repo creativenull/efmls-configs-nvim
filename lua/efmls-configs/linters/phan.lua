@@ -1,13 +1,11 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'phan'
-local bin = fs.get_executable(linter, fs.Scope.COMPOSER)
-local args = '--output-mode pylint ${INPUT}'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s --output-mode pylint ${INPUT}', fs.executable(linter, fs.Scope.COMPOSER))
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = true,
   lintFormats = { '%.%#:%l: [%t%.%#] %m (at column %c)' },
   rootMarkers = { '.phan/config.php', 'composer.json' },

@@ -1,3 +1,5 @@
+local fs = require('efmls-configs.fs')
+
 local linter = 'clazy'
 local args = {
   '--analyze',
@@ -6,11 +8,11 @@ local args = {
   '--extra-arg=-fno-color-diagnostics',
   '${INPUT}',
 }
-local cmd = string.format('%s %s', linter, table.concat(args, ' '))
+local command = string.format('%s %s', fs.executable(linter), table.concat(args, ' '))
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%c: %trror: %m', '%.%#:%l:%c: fatal %trror: %m', '%.%#:%l:%c: %tarning: %m' },
   rootMarkers = {},

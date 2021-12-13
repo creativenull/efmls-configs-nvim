@@ -1,6 +1,11 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'dartanalyzer'
+local command = string.format('%s --format machine ${INPUT}', fs.executable(linter))
+
 return {
-  prefix = 'dartanalyzer',
-  lintCommand = './dart-sdk/bin/dartanalyzer --format machine ${INPUT}',
+  prefix = linter,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = {
     '%tRROR|%.%#|%.%#|%f|%l|%c|%.%#|%m',

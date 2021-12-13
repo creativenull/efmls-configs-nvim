@@ -1,13 +1,11 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'standard'
-local bin = fs.get_executable(linter, fs.Scope.NODE)
-local args = '--stdin'
-local cmd = string.format('%s %s', bin, args)
+local command = string.format('%s --stdin', fs.executable(linter, fs.Scope.NODE))
 
 return {
   prefix = linter,
-  lintCommand = cmd,
+  lintCommand = command,
   lintStdin = true,
   lintFormats = { '%.%#:%l:%c: %m' },
   rootMarkers = { 'package.json' },

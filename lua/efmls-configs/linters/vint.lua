@@ -1,9 +1,13 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'vint'
+local args = '--no-color --warning --format'
 local format = '{file_path}:{line_number}:{column_number}: {severity}: {description} (see {reference})'
-local cmd = string.format('vint --no-color --warning --format %q -', format)
+local command = string.format('%s %s %q', fs.executable(linter), args, format)
 
 return {
-  prefix = 'vint',
-  lintCommand = cmd,
+  prefix = linter,
+  lintCommand = command,
   lintStdin = true,
   lintFormats = { '%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m' },
   rootMarkers = { '.vintrc.yaml', '.vintrc.yml', '.vintrc' },

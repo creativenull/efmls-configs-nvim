@@ -1,6 +1,12 @@
+local fs = require('efmls-configs.fs')
+
+local linter = 'gcc'
+local args = { '-Wpedantic', '-Wall', '-Wextra', '-fno-diagnostics-color', '-fsyntax-only', '${INPUT}' }
+local command = string.format('%s %s', fs.executable(linter), table.concat(args, ' '))
+
 return {
-  prefix = 'gcc',
-  lintCommand = 'gcc -Wpedantic -Wall -Wextra -fno-diagnostics-color -fsyntax-only ${INPUT}',
+  prefix = linter,
+  lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%c: %trror: %m', '%.%#:%l:%c: %tarning: %m', '%.%#:%l:%c: %tnfo: %m' },
   rootMarkers = { 'Makefile' },
