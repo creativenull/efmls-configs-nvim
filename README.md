@@ -11,9 +11,9 @@ Check out [supported-linters-and-formatters.md](supported-linters-and-formatters
 
 + Out-of-box configurations for 60+ linters & formatters
 + Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
-  ruby/bundler, additional support for other build tools coming soon
-+ Use `:checkhealth` for quick diagnostic on tools
-+ Ability to customize configurations for your specific project use-cases
+  ruby/bundler (additional support for other build tools coming soon)
++ Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
++ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup))
 
 ## Vim Docs
 
@@ -48,7 +48,8 @@ use {
 ```
 
 ## Documentation
-### Setup
+
+### Setup (`:help efmls-configs-setup`)
 
 #### Step 1
 
@@ -88,7 +89,7 @@ efmls.setup {
 }
 ```
 
-### Default Configuration
+### Default Configuration (`:help efmls-configs-defaults`)
 
 A default configuration for the supported filetypes is provided but not activated by default.
 
@@ -110,7 +111,7 @@ You will still need to call the `setup()` after `init()` for the changes to take
 configurations to `setup()` as show in the [Setup section](#setup) and it will override any default configuration set
 by `default_config` if it's the same filetype.
 
-### Advanced Configuration Setup
+### Advanced Configuration Setup (`:help efmls-configs-advanced`)
 
 If you want to change some settings that are not provided in the default config, you can change them with `vim.tbl_extend`.
 These configs take the same keys referenced in the [efm-langserver schema file][schema-file] in json format, aka
