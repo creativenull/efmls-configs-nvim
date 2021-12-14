@@ -24,8 +24,8 @@ on how to set `default_config` check the docs:
 ## Linter & Formatter Configurations
 
 Below are the supported linters and formatters that are configured to run with efm-langserver. You can access
-the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd>
-+ <kbd>F</kbd> to search). Copy the `require` code into your `setup()` function (See example code:
+the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
+to search). Copy the `require` code into your `setup()` function (See example code:
 [`:help efmls-configs-setup`](https://github.com/creativenull/efmls-configs-nvim#setup)).
 
 ### Ada
