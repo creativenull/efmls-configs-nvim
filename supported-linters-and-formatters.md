@@ -10,7 +10,7 @@ on how to set `default_config` check the docs:
 
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
-| CSS/SASS/SCSS/LESS | [`stylelint`](#csssassscssless) | [`prettier`](#csssassscssless) |
+| CSS/SASS/SCSS/LESS | [`stylelint`](#css) | [`prettier`](#css) |
 | Go | [`golangci_lint`](#go) | |
 | HTML | [`stylelint`](#html) | [`prettier`](#html) |
 | JavaScript/JSX | [`eslint`](#javascript) | [`prettier`](#javascript) |
