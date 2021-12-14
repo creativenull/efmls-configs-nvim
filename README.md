@@ -13,7 +13,7 @@ Check out [supported-linters-and-formatters.md](supported-linters-and-formatters
 + Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
   ruby/bundler (additional support for other build tools coming soon)
 + Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
-+ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup))
++ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup-help-efmls-configs-advanced))
 
 ## Vim Docs
 
