@@ -428,6 +428,12 @@ local eslint_d_fmt = require 'efmls-configs.formatters.eslint_d'
 local prettier = require 'efmls-configs.formatters.prettier'
 ```
 
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
+```
+
 [prettier-eslint](https://github.com/prettier/prettier-eslint-cli)
 
 ```lua
@@ -466,6 +472,12 @@ local eslint = require 'efmls-configs.linters.eslint'
 
 ```lua
 local prettier = require 'efmls-configs.formatters.prettier'
+```
+
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
 ```
 
 ### JSON5
@@ -596,6 +608,12 @@ local languagetool = require 'efmls-configs.linters.languagetool'
 local prettier = require 'efmls-configs.formatters.prettier'
 ```
 
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
+```
+
 [proselint](http://proselint.com/)
 
 ```lua
@@ -648,6 +666,12 @@ local uncrustify = require 'efmls-configs.formatters.uncrustify'
 
 ```lua
 local prettier = require 'efmls-configs.formatters.prettier'
+```
+
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
 ```
 
 ### Pawn
@@ -840,6 +864,12 @@ local debride = require 'efmls-configs.linters.debride'
 local prettier = require 'efmls-configs.formatters.prettier'
 ```
 
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
+```
+
 [rubocop](https://github.com/bbatsov/rubocop)
 
 ```lua
@@ -866,6 +896,12 @@ local stylelint = require 'efmls-configs.linters.stylelint'
 
 ```lua
 local prettier = require 'efmls-configs.formatters.prettier'
+```
+
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
 ```
 
 [stylelint](https://github.com/stylelint/stylelint)
@@ -896,6 +932,12 @@ local stylelint = require 'efmls-configs.linters.stylelint'
 
 ```lua
 local prettier = require 'efmls-configs.formatters.prettier'
+```
+
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
 ```
 
 ### Texinfo
@@ -981,6 +1023,12 @@ local eslint_d_fmt = require 'efmls-configs.formatters.eslint_d'
 
 ```lua
 local prettier = require 'efmls-configs.formatters.prettier'
+```
+
+[prettier_d](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require 'efmls-configs.formatters.prettier_d'
 ```
 
 [standard](http://standardjs.com/)
