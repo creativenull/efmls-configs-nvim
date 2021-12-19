@@ -35,7 +35,7 @@ local get_local_exec = function(name, context)
   local binpath = string.format('%s/%s/%s', current_working_dir, local_bin_path, name)
 
   if vim.fn.filereadable(binpath) == 0 then
-    add_checkhealth_error(name)
+    binpath = ''
   end
 
   return binpath
@@ -48,8 +48,7 @@ local get_global_exec = function(name)
   if vim.fn.executable(name) == 1 then
     return vim.fn.exepath(name)
   else
-    add_checkhealth_error(name)
-    return name
+    return ''
   end
 end
 
@@ -64,18 +63,23 @@ M.executable = function(name, context)
     _G.efmls_healthcheck = {}
   end
 
+  local binpath
+
   if context ~= nil then
-    local local_binpath = get_local_exec(name, context)
+    binpath = get_local_exec(name, context)
 
-    if local_binpath == '' then
-      return get_global_exec(name)
+    if binpath == '' then
+      binpath = get_global_exec(name)
     end
-
-    return local_binpath
   else
-    return get_global_exec(name)
+    binpath = get_global_exec(name)
   end
-end
 
+  if binpath == '' then
+    add_checkhealth_error(name)
+  end
+
+  return binpath
+end
 
 return M
