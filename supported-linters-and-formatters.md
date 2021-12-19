@@ -1362,7 +1362,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + OpenApi
   + [ ] [ibm_validator](https://github.com/IBM/openapi-validator)
   + [X] [prettier](https://github.com/prettier/prettier)
-  + [ ] [yamllint](https://yamllint.readthedocs.io/)
+  + [x] [yamllint](https://yamllint.readthedocs.io/)
 + Pascal
   + [ ] [ptop](https://www.freepascal.org/tools/ptop.var)
 + Pawn
