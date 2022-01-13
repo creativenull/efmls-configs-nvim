@@ -294,6 +294,16 @@ local joker = require 'efmls-configs.linters.joker'
 local joker_fmt = require 'efmls-configs.formatters.joker'
 ```
 
+### CoffeeScript
+
+[eslint](http://eslint.org/)
+
+Note: `eslint-plugin-coffee` or a similar eslint plugin will be required to run eslint on coffeescript files.
+
+```
+local eslint = require 'efmls-configs.linters.eslint'
+```
+
 ### D
 
 [dfmt](https://github.com/dlang-community/dfmt)
@@ -1199,7 +1209,8 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [cmake-format](https://github.com/cheshirekow/cmake_format)
   + [ ] [cmakelint](https://github.com/richq/cmake-lint)
 + CoffeeScript
-  + [ ] [coffeelint](https://www.npmjs.com/package/coffeelint)
+  + [x] [eslint](https://eslint.org)
+  + [x] ~~[coffeelint](https://www.npmjs.com/package/coffeelint)~~
 + Crystal
   + [ ] [ameba](https://github.com/veelenga/ameba)
   + [ ] [crystal](https://crystal-lang.org/)
