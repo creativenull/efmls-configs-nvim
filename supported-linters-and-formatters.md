@@ -279,6 +279,21 @@ local prettier = require 'efmls-configs.formatters.prettier'
 local stylelint = require 'efmls-configs.linters.stylelint'
 ```
 
+### Clojure
+
+[clj-kondo](https://github.com/borkdude/clj-kondo)
+
+```lua
+local clj_kondo = require 'efmls-configs.linters.clj_kondo'
+```
+
+[joker](https://github.com/candid82/joker)
+
+```lua
+local joker = require 'efmls-configs.linters.joker'
+local joker_fmt = require 'efmls-configs.formatters.joker'
+```
+
 ### D
 
 [dfmt](https://github.com/dlang-community/dfmt)
@@ -1176,8 +1191,8 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [cookstyle](https://docs.chef.io/cookstyle.html)
   + [ ] [foodcritic](http://www.foodcritic.io/)
 + Clojure
-  + [ ] [clj-kondo](https://github.com/borkdude/clj-kondo)
-  + [ ] [joker](https://github.com/candid82/joker)
+  + [x] [clj-kondo](https://github.com/borkdude/clj-kondo)
+  + [x] [joker](https://github.com/candid82/joker)
 + CloudFormation
   + [ ] [cfn-python-lint](https://github.com/awslabs/cfn-python-lint)
 + CMake
