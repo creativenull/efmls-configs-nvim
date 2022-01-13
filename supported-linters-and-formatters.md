@@ -304,6 +304,14 @@ Note: `eslint-plugin-coffee` or a similar eslint plugin will be required to run 
 local eslint = require 'efmls-configs.linters.eslint'
 ```
 
+### Crystal
+
+[ameba](https://github.com/veelenga/ameba)
+
+```
+local ameba = require 'efmls-configs.linters.ameba'
+```
+
 ### D
 
 [dfmt](https://github.com/dlang-community/dfmt)
@@ -1212,8 +1220,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [x] [eslint](https://eslint.org)
   + [x] ~~[coffeelint](https://www.npmjs.com/package/coffeelint)~~
 + Crystal
-  + [ ] [ameba](https://github.com/veelenga/ameba)
-  + [ ] [crystal](https://crystal-lang.org/)
+  + [x] [ameba](https://github.com/veelenga/ameba)
 + CSS
   + [ ] [csslint](http://csslint.net/)
   + [ ] [fecs](http://fecs.baidu.com/)
