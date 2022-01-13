@@ -279,6 +279,12 @@ local prettier = require 'efmls-configs.formatters.prettier'
 local stylelint = require 'efmls-configs.linters.stylelint'
 ```
 
+[fecs](http://fecs.baidu.com/)
+
+```
+local fecs = require 'efmls-configs.linters.fecs'
+```
+
 ### Clojure
 
 [clj-kondo](https://github.com/borkdude/clj-kondo)
@@ -432,6 +438,12 @@ local proselint = require 'efmls-configs.linters.proselint'
 local write_good = require 'efmls-configs.linters.write_good'
 ```
 
+[fecs](http://fecs.baidu.com/)
+
+```
+local fecs = require 'efmls-configs.linters.fecs'
+```
+
 ### Java
 
 [uncrustify](https://github.com/uncrustify/uncrustify)
@@ -491,6 +503,12 @@ local standard_fmt = require 'efmls-configs.formatters.js_standard'
 ```lua
 local xo = require 'efmls-configs.linters.xo'
 local xo_fmt = require 'efmls-configs.formatters.xo'
+```
+
+[fecs](http://fecs.baidu.com/)
+
+```
+local fecs = require 'efmls-configs.linters.fecs'
 ```
 
 ### JSON
@@ -1071,6 +1089,12 @@ local standard = require 'efmls-configs.linters.standardjs'
 local standard_fmt = require 'efmls-configs.formatters.standardjs'
 ```
 
+[fecs](http://fecs.baidu.com/)
+
+```
+local fecs = require 'efmls-configs.linters.fecs'
+```
+
 ### VALA
 
 [uncrustify](https://github.com/uncrustify/uncrustify)
@@ -1223,7 +1247,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [x] [ameba](https://github.com/veelenga/ameba)
 + CSS
   + [ ] [csslint](http://csslint.net/)
-  + [ ] [fecs](http://fecs.baidu.com/)
+  + [X] [fecs](http://fecs.baidu.com/)
   + [X] [prettier](https://github.com/prettier/prettier)
   + [X] [stylelint](https://github.com/stylelint/stylelint)
 + Cucumber
@@ -1324,7 +1348,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [terraform-fmt](https://github.com/hashicorp/terraform)
 + HTML
   + [X] [alex](https://github.com/wooorm/alex)
-  + [ ] [fecs](http://fecs.baidu.com/)
+  + [X] [fecs](http://fecs.baidu.com/)
   + [ ] [html-beautify](https://beautifier.io/)
   + [ ] [htmlhint](http://htmlhint.com/)
   + [X] [prettier](https://github.com/prettier/prettier)
@@ -1345,7 +1369,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [uncrustify](https://github.com/uncrustify/uncrustify)
 + JavaScript
   + [X] [eslint](http://eslint.org/)
-  + [ ] [fecs](http://fecs.baidu.com/)
+  + [X] [fecs](http://fecs.baidu.com/)
   + [ ] [flow](https://flowtype.org/)
   + [ ] [jscs](https://jscs-dev.github.io/)
   + [ ] [jshint](http://jshint.com/)
@@ -1617,7 +1641,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [thriftcheck](https://github.com/pinterest/thriftcheck)
 + TypeScript
   + [X] [eslint](http://eslint.org/)
-  + [ ] [fecs](http://fecs.baidu.com/)
+  + [X] [fecs](http://fecs.baidu.com/)
   + [X] [prettier](https://github.com/prettier/prettier)
   + [X] [standard](http://standardjs.com/)
   + typecheck
