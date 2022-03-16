@@ -1,5 +1,14 @@
 local M = {}
 
+-- TODO:
+-- Add implementation to find the relevant linter/formatter binary
+-- by traversing down each parent dir and match with FilepathByScope var
+-- for the supported language package managers in Scope.
+
+-- TODO:
+-- Add python virtual env support (venv), automatically detect the venv
+-- folder and then use the tools within it. Related with the todo above.
+
 ---@alias ScopeType
 ---| 'BUNDLE'
 ---| 'COMPOSER'
