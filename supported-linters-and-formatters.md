@@ -352,6 +352,14 @@ local dart_format = require 'efmls-configs.formatters.dart_format'
 local dartanalyzer = require 'efmls-configs.linters.dartanalyzer'
 ```
 
+### Dockerfile
+
+[hadolint](https://github.com/hadolint/hadolint)
+
+```lua
+local hadolint = require 'efmls-configs.linters.hadolint'
+```
+
 ### Fountain
 
 [proselint](http://proselint.com/)
@@ -1276,7 +1284,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [dhall-lint](https://github.com/dhall-lang/dhall-lang)
 + Dockerfile
   + [ ] [dockerfile_lint](https://github.com/projectatomic/dockerfile_lint)
-  + [ ] [hadolint](https://github.com/hadolint/hadolint)
+  + [X] [hadolint](https://github.com/hadolint/hadolint)
 + Elixir
   + [ ] [credo](https://github.com/rrrene/credo)
   + [ ] [dialyxir](https://github.com/jeremyjh/dialyxir)
