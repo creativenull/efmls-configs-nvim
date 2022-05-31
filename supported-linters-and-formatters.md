@@ -1353,7 +1353,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [stack-ghc](https://haskellstack.org/)
   + [ ] [stylish-haskell](https://github.com/jaspervdj/stylish-haskell)
 + HCL
-  + [ ] [terraform-fmt](https://github.com/hashicorp/terraform)
+  + [X] [terraform-fmt](https://github.com/hashicorp/terraform)
 + HTML
   + [X] [alex](https://github.com/wooorm/alex)
   + [X] [fecs](http://fecs.baidu.com/)
