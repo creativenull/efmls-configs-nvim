@@ -8,7 +8,7 @@ local command = string.format('%s %s %q', fs.executable(linter), args, format)
 return {
   prefix = linter,
   lintCommand = command,
-  lintStdin = true,
+  lintStdin = false,
   lintFormats = { '%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m' },
   rootMarkers = { '.vintrc.yaml', '.vintrc.yml', '.vintrc' },
 }
