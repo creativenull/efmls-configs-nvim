@@ -7,6 +7,6 @@ return {
   prefix = linter,
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '%.%#:%l:%c: %t%.%# %m' },
+  lintFormats = { 'stdin:%l:%c: %t%n %m' },
   rootMarkers = { 'setup.cfg', 'tox.ini', '.flake8' },
 }
