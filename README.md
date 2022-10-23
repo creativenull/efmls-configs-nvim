@@ -27,24 +27,23 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 
 ## Installation
 
-Install with your favorite plugin manager or just use builtin package.
+Install with your favorite plugin manager or just use builtin packages.
 
-### vim-plug
-
-```vim
-Plug 'neovim/nvim-lspconfig'
-Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.2' } " tag is optional
-```
-
-### packer.nvim
+### Packer.nvim
 
 ```lua
 use {
   'creativenull/efmls-configs-nvim',
   tag = 'v0.1.2', -- tag is optional
-
   requires = { 'neovim/nvim-lspconfig' },
 }
+```
+
+### Vim-plug
+
+```vim
+Plug 'neovim/nvim-lspconfig'
+Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.2' } " tag is optional
 ```
 
 ## Documentation
