@@ -1,4 +1,12 @@
-local health = require('health')
+local health
+
+-- Keep support for nvim 0.6/0.7 but use new vim.health for nvim >= 0.8
+if vim.fn.has('nvim-0.8') == 1 then
+  health = vim.health
+else
+  health = require('health')
+end
+
 local M = {}
 
 local has_issues = function()
