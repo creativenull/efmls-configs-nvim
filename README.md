@@ -1,7 +1,7 @@
 # efmls-configs-nvim
 
 An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] to work with the
-built-in [nvim-lsp][nvim-lsp]. Works only for neovim >= 0.5.
+built-in [nvim-lsp][nvim-lsp]. Works only for Neovim >= 0.5.
 
 ## Supported linters and formatters
 
@@ -21,7 +21,7 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 
 ## Requirements
 
-+ [neovim 0.5 and up][neovim]
++ [Neovim 0.5 and up][neovim]
 + [nvim-lspconfig][lspconfig]
 + [efm-langserver][efm-langserver], installed globally - follow instructions on the repo
 
@@ -79,7 +79,7 @@ Below is an example to setup eslint and prettier to work with a `javascript` fil
 
 ```lua
 local eslint = require 'efmls-configs.linters.eslint'
-local pretter = require 'efmls-configs.formatters.prettier'
+local prettier = require 'efmls-configs.formatters.prettier'
 efmls.setup {
   javascript = {
     linter = eslint,
