@@ -10,6 +10,7 @@ return {
   lintCommand = command,
   lintStdin = true,
   lintFormats = { '<text>(%l,%c): %trror %m', '<text>(%l,%c): %tarning %m' },
+  lintIgnoreExitCode = true,
   rootMarkers = {
     '.eslintrc',
     '.eslintrc.cjs',
