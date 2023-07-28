@@ -1307,7 +1307,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [erlfmt](https://github.com/WhatsApp/erlfmt)
 + Fish
   + [ ] fish [-n flag](https://linux.die.net/man/1/fish)
-  + [ ] [fish_indent](https://fishshell.com/docs/current/cmds/fish_indent.html)
+  + [X] [fish_indent](https://fishshell.com/docs/current/cmds/fish_indent.html)
 + Fortran
   + [ ] [fortran-linter](https://github.com/cphyc/fortran-linter)
 + Fountain
@@ -1319,12 +1319,13 @@ Languages to support, list based on ALE with LSP servers omitted:
 + GLSL
   + [ ] [glslang](https://github.com/KhronosGroup/glslang)
 + Go
-  + [X] [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports)
-  + [X] [golangci-lint](https://github.com/golangci/golangci-lint)
-  + [X] [golines](https://github.com/segmentio/golines)
-  + [X] [golint](https://godoc.org/github.com/golang/lint)
-  + [X] [revive](https://github.com/mgechev/revive)
-  + [X] [staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
+  + [X] [gofmt](https://pkg.go.dev/cmd/gofmt)
+  + [X] [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) 
+  + [X] [golangci-lint](https://github.com/golangci/golangci-lint) 
+  + [X] [golines](https://github.com/segmentio/golines) 
+  + [X] [golint](https://godoc.org/github.com/golang/lint) 
+  + [X] [revive](https://github.com/mgechev/revive) 
+  + [X] [staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck) 
 + GraphQL
   + [X] [eslint](http://eslint.org/)
   + [ ] [gqlint](https://github.com/happylinks/gqlint)
@@ -1434,6 +1435,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [checkmake](https://github.com/mrtazz/checkmake)
 + Markdown
   + [X] [alex](https://github.com/wooorm/alex)
+  + [X] [cbfmt](https://github.com/lukas-reineke/cbfmt)
   + [X] [languagetool](https://languagetool.org/)
   + [ ] [markdownlint](https://github.com/DavidAnson/markdownlint)
   + [ ] [mdl](https://github.com/mivok/markdownlint)
@@ -1456,8 +1458,9 @@ Languages to support, list based on ALE with LSP servers omitted:
   + nimpretty
 + nix
   + [ ] [nix-instantiate](http://nixos.org/nix/manual/#sec-nix-instantiate)
-  + [ ] [nixfmt](https://github.com/serokell/nixfmt)
-  + [ ] [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt)
+  + [X] [nixfmt](https://github.com/serokell/nixfmt) 
+  + [ ] [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt) 
+  + [X] [statix](https://github.com/NerdyPepper/statix)
 + nroff
   + [ ] [alex](https://github.com/wooorm/alex)
   + [ ] [proselint](http://proselint.com/)
@@ -1582,7 +1585,7 @@ Languages to support, list based on ALE with LSP servers omitted:
 + Rust
   + [ ] [cargo](https://github.com/rust-lang/cargo)
   + [ ] [rustc](https://www.rust-lang.org/)
-  + [ ] [rustfmt](https://github.com/rust-lang-nursery/rustfmt)
+  + [X] [rustfmt](https://github.com/rust-lang-nursery/rustfmt)
 + Salt
   + [ ] [salt-lint](https://github.com/warpnet/salt-lint)
 + Sass
