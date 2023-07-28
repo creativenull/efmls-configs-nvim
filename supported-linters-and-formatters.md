@@ -1306,7 +1306,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [erlc](http://erlang.org/doc/man/erlc.html)
   + [ ] [erlfmt](https://github.com/WhatsApp/erlfmt)
 + Fish
-  + [ ] fish [-n flag](https://linux.die.net/man/1/fish)
+  + [X] fish [-n flag](https://linux.die.net/man/1/fish)
   + [X] [fish_indent](https://fishshell.com/docs/current/cmds/fish_indent.html)
 + Fortran
   + [ ] [fortran-linter](https://github.com/cphyc/fortran-linter)
