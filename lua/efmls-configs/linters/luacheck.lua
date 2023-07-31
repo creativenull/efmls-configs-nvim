@@ -6,6 +6,7 @@ local command = string.format('%s --codes --no-color --quiet -', fs.executable(l
 return {
   prefix = linter,
   lintCommand = command,
+  lintIgnoreExitCode = true,
   lintStdin = true,
   lintFormats = { '%.%#:%l:%c: (%t%n) %m' },
   rootMarkers = { '.luacheckrc' },
