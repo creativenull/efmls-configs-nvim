@@ -34,6 +34,16 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 
 Install with your favorite plugin manager or just use builtin packages.
 
+### lazy.nvim
+
+```lua
+{
+  'creativenull/efmls-configs-nvim',
+  version = 'v0.1.3',
+  dependencies = { 'neovim/nvim-lspconfig' },
+}
+```
+
 ### Packer.nvim
 
 ```lua
