@@ -1617,8 +1617,10 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [smlnj](http://www.smlnj.org/)
 + Solidity
   + [ ] [solc](https://solidity.readthedocs.io/)
-  + [ ] [solhint](https://github.com/protofire/solhint)
+  + [X] [solhint](https://github.com/protofire/solhint)
   + [ ] [solium](https://github.com/duaraghav8/Solium)
+  + [X] [slither](https://github.com/crytic/slither)
+  + [X] [forget fmt](https://github.com/foundry-rs/foundry)
 + SQL
   + [ ] [pgformatter](https://github.com/darold/pgFormatter)
   + [ ] [sql-lint](https://github.com/joereynolds/sql-lint)
