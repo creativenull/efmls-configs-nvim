@@ -2,8 +2,7 @@ local fs = require('efmls-configs.fs')
 
 local formatter = 'stylua'
 local command = string.format(
-  '%s ${--indent-width:tabSize} ${--range-start:charStart} '
-    .. '${--range-end:charEnd} --color Never -',
+  '%s ${--indent-width:tabSize} ${--range-start:charStart} ' .. '${--range-end:charEnd} --color Never -',
   fs.executable(formatter)
 )
 

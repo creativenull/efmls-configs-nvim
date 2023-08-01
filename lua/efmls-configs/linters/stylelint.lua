@@ -9,5 +9,5 @@ return {
   lintCommand = command,
   lintStdin = true,
   lintFormats = { '%.%#: line %l, col %c, %trror - %m', '%.%#: line %l, col %c, %tarning - %m' },
-  rootMarkers = { '.stylelintrc' }
+  rootMarkers = { '.stylelintrc' },
 }

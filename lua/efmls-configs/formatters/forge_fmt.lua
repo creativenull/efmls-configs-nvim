@@ -6,5 +6,5 @@ local command = string.format('%s fmt --raw -', fs.executable(formatter))
 return {
   formatCommand = command,
   formatStdin = true,
-  rootMarkers = { "foundry.toml" },
+  rootMarkers = { 'foundry.toml' },
 }

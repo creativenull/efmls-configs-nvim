@@ -9,4 +9,3 @@ return {
   lintCommand = command,
   lintStdin = true,
 }
-

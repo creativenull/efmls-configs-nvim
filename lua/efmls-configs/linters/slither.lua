@@ -19,7 +19,8 @@ local args = '--json - "${INPUT}"'
 -- 3. Pick out the marked results. It'll be the even-numbered fields,
 --    example: junk|results|junk|results|junk.
 -- 4. Turn the "lines" result (e.g. "1,2,3,4") into range (e.g. "1-4").
-local command = string.format([=[
+local command = string.format(
+  [=[
 %s %s --solc-remaps "$([ -f remappings.txt ] && tr '\n' ' ' < remappings.txt | xargs)" \
 | sed "s/filename_absolute/$(printf '%%b' '\0036')filename_absolute/g" \
 | sed "s/lines/$(printf '%%b' '\0036')lines/g" \
@@ -28,7 +29,10 @@ local command = string.format([=[
 | sed "s/\"elements\"[^$(printf '%%b' '\0036')]*\"$(printf '%%b' '\0036')filename_absolute\": \"\([^\"]*\)\"[^$(printf '%%b' '\0036')]*\"$(printf '%%b' '\0036')lines\": \[\([^]]*\)\][^0-9]*starting_column\": \([0-9]*\), \"ending_column\": \([0-9]*\)[^$(printf '%%b' '\0037')]*$(printf '%%b' '\0037')description\": \"\([^\"]*\)[^$(printf '%%b' '\0036')]*\"$(printf '%%b' '\0036')impact\": \"\([^\"]*\)\"/$(printf '%%b' '\0035')\2| \3-\4 of \1 (\6): \5$(printf '%%b' '\0035')/g" \
 | awk -F "$(printf '%%b' '\0035')" '{for (i=2; i<=NF; i+=2) print $i}' \
 | awk -F "|" '{split($1, a, ", "); $1=a[1] "-" a[length(a)] ":"; print $0}'
-]=], bin, args)
+]=],
+  bin,
+  args
+)
 
 return {
   lintCategoryMap = {
@@ -45,19 +49,19 @@ return {
   -- https://github.com/crytic/slither/issues/2057
   lintStdin = false,
   lintFormats = {
-    "%l-%e:  %c-%k of %f (%tow): %m",
-    "%l-%e:  %c-%k of %f (%tedium): %m",
-    "%l-%e:  %c-%k of %f (%tigh): %m",
-    "%l-%e:  %c-%k of %f (%tptimization): %m",
-    "%l-%e:  %c-%k of %f (%tnformational): %m",
+    '%l-%e:  %c-%k of %f (%tow): %m',
+    '%l-%e:  %c-%k of %f (%tedium): %m',
+    '%l-%e:  %c-%k of %f (%tigh): %m',
+    '%l-%e:  %c-%k of %f (%tptimization): %m',
+    '%l-%e:  %c-%k of %f (%tnformational): %m',
   },
   rootMarkers = {
-    "hardhat.config.js",
-    "hardhat.config.ts",
-    "foundry.toml",
-    "remappings.txt",
-    "truffle.js",
-    "truffle-config.js",
-    "ape-config.yaml",
+    'hardhat.config.js',
+    'hardhat.config.ts',
+    'foundry.toml',
+    'remappings.txt',
+    'truffle.js',
+    'truffle-config.js',
+    'ape-config.yaml',
   },
 }
