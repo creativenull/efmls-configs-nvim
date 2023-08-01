@@ -1,0 +1,45 @@
+{
+  "defaults": [
+    {
+      "languages": ["CSS", "SCSS", "LESS", "SASS"],
+      "linters": ["stylelint"],
+      "formatters": ["prettier"]
+    },
+    {
+      "languages": ["javascript", "typescript"], 
+      "linters": ["eslint"],
+      "formatters": ["prettier"]
+    },
+    {
+      "languages": ["go"],
+      "linters": ["golangci_lint"]
+    },
+    {
+      "languages": ["html"],
+      "formatters": ["prettier"]
+    },
+    {
+      "languages": ["lua"],
+      "linters": ["luacheck"],
+      "formatters": ["stylua"]
+    },
+    {
+      "languages": ["php"],
+      "linters": ["phpcs"],
+      "formatters": ["phpcbf"]
+    },
+    {
+      "languages": ["python"],
+      "linters": ["flake8"],
+      "formatters": ["autopep8"]
+    },
+    {
+      "languages": ["ruby"],
+      "linters": ["reek"]
+    },
+    {
+      "languages": ["vim"],
+      "linters": ["vint"]
+    }
+  ]
+}
