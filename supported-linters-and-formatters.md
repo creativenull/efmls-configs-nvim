@@ -452,6 +452,14 @@ local write_good = require 'efmls-configs.linters.write_good'
 local fecs = require 'efmls-configs.linters.fecs'
 ```
 
+### HTMLDjango
+
+[djlint](https://djlint.com/)
+
+```lua
+local djlint = require 'efmls-configs.linters.djlint'
+```
+
 ### Java
 
 [uncrustify](https://github.com/uncrustify/uncrustify)
@@ -1320,12 +1328,12 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [glslang](https://github.com/KhronosGroup/glslang)
 + Go
   + [X] [gofmt](https://pkg.go.dev/cmd/gofmt)
-  + [X] [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) 
-  + [X] [golangci-lint](https://github.com/golangci/golangci-lint) 
-  + [X] [golines](https://github.com/segmentio/golines) 
-  + [X] [golint](https://godoc.org/github.com/golang/lint) 
-  + [X] [revive](https://github.com/mgechev/revive) 
-  + [X] [staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck) 
+  + [X] [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports)
+  + [X] [golangci-lint](https://github.com/golangci/golangci-lint)
+  + [X] [golines](https://github.com/segmentio/golines)
+  + [X] [golint](https://godoc.org/github.com/golang/lint)
+  + [X] [revive](https://github.com/mgechev/revive)
+  + [X] [staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
 + GraphQL
   + [X] [eslint](http://eslint.org/)
   + [ ] [gqlint](https://github.com/happylinks/gqlint)
@@ -1458,8 +1466,8 @@ Languages to support, list based on ALE with LSP servers omitted:
   + nimpretty
 + nix
   + [ ] [nix-instantiate](http://nixos.org/nix/manual/#sec-nix-instantiate)
-  + [X] [nixfmt](https://github.com/serokell/nixfmt) 
-  + [ ] [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt) 
+  + [X] [nixfmt](https://github.com/serokell/nixfmt)
+  + [ ] [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt)
   + [X] [statix](https://github.com/NerdyPepper/statix)
 + nroff
   + [ ] [alex](https://github.com/wooorm/alex)
