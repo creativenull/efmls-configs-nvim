@@ -173,7 +173,9 @@ local ${formatter} = require("efmls-configs.formatters.${formatter}")
 }
 
 async function main() {
-  let contents = `# Supported Linters & Formatters
+  let contents = `<!-- DO NOT MODIFY THIS FILE. AUTO-GENERATED USING \`deno run gen\` -->
+
+# Supported Linters & Formatters
 
 Please create an Pull Request if you see any mismatched documentation or typos.
 
