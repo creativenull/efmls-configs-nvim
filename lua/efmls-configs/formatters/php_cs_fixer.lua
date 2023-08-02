@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: php
+-- url: https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'php-cs-fixer'

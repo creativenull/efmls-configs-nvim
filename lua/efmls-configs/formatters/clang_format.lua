@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c,c++
+-- url: https://clang.llvm.org/docs/ClangFormat.html
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'clang-format'

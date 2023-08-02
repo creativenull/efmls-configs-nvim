@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: nix
+-- url: https://github.com/serokell/nixfmt
+
 local fs = require('efmls-configs.fs')
 local formatter = fs.executable('nixfmt')
 return {

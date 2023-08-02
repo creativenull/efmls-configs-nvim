@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: python
+-- url: https://github.com/google/yapf
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'yapf'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: sh,bash
+-- url: https://github.com/mvdan/sh
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'shfmt'

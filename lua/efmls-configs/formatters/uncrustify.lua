@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c,c++,c#,d,java,objective-c,objective-c++,pawn,vala
+-- url: https://github.com/uncrustify/uncrustify
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'uncrustify'

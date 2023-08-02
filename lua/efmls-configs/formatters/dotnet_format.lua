@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c#
+-- url: https://github.com/dotnet/format
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'dotnet'

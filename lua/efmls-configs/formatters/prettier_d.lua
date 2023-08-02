@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript,typescript,css,scss,sass,less,html,json
+-- url: https://github.com/fsouza/prettierd
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'prettierd'

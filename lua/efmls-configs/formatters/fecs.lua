@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript,typescript,css,html
+-- url: http://fecs.baidu.com/
+
 local fs = require('efmls-configs.fs')
 
 -- TODO:
