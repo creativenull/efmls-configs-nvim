@@ -12,8 +12,11 @@ type DefaultConfigurationJsonData = {
 };
 
 type LuaFileMetadata = {
-  [key: string]: string;
+  [key: string]: string | string[];
 };
+
+// Tracker
+const languages = new Map();
 
 /**
  * Parse a custom frontmatter data for lua files
@@ -33,11 +36,22 @@ function parseFrontmatter(content: string): LuaFileMetadata {
         inFrontmatter = true;
       }
     } else {
+      if (line.trim() === "") {
+        // End parsing
+        break;
+      }
+
       const match = line.match(/^\s*--\s*(\S+):\s*(.*)/);
       if (match) {
         const key = match[1];
         const value = match[2];
-        frontmatter[key] = value;
+
+        if (key === "languages") {
+          // Make comma separated values into an array
+          frontmatter[key] = value.split(",").map((v) => v.trim());
+        } else {
+          frontmatter[key] = value;
+        }
       }
     }
   }
@@ -106,7 +120,20 @@ async function getLinters(): Promise<string[]> {
   const linters: string[] = [];
 
   for await (const dirEntry of Deno.readDir(`${basepath}/linters`)) {
-    linters.push(dirEntry.name.split(".")[0]);
+    const name = dirEntry.name.split(".")[0];
+    linters.push(name);
+
+    const fileContents = await Deno.readTextFile(`${basepath}/linters/${dirEntry.name}`);
+    const parsed = parseFrontmatter(fileContents);
+
+    for (const lang of parsed.languages ?? []) {
+      languages.set(
+        lang,
+        languages.has(lang)
+          ? { linters: [...languages.get(lang).linters, name].sort() }
+          : { linters: [name] },
+      );
+    }
   }
 
   return linters;
@@ -144,8 +171,26 @@ async function getFormatters(): Promise<string[]> {
   const formatters: string[] = [];
 
   for await (const dirEntry of Deno.readDir(`${basepath}/formatters`)) {
-    formatters.push(dirEntry.name.split(".")[0]);
+    const name = dirEntry.name.split(".")[0];
+    formatters.push(name);
+
+    const fileContents = await Deno.readTextFile(`${basepath}/formatters/${dirEntry.name}`);
+    const parsed = parseFrontmatter(fileContents);
+
+    for (const lang of parsed.languages ?? []) {
+      languages.set(
+        lang,
+        languages.has(lang)
+          ? {
+            linters: languages.get(lang).linters,
+            formatters: [...languages.get(lang).formatters, name].sort(),
+          }
+          : { linters: languages.get(lang).linters, formatters: [name] },
+      );
+    }
   }
+
+  console.log(languages);
 
   return formatters;
 }
