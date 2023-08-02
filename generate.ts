@@ -1,5 +1,5 @@
 const basepath = "./lua/efmls-configs";
-const outputfile = "./SUPPORTED_LIST.md";
+const outputfile = "./doc/SUPPORTED_LIST.md";
 
 type DefaultConfiguration = {
   languages: string[];
