@@ -22,535 +22,1018 @@ on how to set `default_config` check the docs:
 | Ruby | `reek` |  |
 | Vim | `vint` |  |
 
-## Linters
+## Languages
 
-### `js_standard`
+Below are the supported linters and formatters that are configured to run with efm-langserver. You can access
+the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
+to search). Copy the `require` code into your `setup()` function (See example code:
+[`:help efmls-configs-setup`](https://github.com/creativenull/efmls-configs-nvim#setup-help-efmls-configs-setup)).
 
+### Javascript
+
+#### Linters
+
+`js_standard`
+
+```lua
+local js_standard = require('efmls-configs.linters.js_standard')
+```
+
+`xo`
+
+```lua
+local xo = require('efmls-configs.linters.xo')
+```
+
+`eslint`
+
+```lua
+local eslint = require('efmls-configs.linters.eslint')
+```
+
+`fecs`
+
+```lua
+local fecs = require('efmls-configs.linters.fecs')
+```
+
+`eslint_d`
+
+```lua
+local eslint_d = require('efmls-configs.linters.eslint_d')
+```
+
+#### Formatters
+
+`prettier_standard`
+
+```lua
+local prettier_standard = require('efmls-configs.formatters.prettier_standard')
+```
+
+`js_standard`
+
+```lua
+local js_standard = require('efmls-configs.formatters.js_standard')
+```
+
+`prettier_d`
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+`xo`
+
+```lua
+local xo = require('efmls-configs.formatters.xo')
+```
+
+`eslint`
+
+```lua
+local eslint = require('efmls-configs.formatters.eslint')
+```
+
+`fecs`
+
+```lua
+local fecs = require('efmls-configs.formatters.fecs')
+```
+
+`prettier_eslint`
+
+```lua
+local prettier_eslint = require('efmls-configs.formatters.prettier_eslint')
+```
+
+`eslint_d`
+
+```lua
+local eslint_d = require('efmls-configs.formatters.eslint_d')
+```
+
+`prettier`
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+### Solidity
+
+#### Linters
+
+`slither`
+
+```lua
+local slither = require('efmls-configs.linters.slither')
+```
+
+`solhint`
+
+```lua
+local solhint = require('efmls-configs.linters.solhint')
+```
+
+#### Formatters
+
+`forge_fmt`
+
+```lua
+local forge_fmt = require('efmls-configs.formatters.forge_fmt')
+```
+
+### Go
+
+#### Linters
+
+`golint`
+
+```lua
+local golint = require('efmls-configs.linters.golint')
+```
+
+`go_revive`
+
+```lua
+local go_revive = require('efmls-configs.linters.go_revive')
+```
+
+`staticcheck`
+
+```lua
+local staticcheck = require('efmls-configs.linters.staticcheck')
+```
+
+`djlint`
+
+```lua
+local djlint = require('efmls-configs.linters.djlint')
+```
+
+`golangci_lint`
+
+```lua
+local golangci_lint = require('efmls-configs.linters.golangci_lint')
+```
+
+#### Formatters
+
+`gofmt`
+
+```lua
+local gofmt = require('efmls-configs.formatters.gofmt')
+```
+
+`goimports`
+
+```lua
+local goimports = require('efmls-configs.formatters.goimports')
+```
+
+`golines`
+
+```lua
+local golines = require('efmls-configs.formatters.golines')
+```
+
+### Python
+
+#### Linters
+
+`pylint`
+
+```lua
+local pylint = require('efmls-configs.linters.pylint')
+```
+
+`flake8`
+
+```lua
+local flake8 = require('efmls-configs.linters.flake8')
+```
+
+`djlint`
+
+```lua
+local djlint = require('efmls-configs.linters.djlint')
+```
+
+`vulture`
+
+```lua
+local vulture = require('efmls-configs.linters.vulture')
+```
+
+#### Formatters
+
+`black`
+
+```lua
+local black = require('efmls-configs.formatters.black')
+```
+
+`autopep8`
+
+```lua
+local autopep8 = require('efmls-configs.formatters.autopep8')
+```
+
+`yapf`
+
+```lua
+local yapf = require('efmls-configs.formatters.yapf')
+```
+
+### Misc
+
+#### Linters
+
+`proselint`
+
+```lua
+local proselint = require('efmls-configs.linters.proselint')
+```
+
+`redpen`
+
+```lua
+local redpen = require('efmls-configs.linters.redpen')
+```
+
+`write_good`
+
+```lua
+local write_good = require('efmls-configs.linters.write_good')
+```
+
+`vale`
+
+```lua
+local vale = require('efmls-configs.linters.vale')
+```
+
+`alex`
+
+```lua
+local alex = require('efmls-configs.linters.alex')
+```
+
+`textlint`
+
+```lua
+local textlint = require('efmls-configs.linters.textlint')
+```
+
+`languagetool`
+
+```lua
+local languagetool = require('efmls-configs.linters.languagetool')
+```
+
+### Crystal
+
+#### Linters
+
+`ameba`
+
+```lua
+local ameba = require('efmls-configs.linters.ameba')
+```
+
+### Php
+
+#### Linters
+
+`php`
+
+```lua
+local php = require('efmls-configs.linters.php')
+```
+
+`psalm`
+
+```lua
+local psalm = require('efmls-configs.linters.psalm')
+```
+
+`phpstan`
+
+```lua
+local phpstan = require('efmls-configs.linters.phpstan')
+```
+
+`phpcs`
+
+```lua
+local phpcs = require('efmls-configs.linters.phpcs')
+```
+
+`phan`
+
+```lua
+local phan = require('efmls-configs.linters.phan')
+```
+
+`djlint`
+
+```lua
+local djlint = require('efmls-configs.linters.djlint')
+```
+
+#### Formatters
+
+`pint`
+
+```lua
+local pint = require('efmls-configs.formatters.pint')
+```
+
+`php_cs_fixer`
+
+```lua
+local php_cs_fixer = require('efmls-configs.formatters.php_cs_fixer')
+```
+
+`phpcbf`
+
 ```lua
-local js_standard = require("efmls-configs.linters.js_standard")
+local phpcbf = require('efmls-configs.formatters.phpcbf')
 ```
+
+### C
 
-### `slither`
+#### Linters
 
+`cppcheck`
+
 ```lua
-local slither = require("efmls-configs.linters.slither")
+local cppcheck = require('efmls-configs.linters.cppcheck')
 ```
 
-### `golint`
+`clang_tidy`
 
 ```lua
-local golint = require("efmls-configs.linters.golint")
+local clang_tidy = require('efmls-configs.linters.clang_tidy')
 ```
 
-### `pylint`
+`flawfinder`
 
 ```lua
-local pylint = require("efmls-configs.linters.pylint")
+local flawfinder = require('efmls-configs.linters.flawfinder')
 ```
 
-### `proselint`
+`cpplint`
 
 ```lua
-local proselint = require("efmls-configs.linters.proselint")
+local cpplint = require('efmls-configs.linters.cpplint')
 ```
 
-### `redpen`
+`gcc`
 
 ```lua
-local redpen = require("efmls-configs.linters.redpen")
+local gcc = require('efmls-configs.linters.gcc')
 ```
 
-### `ameba`
+#### Formatters
 
+`clang_tidy`
+
 ```lua
-local ameba = require("efmls-configs.linters.ameba")
+local clang_tidy = require('efmls-configs.formatters.clang_tidy')
 ```
 
-### `php`
+`astyle`
 
 ```lua
-local php = require("efmls-configs.linters.php")
+local astyle = require('efmls-configs.formatters.astyle')
 ```
 
-### `psalm`
+`uncrustify`
 
 ```lua
-local psalm = require("efmls-configs.linters.psalm")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
 
-### `phpstan`
+`clang_format`
 
 ```lua
-local phpstan = require("efmls-configs.linters.phpstan")
+local clang_format = require('efmls-configs.formatters.clang_format')
 ```
+
+### C++
 
-### `flake8`
+#### Linters
 
+`cppcheck`
+
 ```lua
-local flake8 = require("efmls-configs.linters.flake8")
+local cppcheck = require('efmls-configs.linters.cppcheck')
 ```
 
-### `write_good`
+`clang_tidy`
 
 ```lua
-local write_good = require("efmls-configs.linters.write_good")
+local clang_tidy = require('efmls-configs.linters.clang_tidy')
 ```
 
-### `cppcheck`
+`clazy`
 
 ```lua
-local cppcheck = require("efmls-configs.linters.cppcheck")
+local clazy = require('efmls-configs.linters.clazy')
 ```
 
-### `mcs`
+`cpplint`
 
 ```lua
-local mcs = require("efmls-configs.linters.mcs")
+local cpplint = require('efmls-configs.linters.cpplint')
 ```
 
-### `clang_tidy`
+`gcc`
 
 ```lua
-local clang_tidy = require("efmls-configs.linters.clang_tidy")
+local gcc = require('efmls-configs.linters.gcc')
 ```
+
+#### Formatters
 
-### `stylelint`
+`clang_tidy`
 
 ```lua
-local stylelint = require("efmls-configs.linters.stylelint")
+local clang_tidy = require('efmls-configs.formatters.clang_tidy')
 ```
 
-### `flawfinder`
+`astyle`
 
 ```lua
-local flawfinder = require("efmls-configs.linters.flawfinder")
+local astyle = require('efmls-configs.formatters.astyle')
 ```
 
-### `dmd`
+`uncrustify`
 
 ```lua
-local dmd = require("efmls-configs.linters.dmd")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
 
-### `hadolint`
+`clang_format`
 
 ```lua
-local hadolint = require("efmls-configs.linters.hadolint")
+local clang_format = require('efmls-configs.formatters.clang_format')
 ```
+
+### C#
+
+#### Linters
 
-### `dartanalyzer`
+`mcs`
 
 ```lua
-local dartanalyzer = require("efmls-configs.linters.dartanalyzer")
+local mcs = require('efmls-configs.linters.mcs')
 ```
 
-### `phpcs`
+#### Formatters
 
+`dotnet_format`
+
 ```lua
-local phpcs = require("efmls-configs.linters.phpcs")
+local dotnet_format = require('efmls-configs.formatters.dotnet_format')
 ```
 
-### `go_revive`
+`uncrustify`
 
 ```lua
-local go_revive = require("efmls-configs.linters.go_revive")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Css
 
-### `solhint`
+#### Linters
 
+`stylelint`
+
 ```lua
-local solhint = require("efmls-configs.linters.solhint")
+local stylelint = require('efmls-configs.linters.stylelint')
 ```
 
-### `reek`
+#### Formatters
 
+`prettier_d`
+
 ```lua
-local reek = require("efmls-configs.linters.reek")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `clazy`
+`fecs`
 
 ```lua
-local clazy = require("efmls-configs.linters.clazy")
+local fecs = require('efmls-configs.formatters.fecs')
 ```
 
-### `vale`
+`prettier`
 
 ```lua
-local vale = require("efmls-configs.linters.vale")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### Scss
 
-### `shellcheck`
+#### Linters
 
+`stylelint`
+
 ```lua
-local shellcheck = require("efmls-configs.linters.shellcheck")
+local stylelint = require('efmls-configs.linters.stylelint')
 ```
+
+#### Formatters
 
-### `phan`
+`prettier_d`
 
 ```lua
-local phan = require("efmls-configs.linters.phan")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `clj_kondo`
+`prettier`
 
 ```lua
-local clj_kondo = require("efmls-configs.linters.clj_kondo")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### Sass
+
+#### Linters
 
-### `fish`
+`stylelint`
 
 ```lua
-local fish = require("efmls-configs.linters.fish")
+local stylelint = require('efmls-configs.linters.stylelint')
 ```
 
-### `alex`
+#### Formatters
 
+`prettier_d`
+
 ```lua
-local alex = require("efmls-configs.linters.alex")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `staticcheck`
+`prettier`
 
 ```lua
-local staticcheck = require("efmls-configs.linters.staticcheck")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### Less
 
-### `xo`
+#### Linters
 
+`stylelint`
+
 ```lua
-local xo = require("efmls-configs.linters.xo")
+local stylelint = require('efmls-configs.linters.stylelint')
 ```
 
-### `statix`
+#### Formatters
 
+`prettier_d`
+
 ```lua
-local statix = require("efmls-configs.linters.statix")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `rubocop`
+`prettier`
 
 ```lua
-local rubocop = require("efmls-configs.linters.rubocop")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### D
 
-### `eslint`
+#### Linters
 
+`dmd`
+
 ```lua
-local eslint = require("efmls-configs.linters.eslint")
+local dmd = require('efmls-configs.linters.dmd')
 ```
+
+#### Formatters
 
-### `cpplint`
+`dfmt`
 
 ```lua
-local cpplint = require("efmls-configs.linters.cpplint")
+local dfmt = require('efmls-configs.formatters.dfmt')
 ```
 
-### `yamllint`
+`uncrustify`
 
 ```lua
-local yamllint = require("efmls-configs.linters.yamllint")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Docker
+
+#### Linters
 
-### `joker`
+`hadolint`
 
 ```lua
-local joker = require("efmls-configs.linters.joker")
+local hadolint = require('efmls-configs.linters.hadolint')
 ```
 
-### `fecs`
+### Dart
 
+#### Linters
+
+`dartanalyzer`
+
 ```lua
-local fecs = require("efmls-configs.linters.fecs")
+local dartanalyzer = require('efmls-configs.linters.dartanalyzer')
 ```
 
-### `textlint`
+#### Formatters
 
+`dartfmt`
+
 ```lua
-local textlint = require("efmls-configs.linters.textlint")
+local dartfmt = require('efmls-configs.formatters.dartfmt')
 ```
+
+### Ruby
+
+#### Linters
 
-### `vint`
+`reek`
 
 ```lua
-local vint = require("efmls-configs.linters.vint")
+local reek = require('efmls-configs.linters.reek')
 ```
 
-### `bashate`
+`rubocop`
 
 ```lua
-local bashate = require("efmls-configs.linters.bashate")
+local rubocop = require('efmls-configs.linters.rubocop')
 ```
 
-### `eslint_d`
+`sorbet`
 
 ```lua
-local eslint_d = require("efmls-configs.linters.eslint_d")
+local sorbet = require('efmls-configs.linters.sorbet')
 ```
 
-### `sorbet`
+`debride`
 
 ```lua
-local sorbet = require("efmls-configs.linters.sorbet")
+local debride = require('efmls-configs.linters.debride')
 ```
 
-### `ansible_lint`
+### Sh
 
+#### Linters
+
+`shellcheck`
+
 ```lua
-local ansible_lint = require("efmls-configs.linters.ansible_lint")
+local shellcheck = require('efmls-configs.linters.shellcheck')
 ```
 
-### `djlint`
+#### Formatters
 
+`shfmt`
+
 ```lua
-local djlint = require("efmls-configs.linters.djlint")
+local shfmt = require('efmls-configs.formatters.shfmt')
 ```
+
+### Bash
 
-### `golangci_lint`
+#### Linters
 
+`shellcheck`
+
 ```lua
-local golangci_lint = require("efmls-configs.linters.golangci_lint")
+local shellcheck = require('efmls-configs.linters.shellcheck')
 ```
 
-### `gcc`
+`bashate`
 
 ```lua
-local gcc = require("efmls-configs.linters.gcc")
+local bashate = require('efmls-configs.linters.bashate')
 ```
+
+#### Formatters
 
-### `languagetool`
+`shfmt`
 
 ```lua
-local languagetool = require("efmls-configs.linters.languagetool")
+local shfmt = require('efmls-configs.formatters.shfmt')
 ```
 
-### `debride`
+### Clojure
 
+#### Linters
+
+`clj_kondo`
+
 ```lua
-local debride = require("efmls-configs.linters.debride")
+local clj_kondo = require('efmls-configs.linters.clj_kondo')
 ```
 
-### `luacheck`
+`joker`
 
 ```lua
-local luacheck = require("efmls-configs.linters.luacheck")
+local joker = require('efmls-configs.linters.joker')
 ```
+
+#### Formatters
 
-### `vulture`
+`joker`
 
 ```lua
-local vulture = require("efmls-configs.linters.vulture")
+local joker = require('efmls-configs.formatters.joker')
 ```
 
-## Formatters
+### Fish
 
-### `pint`
+#### Linters
 
+`fish`
+
 ```lua
-local pint = require("efmls-configs.formatters.pint")
+local fish = require('efmls-configs.linters.fish')
 ```
+
+#### Formatters
 
-### `prettier_standard`
+`fish_indent`
 
 ```lua
-local prettier_standard = require("efmls-configs.formatters.prettier_standard")
+local fish_indent = require('efmls-configs.formatters.fish_indent')
 ```
+
+### Typescript
+
+#### Linters
 
-### `cbfmt`
+`xo`
 
 ```lua
-local cbfmt = require("efmls-configs.formatters.cbfmt")
+local xo = require('efmls-configs.linters.xo')
 ```
 
-### `js_standard`
+`eslint`
 
 ```lua
-local js_standard = require("efmls-configs.formatters.js_standard")
+local eslint = require('efmls-configs.linters.eslint')
 ```
 
-### `lua_format`
+`eslint_d`
 
 ```lua
-local lua_format = require("efmls-configs.formatters.lua_format")
+local eslint_d = require('efmls-configs.linters.eslint_d')
 ```
 
-### `gofmt`
+#### Formatters
 
+`prettier_standard`
+
 ```lua
-local gofmt = require("efmls-configs.formatters.gofmt")
+local prettier_standard = require('efmls-configs.formatters.prettier_standard')
 ```
 
-### `dotnet_format`
+`prettier_d`
 
 ```lua
-local dotnet_format = require("efmls-configs.formatters.dotnet_format")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `rustfmt`
+`xo`
 
 ```lua
-local rustfmt = require("efmls-configs.formatters.rustfmt")
+local xo = require('efmls-configs.formatters.xo')
 ```
 
-### `php_cs_fixer`
+`eslint`
 
 ```lua
-local php_cs_fixer = require("efmls-configs.formatters.php_cs_fixer")
+local eslint = require('efmls-configs.formatters.eslint')
 ```
 
-### `clang_tidy`
+`fecs`
 
 ```lua
-local clang_tidy = require("efmls-configs.formatters.clang_tidy")
+local fecs = require('efmls-configs.formatters.fecs')
 ```
 
-### `dfmt`
+`prettier_eslint`
 
 ```lua
-local dfmt = require("efmls-configs.formatters.dfmt")
+local prettier_eslint = require('efmls-configs.formatters.prettier_eslint')
 ```
 
-### `shfmt`
+`eslint_d`
 
 ```lua
-local shfmt = require("efmls-configs.formatters.shfmt")
+local eslint_d = require('efmls-configs.formatters.eslint_d')
 ```
 
-### `black`
+`prettier`
 
 ```lua
-local black = require("efmls-configs.formatters.black")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### Nix
 
-### `goimports`
+#### Linters
 
+`statix`
+
 ```lua
-local goimports = require("efmls-configs.formatters.goimports")
+local statix = require('efmls-configs.linters.statix')
 ```
 
-### `terraform_fmt`
+#### Formatters
 
+`nixfmt`
+
 ```lua
-local terraform_fmt = require("efmls-configs.formatters.terraform_fmt")
+local nixfmt = require('efmls-configs.formatters.nixfmt')
 ```
+
+### Yaml
 
-### `nixfmt`
+#### Linters
 
+`yamllint`
+
 ```lua
-local nixfmt = require("efmls-configs.formatters.nixfmt")
+local yamllint = require('efmls-configs.linters.yamllint')
 ```
 
-### `prettier_d`
+`ansible_lint`
 
 ```lua
-local prettier_d = require("efmls-configs.formatters.prettier_d")
+local ansible_lint = require('efmls-configs.linters.ansible_lint')
 ```
+
+### Vim
 
-### `phpcbf`
+#### Linters
 
+`vint`
+
 ```lua
-local phpcbf = require("efmls-configs.formatters.phpcbf")
+local vint = require('efmls-configs.linters.vint')
 ```
+
+### Html
 
-### `golines`
+#### Linters
 
+`djlint`
+
 ```lua
-local golines = require("efmls-configs.formatters.golines")
+local djlint = require('efmls-configs.linters.djlint')
 ```
+
+#### Formatters
 
-### `stylua`
+`prettier_d`
 
 ```lua
-local stylua = require("efmls-configs.formatters.stylua")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `autopep8`
+`fecs`
 
 ```lua
-local autopep8 = require("efmls-configs.formatters.autopep8")
+local fecs = require('efmls-configs.formatters.fecs')
 ```
 
-### `astyle`
+`prettier`
 
 ```lua
-local astyle = require("efmls-configs.formatters.astyle")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
 
-### `xo`
+### Lua
 
+#### Linters
+
+`luacheck`
+
 ```lua
-local xo = require("efmls-configs.formatters.xo")
+local luacheck = require('efmls-configs.linters.luacheck')
 ```
+
+#### Formatters
 
-### `dartfmt`
+`lua_format`
 
 ```lua
-local dartfmt = require("efmls-configs.formatters.dartfmt")
+local lua_format = require('efmls-configs.formatters.lua_format')
 ```
 
-### `uncrustify`
+`stylua`
 
 ```lua
-local uncrustify = require("efmls-configs.formatters.uncrustify")
+local stylua = require('efmls-configs.formatters.stylua')
 ```
 
-### `eslint`
+### Markdown
 
+#### Formatters
+
+`cbfmt`
+
 ```lua
-local eslint = require("efmls-configs.formatters.eslint")
+local cbfmt = require('efmls-configs.formatters.cbfmt')
 ```
+
+### Rust
+
+#### Formatters
 
-### `joker`
+`rustfmt`
 
 ```lua
-local joker = require("efmls-configs.formatters.joker")
+local rustfmt = require('efmls-configs.formatters.rustfmt')
 ```
 
-### `fecs`
+### Terraform
 
+#### Formatters
+
+`terraform_fmt`
+
 ```lua
-local fecs = require("efmls-configs.formatters.fecs")
+local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
 ```
 
-### `prettier_eslint`
+### Json
 
+#### Formatters
+
+`prettier_d`
+
 ```lua
-local prettier_eslint = require("efmls-configs.formatters.prettier_eslint")
+local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
-### `eslint_d`
+`prettier`
 
 ```lua
-local eslint_d = require("efmls-configs.formatters.eslint_d")
+local prettier = require('efmls-configs.formatters.prettier')
 ```
+
+### Java
 
-### `forge_fmt`
+#### Formatters
 
+`uncrustify`
+
 ```lua
-local forge_fmt = require("efmls-configs.formatters.forge_fmt")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Objective-c
 
-### `fish_indent`
+#### Formatters
 
+`uncrustify`
+
 ```lua
-local fish_indent = require("efmls-configs.formatters.fish_indent")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Objective-c++
 
-### `yapf`
+#### Formatters
 
+`uncrustify`
+
 ```lua
-local yapf = require("efmls-configs.formatters.yapf")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Pawn
 
-### `prettier`
+#### Formatters
 
+`uncrustify`
+
 ```lua
-local prettier = require("efmls-configs.formatters.prettier")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
+
+### Vala
+
+#### Formatters
 
-### `clang_format`
+`uncrustify`
 
 ```lua
-local clang_format = require("efmls-configs.formatters.clang_format")
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
 
