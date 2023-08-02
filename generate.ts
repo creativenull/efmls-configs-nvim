@@ -16,7 +16,12 @@ type LuaFileMetadata = {
 };
 
 // Tracker
-const languages = new Map();
+type LanguageTool = {
+  linters: string[];
+  formatters: string[];
+};
+
+const languages = new Map<string, LanguageTool>();
 
 /**
  * Parse a custom frontmatter data for lua files
@@ -116,49 +121,20 @@ async function renderDefaults(): Promise<string> {
  * @async
  * @returns {Promise<string[]>}
  */
-async function getLinters(): Promise<string[]> {
-  const linters: string[] = [];
-
+async function setLanguageLinters(): Promise<void> {
   for await (const dirEntry of Deno.readDir(`${basepath}/linters`)) {
-    const name = dirEntry.name.split(".")[0];
-    linters.push(name);
-
+    const linterName = dirEntry.name.split(".")[0];
     const fileContents = await Deno.readTextFile(`${basepath}/linters/${dirEntry.name}`);
     const parsed = parseFrontmatter(fileContents);
 
     for (const lang of parsed.languages ?? []) {
+      const linters = languages.get(lang)?.linters ?? [];
       languages.set(
         lang,
-        languages.has(lang)
-          ? { linters: [...languages.get(lang).linters, name].sort() }
-          : { linters: [name] },
+        { ...languages.get(lang), linters: [...linters, linterName] } as LanguageTool,
       );
     }
   }
-
-  return linters;
-}
-
-/**
- * Stringify linters content.
- *
- * @async
- * @returns {Promise<string>}
- */
-async function renderLinters(): Promise<string> {
-  let linterString = "";
-
-  for (const linter of await getLinters()) {
-    linterString += `### \`${linter}\`
-
-\`\`\`lua
-local ${linter} = require("efmls-configs.linters.${linter}")
-\`\`\`
-
-`;
-  }
-
-  return linterString;
 }
 
 /**
@@ -167,54 +143,68 @@ local ${linter} = require("efmls-configs.linters.${linter}")
  * @async
  * @returns {Promise<string[]>}
  */
-async function getFormatters(): Promise<string[]> {
-  const formatters: string[] = [];
-
+async function setLanguageFormatters(): Promise<void> {
   for await (const dirEntry of Deno.readDir(`${basepath}/formatters`)) {
-    const name = dirEntry.name.split(".")[0];
-    formatters.push(name);
+    const formatterName = dirEntry.name.split(".")[0];
 
     const fileContents = await Deno.readTextFile(`${basepath}/formatters/${dirEntry.name}`);
     const parsed = parseFrontmatter(fileContents);
 
     for (const lang of parsed.languages ?? []) {
+      const formatters = languages.get(lang)?.formatters ?? [];
       languages.set(
         lang,
-        languages.has(lang)
-          ? {
-            linters: languages.get(lang).linters,
-            formatters: [...languages.get(lang).formatters, name].sort(),
-          }
-          : { linters: languages.get(lang).linters, formatters: [name] },
+        { ...languages.get(lang), formatters: [...formatters, formatterName] } as LanguageTool,
       );
     }
   }
-
-  console.log(languages);
-
-  return formatters;
 }
 
 /**
- * Stringify formatters content.
+ * Render language section.
  *
  * @async
- * @returns {Promise<string>}
+ * @returns {string}
  */
-async function renderFormatters(): Promise<string> {
-  let formatterString = "";
+async function renderLanguages(): Promise<string> {
+  let languageString = "";
 
-  for (const formatter of await getFormatters()) {
-    formatterString += `### \`${formatter}\`
+  await setLanguageLinters();
+  await setLanguageFormatters();
+
+  for (const [lang, tools] of languages) {
+    languageString += `### ${capitalize(lang)}\n\n`;
+
+    if (tools.linters) {
+      languageString += `#### Linters\n\n`;
+
+      for (const linter of tools.linters) {
+        languageString += `\`${linter}\`
 
 \`\`\`lua
-local ${formatter} = require("efmls-configs.formatters.${formatter}")
+local ${linter} = require('efmls-configs.linters.${linter}')
 \`\`\`
 
 `;
+      }
+    }
+
+    if (tools.formatters) {
+      languageString += `#### Formatters\n\n`;
+
+      for (const formatter of tools.formatters) {
+        languageString += `\`${formatter}\`
+
+\`\`\`lua
+local ${formatter} = require('efmls-configs.formatters.${formatter}')
+\`\`\`
+
+`;
+      }
+    }
   }
 
-  return formatterString;
+  return languageString;
 }
 
 async function main() {
@@ -238,11 +228,14 @@ on how to set \`default_config\` check the docs:
 
   contents += `\n`;
 
-  contents += `## Linters\n\n`;
-  contents += await renderLinters();
+  contents += `## Languages\n\n`;
+  contents +=
+    `Below are the supported linters and formatters that are configured to run with efm-langserver. You can access
+the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
+to search). Copy the \`require\` code into your \`setup()\` function (See example code:
+[\`:help efmls-configs-setup\`](https://github.com/creativenull/efmls-configs-nvim#setup-help-efmls-configs-setup)).\n\n`;
 
-  contents += `## Formatters\n\n`;
-  contents += await renderFormatters();
+  contents += await renderLanguages();
 
   console.log("Writing to file");
   await Deno.writeTextFile(outputfile, contents);
@@ -250,5 +243,5 @@ on how to set \`default_config\` check the docs:
 }
 
 if (import.meta.main) {
-  main();
+  await main();
 }
