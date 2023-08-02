@@ -614,7 +614,7 @@ local stylelint = require 'efmls-configs.linters.stylelint'
 [lua-format](https://github.com/Koihik/LuaFormatter)
 
 ```lua
-local lua = require 'efmls-configs.formatters.lua'
+local lua = require 'efmls-configs.formatters.lua_format'
 ```
 
 [luacheck](https://github.com/mpeterv/luacheck)
