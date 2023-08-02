@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: go
+-- url: https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'staticcheck'

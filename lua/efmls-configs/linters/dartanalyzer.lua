@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: dart
+-- url: https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'dartanalyzer'

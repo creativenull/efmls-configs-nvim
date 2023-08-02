@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: php
+-- url: https://getpsalm.org
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'psalm'

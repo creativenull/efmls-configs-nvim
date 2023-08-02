@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: python
+-- url: https://github.com/jendrikseipp/vulture
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'vulture'

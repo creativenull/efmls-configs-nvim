@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://alexjs.com/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'alex'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: css,scss,sass,less
+-- url: https://github.com/stylelint/stylelint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'stylelint'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://github.com/btford/write-good
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'write-good'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: ruby
+-- url: https://github.com/troessner/reek
+
 local fs = require('efmls-configs.fs')
 
 -- TODO: Not properly implemented yet

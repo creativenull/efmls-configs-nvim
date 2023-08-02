@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: docker
+-- url: https://github.com/hadolint/hadolint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'hadolint'

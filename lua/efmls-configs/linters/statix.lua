@@ -1,6 +1,12 @@
+-- Metadata
+-- languages: nix
+-- url: https://github.com/NerdyPepper/statix
+
 local fs = require('efmls-configs.fs')
+
 local linter = fs.executable('statix')
 local command = string.format('%s check --stdin --format=errfmt', linter)
+
 return {
   lintCommand = command,
   lintStdin = true,

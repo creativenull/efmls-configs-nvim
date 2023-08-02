@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: crystal
+-- url: https://github.com/veelenga/ameba
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'ameba'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: yaml
+-- url: https://yamllint.readthedocs.io/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'yamllint'

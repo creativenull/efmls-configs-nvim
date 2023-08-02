@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: http://redpen.cc/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'redpen'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c++
+-- url: https://github.com/KDE/clazy
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'clazy'

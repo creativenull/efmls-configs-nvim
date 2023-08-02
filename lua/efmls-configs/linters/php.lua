@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: php
+-- url: https://secure.php.net/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'php'

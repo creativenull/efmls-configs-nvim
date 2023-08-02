@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: go
+-- url: https://github.com/golangci/golangci-lint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'golangci-lint'

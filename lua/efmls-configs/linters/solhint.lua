@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: solidity
+-- url: https://github.com/protofire/solhint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'solhint'

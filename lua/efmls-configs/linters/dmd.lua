@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: d
+-- url: https://dlang.org/dmd-linux.html
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'dmd'
