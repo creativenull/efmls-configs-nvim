@@ -207,7 +207,7 @@ local ${formatter} = require('efmls-configs.formatters.${formatter}')
   return languageString;
 }
 
-async function main() {
+async function generateSupportedList() {
   let contents = `<!-- DO NOT MODIFY THIS FILE. AUTO-GENERATED USING \`deno run gen\` -->
 
 # Supported Linters & Formatters
@@ -237,9 +237,13 @@ to search). Copy the \`require\` code into your \`setup()\` function (See exampl
 
   contents += await renderLanguages();
 
-  console.log("Writing to file");
+  console.log("Generating SUPPORTED_LIST.md");
   await Deno.writeTextFile(outputfile, contents);
-  console.log("Success!");
+  console.log("Done!");
+}
+
+async function main() {
+  await generateSupportedList();
 }
 
 if (import.meta.main) {
