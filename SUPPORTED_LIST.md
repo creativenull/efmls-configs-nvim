@@ -1,3 +1,5 @@
+<!-- DO NOT MODIFY THIS FILE. AUTO-GENERATED USING `deno run gen` -->
+
 # Supported Linters & Formatters
 
 Please create an Pull Request if you see any mismatched documentation or typos.
