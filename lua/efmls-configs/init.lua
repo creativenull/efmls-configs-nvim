@@ -7,6 +7,11 @@ end
 
 local M = {}
 
+M.features = {
+  FORMATTER = 'formatter',
+  LINTER = 'linter',
+}
+
 ---@class EfmLSConfig
 local efmls_setup = {
   root_dir = lspconfig.util.root_pattern('.git'),
@@ -77,6 +82,32 @@ M.setup = function(filetypes)
   end
 
   lspconfig.efm.setup(efmls_setup)
+end
+
+M.has_handler = function(filetype, feature)
+  vim.validate({
+    filetype = { filetype, 'string' },
+    feature = {
+      feature,
+      function(value)
+        return value == M.features.LINTER or value == M.features.FORMATTER
+      end,
+      'feature must be one of "linter" or "formatter"',
+    },
+  })
+
+  local ft_config = efmls_setup.settings.languages[filetype]
+  if not ft_config then
+    return false
+  end
+
+  return #vim.tbl_filter(function(config)
+    if feature == M.features.LINTER then
+      return config.lintCommand ~= nil
+    else
+      return config.formatCommand ~= nil
+    end
+  end, ft_config) > 0
 end
 
 return M
