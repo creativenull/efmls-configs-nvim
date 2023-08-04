@@ -160,6 +160,42 @@ async function setLanguageFormatters(): Promise<void> {
   }
 }
 
+function getRenderMiscLanguages(misc: LanguageTool): string {
+  let contents = "";
+
+  contents += `### Misc\n\n`;
+
+  if (misc.linters) {
+    contents += `#### Linters\n\n`;
+
+    for (const linter of misc.linters) {
+      contents += `\`${linter}\`
+
+\`\`\`lua
+local ${linter} = require('efmls-configs.linters.${linter}')
+\`\`\`
+
+`;
+    }
+  }
+
+  if (misc.formatters) {
+    contents += `#### Formatters\n\n`;
+
+    for (const formatter of misc.formatters) {
+      contents += `\`${formatter}\`
+
+\`\`\`lua
+local ${formatter} = require('efmls-configs.formatters.${formatter}')
+\`\`\`
+
+`;
+    }
+  }
+
+  return contents;
+}
+
 /**
  * Render language section.
  *
@@ -171,6 +207,11 @@ async function renderLanguages(): Promise<string> {
 
   await setLanguageLinters();
   await setLanguageFormatters();
+
+  // Render misc languages first
+  // then the rest
+  languageString += getRenderMiscLanguages(languages.get("misc") as LanguageTool);
+  languages.delete("misc");
 
   for (const [lang, tools] of languages) {
     languageString += `### ${capitalize(lang)}\n\n`;
