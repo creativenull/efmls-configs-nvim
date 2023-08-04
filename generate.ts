@@ -232,7 +232,7 @@ async function renderLanguages(): Promise<string> {
       languageString += `#### Linters\n\n`;
 
       for (const linter of tools.linters) {
-        languageString += `\`${linter.name}\` [${linter.name}](${linter.url})
+        languageString += `\`${linter.name}\` [${linter.url}](${linter.url})
 
 \`\`\`lua
 local ${linter.name} = require('efmls-configs.linters.${linter.name}')
@@ -246,7 +246,7 @@ local ${linter.name} = require('efmls-configs.linters.${linter.name}')
       languageString += `#### Formatters\n\n`;
 
       for (const formatter of tools.formatters) {
-        languageString += `\`${formatter.name}\` [${formatter.name}](${formatter.url})
+        languageString += `\`${formatter.name}\` [${formatter.url}](${formatter.url})
 
 \`\`\`lua
 local ${formatter.name} = require('efmls-configs.formatters.${formatter.name}')
