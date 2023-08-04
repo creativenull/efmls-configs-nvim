@@ -139,7 +139,9 @@ async function setLanguageLinters(): Promise<void> {
         lang,
         {
           ...languages.get(lang),
-          linters: [...linters, { name: linterName, url: frontmatter.url }],
+          linters: [...linters, { name: linterName, url: frontmatter.url as string }].sort((a, b) =>
+            a.name.localeCompare(b.name)
+          ),
         } as LanguageTool,
       );
     }
@@ -165,7 +167,9 @@ async function setLanguageFormatters(): Promise<void> {
         lang,
         {
           ...languages.get(lang),
-          formatters: [...formatters, { name: formatterName, url: frontmatter.url }],
+          formatters: [...formatters, { name: formatterName, url: frontmatter.url as string }].sort(
+            (a, b) => a.name.localeCompare(b.name)
+          ),
         } as LanguageTool,
       );
     }
