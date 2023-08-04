@@ -16,9 +16,14 @@ type LuaFileMetadata = {
 };
 
 // Tracker
+type ToolMetadata = {
+  name: string;
+  url: string;
+};
+
 type LanguageTool = {
-  linters: string[];
-  formatters: string[];
+  linters: ToolMetadata[];
+  formatters: ToolMetadata[];
 };
 
 const languages = new Map<string, LanguageTool>();
@@ -124,14 +129,18 @@ async function renderDefaults(): Promise<string> {
 async function setLanguageLinters(): Promise<void> {
   for await (const dirEntry of Deno.readDir(`${basepath}/linters`)) {
     const linterName = dirEntry.name.split(".")[0];
-    const fileContents = await Deno.readTextFile(`${basepath}/linters/${dirEntry.name}`);
-    const parsed = parseFrontmatter(fileContents);
 
-    for (const lang of parsed.languages ?? []) {
+    const fileContents = await Deno.readTextFile(`${basepath}/linters/${dirEntry.name}`);
+    const frontmatter = parseFrontmatter(fileContents);
+
+    for (const lang of frontmatter.languages ?? []) {
       const linters = languages.get(lang)?.linters ?? [];
       languages.set(
         lang,
-        { ...languages.get(lang), linters: [...linters, linterName] } as LanguageTool,
+        {
+          ...languages.get(lang),
+          linters: [...linters, { name: linterName, url: frontmatter.url }],
+        } as LanguageTool,
       );
     }
   }
@@ -148,13 +157,16 @@ async function setLanguageFormatters(): Promise<void> {
     const formatterName = dirEntry.name.split(".")[0];
 
     const fileContents = await Deno.readTextFile(`${basepath}/formatters/${dirEntry.name}`);
-    const parsed = parseFrontmatter(fileContents);
+    const frontmatter = parseFrontmatter(fileContents);
 
-    for (const lang of parsed.languages ?? []) {
+    for (const lang of frontmatter.languages ?? []) {
       const formatters = languages.get(lang)?.formatters ?? [];
       languages.set(
         lang,
-        { ...languages.get(lang), formatters: [...formatters, formatterName] } as LanguageTool,
+        {
+          ...languages.get(lang),
+          formatters: [...formatters, { name: formatterName, url: frontmatter.url }],
+        } as LanguageTool,
       );
     }
   }
@@ -169,10 +181,10 @@ function getRenderMiscLanguages(misc: LanguageTool): string {
     contents += `#### Linters\n\n`;
 
     for (const linter of misc.linters) {
-      contents += `\`${linter}\`
+      contents += `\`${linter.name}\` [${linter.url}](${linter.url})
 
 \`\`\`lua
-local ${linter} = require('efmls-configs.linters.${linter}')
+local ${linter.name} = require('efmls-configs.linters.${linter.name}')
 \`\`\`
 
 `;
@@ -183,10 +195,10 @@ local ${linter} = require('efmls-configs.linters.${linter}')
     contents += `#### Formatters\n\n`;
 
     for (const formatter of misc.formatters) {
-      contents += `\`${formatter}\`
+      contents += `\`${formatter.name}\` [${formatter.url}](${formatter.url})
 
 \`\`\`lua
-local ${formatter} = require('efmls-configs.formatters.${formatter}')
+local ${formatter.name} = require('efmls-configs.formatters.${formatter.name}')
 \`\`\`
 
 `;
@@ -220,10 +232,10 @@ async function renderLanguages(): Promise<string> {
       languageString += `#### Linters\n\n`;
 
       for (const linter of tools.linters) {
-        languageString += `\`${linter}\`
+        languageString += `\`${linter.name}\` [${linter.name}](${linter.url})
 
 \`\`\`lua
-local ${linter} = require('efmls-configs.linters.${linter}')
+local ${linter.name} = require('efmls-configs.linters.${linter.name}')
 \`\`\`
 
 `;
@@ -234,10 +246,10 @@ local ${linter} = require('efmls-configs.linters.${linter}')
       languageString += `#### Formatters\n\n`;
 
       for (const formatter of tools.formatters) {
-        languageString += `\`${formatter}\`
+        languageString += `\`${formatter.name}\` [${formatter.name}](${formatter.url})
 
 \`\`\`lua
-local ${formatter} = require('efmls-configs.formatters.${formatter}')
+local ${formatter.name} = require('efmls-configs.formatters.${formatter.name}')
 \`\`\`
 
 `;
