@@ -179,7 +179,7 @@ async function setLanguageFormatters(): Promise<void> {
 function getRenderMiscLanguages(misc: LanguageTool): string {
   let contents = "";
 
-  contents += `### Misc\n\n`;
+  contents += `### Misc (Text, LaTeX, Markdown, RST, etc)\n\n`;
 
   if (misc.linters) {
     contents += `#### Linters\n\n`;

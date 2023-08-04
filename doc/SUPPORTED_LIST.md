@@ -29,7 +29,7 @@ the table of contents of this document on the left hand corner of the file, in g
 to search). Copy the `require` code into your `setup()` function (See example code:
 [`:help efmls-configs-setup`](https://github.com/creativenull/efmls-configs-nvim#setup-help-efmls-configs-setup)).
 
-### Misc
+### Misc (Text, LaTeX, Markdown, RST, etc)
 
 #### Linters
 
