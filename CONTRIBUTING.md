@@ -23,7 +23,7 @@
 
 ## Auto-generating Documentation
 
-To create documentation for `doc/SUPPORTED_LIST.md` run the following:
+To create documentation for [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md) run the following:
 
 ```sh
 deno task gen
