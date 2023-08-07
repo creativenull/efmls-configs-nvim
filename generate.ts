@@ -121,12 +121,12 @@ async function renderDefaults(): Promise<string> {
 }
 
 /**
- * Get a list of linters and parse metadata content.
+ * Generate linter data from linter files for languages.
  *
  * @async
  * @returns {Promise<string[]>}
  */
-async function setLanguageLinters(): Promise<void> {
+async function generateLanguageLinters(): Promise<void> {
   for await (const dirEntry of Deno.readDir(`${basepath}/linters`)) {
     const linterName = dirEntry.name.split(".")[0];
 
@@ -149,12 +149,12 @@ async function setLanguageLinters(): Promise<void> {
 }
 
 /**
- * Get a list of formatters and parse metadata content.
+ * Generate formatter data from formatter files for languages.
  *
  * @async
  * @returns {Promise<string[]>}
  */
-async function setLanguageFormatters(): Promise<void> {
+async function generateLanguageFormatters(): Promise<void> {
   for await (const dirEntry of Deno.readDir(`${basepath}/formatters`)) {
     const formatterName = dirEntry.name.split(".")[0];
 
@@ -221,14 +221,15 @@ local ${formatter.name} = require('efmls-configs.formatters.${formatter.name}')
 async function renderLanguages(): Promise<string> {
   let languageString = "";
 
-  await setLanguageLinters();
-  await setLanguageFormatters();
+  await generateLanguageLinters();
+  await generateLanguageFormatters();
 
   // Render misc languages first
   // then the rest
   languageString += getRenderMiscLanguages(languages.get("misc") as LanguageTool);
   languages.delete("misc");
 
+  // Render the rest of languages
   for (const [lang, tools] of languages) {
     languageString += `### ${capitalize(lang)}\n\n`;
 
