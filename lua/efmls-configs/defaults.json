@@ -1,12 +1,14 @@
 {
   "defaults": [
     {
-      "languages": ["CSS", "SCSS", "LESS", "SASS"],
+      "languages": ["css", "scss", "less", "sass"],
+      "alias": "CSS/SCSS/LESS/SASS",
       "linters": ["stylelint"],
       "formatters": ["prettier"]
     },
     {
       "languages": ["javascript", "javascriptreact", "typescript", "typescriptreact"], 
+      "alias": "JavaScript/JSX TypeScript/TSX",
       "linters": ["eslint"],
       "formatters": ["prettier"]
     },
@@ -16,6 +18,7 @@
     },
     {
       "languages": ["html"],
+      "alias": "HTML",
       "formatters": ["prettier"]
     },
     {
@@ -25,6 +28,7 @@
     },
     {
       "languages": ["php"],
+      "alias": "PHP",
       "linters": ["phpcs"],
       "formatters": ["phpcbf"]
     },
@@ -39,6 +43,7 @@
     },
     {
       "languages": ["vim"],
+      "alias": "VIM",
       "linters": ["vint"]
     }
   ]

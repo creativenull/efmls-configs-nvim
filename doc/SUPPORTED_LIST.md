@@ -13,14 +13,14 @@ on how to set `default_config` check the docs:
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
 | CSS/SCSS/LESS/SASS | `stylelint` | `prettier` |
-| Javascript/Typescript | `eslint` | `prettier` |
+| JavaScript/JSX TypeScript/TSX | `eslint` | `prettier` |
 | Go | `golangci_lint` |  |
-| Html |  | `prettier` |
+| HTML |  | `prettier` |
 | Lua | `luacheck` | `stylua` |
-| Php | `phpcs` | `phpcbf` |
+| PHP | `phpcs` | `phpcbf` |
 | Python | `flake8` | `autopep8` |
 | Ruby | `reek` |  |
-| Vim | `vint` |  |
+| VIM | `vint` |  |
 
 ## Languages
 

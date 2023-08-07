@@ -5,6 +5,7 @@ type DefaultConfiguration = {
   languages: string[];
   linters?: string[];
   formatters?: string[];
+  alias?: string;
 };
 
 type DefaultConfigurationJsonData = {
@@ -93,7 +94,7 @@ async function getDefaults(): Promise<string[][]> {
   const defaults: string[][] = [];
 
   for (const def of defaultFile.defaults) {
-    const langs = def.languages.map((lang) => capitalize(lang)).join("/");
+    const langs = def.alias ?? def.languages.map((lang) => capitalize(lang)).join("/");
     const linters = def.linters?.map((linter) => "`" + linter + "`").join(",") ?? "";
     const formatters = def.formatters?.map((formatter) => "`" + formatter + "`").join(",") ?? "";
 
@@ -168,7 +169,7 @@ async function generateLanguageFormatters(): Promise<void> {
         {
           ...languages.get(lang),
           formatters: [...formatters, { name: formatterName, url: frontmatter.url as string }].sort(
-            (a, b) => a.name.localeCompare(b.name)
+            (a, b) => a.name.localeCompare(b.name),
           ),
         } as LanguageTool,
       );
