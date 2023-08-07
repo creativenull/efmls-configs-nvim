@@ -49,11 +49,12 @@ M.setup = function(filetypes)
   -- Merge default config if required
   -- but priority on filetypes specified first
   if efmls_setup.default_config then
-    local default_filetypes = require('efmls-configs.defaults')
+    local defaults = require('efmls-configs.defaults')
+
     if filetypes == nil then
-      filetypes = default_filetypes
+      filetypes = defaults.languages()
     else
-      filetypes = vim.tbl_extend('force', default_filetypes, filetypes)
+      filetypes = vim.tbl_extend('force', defaults.languages(), filetypes)
     end
   end
 
