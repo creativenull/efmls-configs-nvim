@@ -6,7 +6,7 @@
       "formatters": ["prettier"]
     },
     {
-      "languages": ["javascript", "typescript"], 
+      "languages": ["javascript", "javascriptreact", "typescript", "typescriptreact"], 
       "linters": ["eslint"],
       "formatters": ["prettier"]
     },
