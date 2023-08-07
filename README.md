@@ -1,8 +1,7 @@
 # efmls-configs-nvim
 
 <a href="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim">
-  <img src="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim/shield"
-  alt="Configs on dotfyle">
+  <img src="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim/shield" alt="Configs on dotfyle">
 </a>
 
 An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] to work with the
@@ -10,7 +9,7 @@ built-in [nvim-lsp][nvim-lsp]. Works only for Neovim >= 0.5.
 
 ## Supported linters and formatters
 
-Check out [supported-linters-and-formatters.md](supported-linters-and-formatters.md)
+Check out [SUPPORTED_LIST.md](./doc/SUPPORTED_LIST.md)
 
 ## Features
 
