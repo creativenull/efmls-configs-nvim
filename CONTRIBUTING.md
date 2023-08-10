@@ -21,9 +21,30 @@
 
 ```
 
+## Add a tool to `default_config` option
+
+Users that use the `default_config` (`:help efmls-configs-defaults`) follow the tools registered in `lua/efmls-configs/defaults.json`.
+If you want to add a tool for a language that is not defined, then this json file is the place to add them.
+
+The linter/formatter name you add should match the filename in the `lua/efmls-configs/linters`/`lua/efmls-configs/formatters`
+directory. For example, adding eslint to an html filetype. The following values in the `linters` property should match
+`lua/efmls-configs/linters/eslint.lua`.
+
+```json
+{
+  "defaults": [
+    {
+      "languages": ["html"],
+      "linters": ["eslint"]
+    }
+  ]
+}
+```
+
 ## Auto-generating Documentation
 
-To create documentation for [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md) run the following:
+Never touch the [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md)to add documentation for the tool you've add, to
+create documentation for run the following:
 
 ```sh
 deno task gen
