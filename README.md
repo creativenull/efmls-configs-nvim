@@ -74,7 +74,7 @@ There are two ways to setup your tools:
 You should use this method, when all you need is for us to provide you with the defaults with some option to customize
 they way you want `efm` to work for you.
 
-```
+```lua
 local efmls_config = require('efmls-configs').create_config({
   -- Defaults are an opt-in option
   -- check doc/SUPPORTED_LIST.md for all the defaults provided
