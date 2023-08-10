@@ -64,40 +64,8 @@ Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.2.*' } " tag is optional
 
 See also `:help efmls-configs-setup` to view inside neovim.
 
-There are two ways to setup your tools:
-
-- [Plugin API Setup](#plugin-api-setup) - we provide you with everything, with some customization if needed
-- [Standalone Setup](#standalone-setup) - only use the plugin provided configurations for you language, customize the rest
-
-### Plugin API Setup
-
-You should use this method, when all you need is for us to provide you with the defaults with some option to customize
-they way you want `efm` to work for you.
-
-```lua
-local efmls_config = require('efmls-configs').create_config({
-  -- Defaults are an opt-in option
-  -- check doc/SUPPORTED_LIST.md for all the defaults provided
-  defaults = true,
-
-  -- Provide the tools to use for each languages
-  -- or override existing ones if you set `defaults` to true
-  languages = {
-    typescript = { 'eslint', 'prettier' },
-    lua = { 'stylua' },
-  },
-})
-
-require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
-  -- Pass your cutom config below like on_attach and capabilities
-  -- on_attach = on_attach,
-  -- capabilities = capabilities,
-}))
-```
-
-### Standalone Setup
-
-You should use this method, if you just want the bare necessities and configure the rest for yourself.
+To get started, make a `languages` table that define the linters/formatters for the language. Or use the defaults provided
+by this plugin if you don't want to list for each language.
 
 ```lua
 -- Register linters and formatters per language
@@ -138,12 +106,10 @@ require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
 
 See also `:help efmls-configs-defaults` to view docs inside neovim.
 
-Default configurations are an opt-in feature.
+Default configurations are an opt-in feature. To see all the configurations provided by default go to [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md).
 
-To see all the configurations provided by default go to [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md).
-
-As mentioned in the [Standalone Setup](#standalone-setup) section, you can also use a list of defaults provided by this
-plugin, in-case you don't want to specify configuration for each language.
+You can use a list of defaults provided by this plugin, in-case you don't want to specify configuration
+for each language.
 
 ```lua
 local languages = require('efmls-configs.defaults').languages()
