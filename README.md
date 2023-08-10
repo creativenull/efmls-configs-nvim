@@ -69,14 +69,12 @@ by this plugin if you don't want to list for each language.
 
 ```lua
 -- Register linters and formatters per language
+local eslint = require('efmls-configs.linters.eslint')
+local prettier = require('efmls-configs.formatters.prettier')
+local stylua = require('efmls-configs.formatters.stylua')
 local languages = {
-  typescript = {
-    require('efmls-configs.linters.eslint'),
-    require('efmls-configs.formatters.prettier'),
-  },
-  lua = {
-    require('efmls-configs.formatters.stylua'),
-  },
+  typescript = { eslint, prettier },
+  lua = { stylua },
 }
 
 -- Or use the defaults provided by this plugin
