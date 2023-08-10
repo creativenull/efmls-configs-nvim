@@ -177,6 +177,12 @@ async function generateLanguageFormatters(): Promise<void> {
   }
 }
 
+/**
+ * Generate misc documentation
+ *
+ * @param {LanguageTool} misc
+ * @returns {string}
+ */
 function getRenderMiscLanguages(misc: LanguageTool): string {
   let contents = "";
 
@@ -225,8 +231,7 @@ async function renderLanguages(): Promise<string> {
   await generateLanguageLinters();
   await generateLanguageFormatters();
 
-  // Render misc languages first
-  // then the rest
+  // Render misc languages first then the rest
   languageString += getRenderMiscLanguages(languages.get("misc") as LanguageTool);
   languages.delete("misc");
 
@@ -301,10 +306,6 @@ to search). Copy the \`require\` code into your \`setup()\` function (See exampl
   console.log("Done!");
 }
 
-async function main() {
-  await generateSupportedList();
-}
-
 if (import.meta.main) {
-  await main();
+  await generateSupportedList();
 }
