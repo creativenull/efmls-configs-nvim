@@ -38,7 +38,7 @@ Install with your favorite plugin manager or just use builtin packages.
 ```lua
 {
   'creativenull/efmls-configs-nvim',
-  version = 'v0.2.x', -- tag is optional
+  version = 'v1.x.x', -- version is optional, but recommended
   dependencies = { 'neovim/nvim-lspconfig' },
 }
 ```
@@ -48,7 +48,7 @@ Install with your favorite plugin manager or just use builtin packages.
 ```lua
 use {
   'creativenull/efmls-configs-nvim',
-  tag = 'v0.2.*', -- tag is optional
+  tag = 'v1.*', -- tag is optional, but recommended
   requires = { 'neovim/nvim-lspconfig' },
 }
 ```
@@ -57,7 +57,7 @@ use {
 
 ```vim
 Plug 'neovim/nvim-lspconfig'
-Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.2.*' } " tag is optional
+Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v1.*' } " tag is optional, but recommended
 ```
 
 ## Setup
