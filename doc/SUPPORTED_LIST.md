@@ -7,7 +7,7 @@ Please create an Pull Request if you see any mismatched documentation or typos.
 ## Default Configurations
 
 Here is a list of languages that are automatically set and configured when you call `languages()`. For more information
-check the docs: [`:help efmls-configs-defaults`](https://github.com/creativenull/efmls-configs-nvim#default-configuration).
+check the docs: [`:help efmls-configs-defaults`](./README.md#default-configuration).
 
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
@@ -25,7 +25,7 @@ check the docs: [`:help efmls-configs-defaults`](https://github.com/creativenull
 
 Below are the supported linters and formatters that are configured to run with efm-langserver. You can access
 the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
-to search, <kbd>Cmd</kbd> + <kbd>F</kbd> if on Mac OS). See example code: [`:help efmls-configs-setup`](https://github.com/creativenull/efmls-configs-nvim#setup).
+to search, <kbd>Cmd</kbd> + <kbd>F</kbd> if on Mac OS). See example code: [`:help efmls-configs-setup`](./README.md#setup).
 
 ### Misc (Text, LaTeX, Markdown, RST, etc)
 
