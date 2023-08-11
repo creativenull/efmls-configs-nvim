@@ -1,4 +1,11 @@
 -- Defaults as defined in: doc/SUPPORTED_LIST.md
+local lspconfig_ok, lspconfig = pcall(require, 'lspconfig')
+if not lspconfig_ok then
+  local errmsg = '[efmls-configs] `nvim-lspconfig` plugin is required! Please install via your plugin manager.'
+  vim.api.nvim_err_writeln(errmsg)
+  return
+end
+
 local fs = require('efmls-configs.fs')
 local M = {}
 
