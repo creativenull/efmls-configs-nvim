@@ -9,6 +9,8 @@ end
 local fs = require('efmls-configs.fs')
 local M = {}
 
+---Get default languages from defaults.json
+---@return table
 function M.languages()
   local defaults_filepath = string.format('%s/lua/efmls-configs/defaults.json', fs.get_plugin_path())
   local fp = io.open(defaults_filepath, 'r')
