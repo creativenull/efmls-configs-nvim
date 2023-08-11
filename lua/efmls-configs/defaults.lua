@@ -31,18 +31,23 @@ function M.languages()
   local defaults = {}
   for _, v in pairs(data.defaults) do
     for _, lv in pairs(v.languages) do
-      defaults[string.lower(lv)] = {}
+      local key = string.lower(lv)
+      defaults[key] = {}
+      local linters = {}
+      local formatters = {}
 
       if v.linters then
-        defaults[string.lower(lv)].linter = vim.tbl_map(function(l)
-          return require(string.format('efmls-configs.linters.%s', l))
-        end, v.linters)
+        for _, linter_value in pairs(v.linters) do
+          local config_path = string.format('efmls-configs.linters.%s', linter_value)
+          table.insert(defaults[key], require(config_path))
+        end
       end
 
       if v.formatters then
-        defaults[string.lower(lv)].formatter = vim.tbl_map(function(f)
-          return require(string.format('efmls-configs.formatters.%s', f))
-        end, v.formatters)
+        for _, formatter_value in pairs(v.formatters) do
+          local config_path = string.format('efmls-configs.formatters.%s', formatter_value)
+          table.insert(defaults[key], require(config_path))
+        end
       end
     end
   end
