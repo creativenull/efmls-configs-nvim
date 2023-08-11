@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript
+-- url: http://standardjs.com/
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'standard'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c,c++
+-- url: https://github.com/google/styleguide/tree/gh-pages/cpplint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'cpplint'

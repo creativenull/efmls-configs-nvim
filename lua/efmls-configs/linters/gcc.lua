@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c,c++
+-- url: https://gcc.gnu.org/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'gcc'

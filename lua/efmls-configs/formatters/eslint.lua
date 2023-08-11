@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript,typescript
+-- url: https://eslint.org
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'eslint'

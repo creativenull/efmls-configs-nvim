@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: rust
+-- url: https://github.com/rust-lang-nursery/rustfmt
+
 local fs = require('efmls-configs.fs')
 local formatter = fs.executable('rustfmt')
 local command = string.format('%s --emit=stdout', formatter)

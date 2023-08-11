@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://github.com/ValeLint/vale
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'vale'

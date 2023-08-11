@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: python,go,php,html
+-- url: https://djlint.com/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'djlint'

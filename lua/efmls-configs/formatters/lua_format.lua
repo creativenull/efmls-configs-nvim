@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: lua
+-- url: https://github.com/Koihik/LuaFormatter
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'lua-format'

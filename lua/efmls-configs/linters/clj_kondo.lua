@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: clojure
+-- url: https://github.com/borkdude/clj-kondo
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'clj-kondo'

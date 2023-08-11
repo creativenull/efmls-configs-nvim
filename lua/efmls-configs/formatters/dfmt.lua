@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: d
+-- url: https://github.com/dlang-community/dfmt
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'dfmt'

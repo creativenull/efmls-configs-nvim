@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript,typescript
+-- url: https://github.com/sindresorhus/xo
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'xo'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://languagetool.org/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'languagetool'

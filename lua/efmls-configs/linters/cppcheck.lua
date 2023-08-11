@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c,c++
+-- url: http://cppcheck.sourceforge.net
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'cppcheck'

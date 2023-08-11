@@ -91,4 +91,12 @@ M.executable = function(name, context)
   return binpath
 end
 
+M.get_plugin_path = function()
+  local matches = vim.tbl_filter(function(path)
+    return string.match(path, 'efmls%-configs')
+  end, vim.api.nvim_list_runtime_paths())
+
+  return vim.tbl_isempty(matches) and '' or matches[1]
+end
+
 return M

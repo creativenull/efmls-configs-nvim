@@ -1,8 +1,7 @@
 # efmls-configs-nvim
 
 <a href="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim">
-  <img src="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim/shield"
-  alt="Configs on dotfyle">
+  <img src="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim/shield" alt="Configs on dotfyle">
 </a>
 
 An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] to work with the
@@ -10,7 +9,7 @@ built-in [nvim-lsp][nvim-lsp]. Works only for Neovim >= 0.5.
 
 ## Supported linters and formatters
 
-Check out [supported-linters-and-formatters.md](supported-linters-and-formatters.md)
+Check out [SUPPORTED_LIST.md](./doc/SUPPORTED_LIST.md)
 
 ## Features
 
@@ -18,7 +17,7 @@ Check out [supported-linters-and-formatters.md](supported-linters-and-formatters
 + Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
   ruby/bundler (additional support for other build tools coming soon)
 + Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
-+ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup-help-efmls-configs-advanced))
++ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup))
 
 ## Vim Docs
 
@@ -39,31 +38,33 @@ Install with your favorite plugin manager or just use builtin packages.
 ```lua
 {
   'creativenull/efmls-configs-nvim',
-  version = 'v0.1.3',
+  version = 'v0.2.x', -- tag is optional
   dependencies = { 'neovim/nvim-lspconfig' },
 }
 ```
 
-### Packer.nvim
+### packer.nvim
 
 ```lua
 use {
   'creativenull/efmls-configs-nvim',
-  tag = 'v0.1.3', -- tag is optional
+  tag = 'v0.2.*', -- tag is optional
   requires = { 'neovim/nvim-lspconfig' },
 }
 ```
 
-### Vim-plug
+### vim-plug
 
 ```vim
 Plug 'neovim/nvim-lspconfig'
-Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.1.3' } " tag is optional
+Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v0.2.*' } " tag is optional
 ```
 
 ## Documentation
 
-### Setup (`:help efmls-configs-setup`)
+### Setup
+
+See also `:help efmls-configs-setup` to view inside neovim.
 
 #### Step 1
 
@@ -103,7 +104,9 @@ efmls.setup {
 }
 ```
 
-### Default Configuration (`:help efmls-configs-defaults`)
+### Default Configuration
+
+See also `:help efmls-configs-defaults` to view inside neovim.
 
 A default configuration for the supported filetypes is provided but not activated by default.
 
@@ -125,7 +128,9 @@ You will still need to call the `setup()` after `init()` for the changes to take
 configurations to `setup()` as show in the [Setup section](#setup) and it will override any default configuration set
 by `default_config` if it's the same filetype.
 
-### Advanced Configuration Setup (`:help efmls-configs-advanced`)
+### Advanced Configuration Setup
+
+See also `:help efmls-configs-advanced` to view inside neovim.
 
 If you want to change some settings that are not provided in the default config, you can change them with `vim.tbl_extend`.
 These configs take the same keys referenced in the [efm-langserver schema file][schema-file] in json format, aka

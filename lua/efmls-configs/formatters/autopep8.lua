@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: python
+-- url: https://github.com/hhatto/autopep8
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'autopep8'

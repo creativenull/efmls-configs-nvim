@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: lua
+-- url: https://github.com/johnnymorganz/stylua
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'stylua'

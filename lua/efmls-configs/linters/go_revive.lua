@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: go
+-- url: https://github.com/mgechev/revive
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'revive'

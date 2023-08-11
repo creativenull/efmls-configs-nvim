@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c
+-- url: https://www.dwheeler.com/flawfinder/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'flawfinder'

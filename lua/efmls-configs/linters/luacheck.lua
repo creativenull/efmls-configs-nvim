@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: lua
+-- url: https://github.com/mpeterv/luacheck
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'luacheck'

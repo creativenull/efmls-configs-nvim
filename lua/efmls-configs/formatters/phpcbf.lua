@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: php
+-- url: https://github.com/squizlabs/PHP_CodeSniffer
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'phpcbf'

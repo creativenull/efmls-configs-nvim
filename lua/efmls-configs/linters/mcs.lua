@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: c#
+-- url: http://www.mono-project.com/docs/about-mono/languages/csharp/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'mcs'

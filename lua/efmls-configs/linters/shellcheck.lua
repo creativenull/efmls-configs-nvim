@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: sh,bash
+-- url: https://www.shellcheck.net/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'shellcheck'

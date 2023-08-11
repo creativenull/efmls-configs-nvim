@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: php
+-- url: https://github.com/phpstan/phpstan
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'phpstan'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: yaml
+-- url: https://github.com/willthames/ansible-lint
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'ansible-lint'

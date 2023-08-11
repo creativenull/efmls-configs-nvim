@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: bash
+-- url: https://github.com/openstack/bashate
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'bashate'

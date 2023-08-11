@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: python
+-- url: http://flake8.pycqa.org/en/latest/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'flake8'

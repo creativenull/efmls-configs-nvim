@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://textlint.github.io/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'textlint'

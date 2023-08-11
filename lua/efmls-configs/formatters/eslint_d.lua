@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript,typescript
+-- url: https://github.com/mantoni/eslint_d.js
+
 local fs = require('efmls-configs.fs')
 
 local formatter = 'eslint_d'

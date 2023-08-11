@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: javascript
+-- url: http://fecs.baidu.com/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'fecs'

@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: solidity
+-- url: https://github.com/crytic/slither
+
 -- USAGE:
 -- * `solc` needs to be manually configured, see:
 -- https://github.com/foundry-rs/foundry/issues/5429

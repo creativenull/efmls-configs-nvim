@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: ruby
+-- url: https://github.com/bbatsov/rubocop
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'rubocop'

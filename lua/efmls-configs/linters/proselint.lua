@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: http://proselint.com/
+
 local fs = require('efmls-configs.fs')
 
 local linter = 'proselint'
