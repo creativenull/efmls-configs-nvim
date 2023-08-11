@@ -13,7 +13,7 @@ return {
   prefix = linter,
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '<text>(%l,%c): %trror %m', '<text>(%l,%c): %tarning %m' },
+  lintFormats = { '%f(%l,%c): %trror %m', '%f(%l,%c): %tarning %m' },
   lintIgnoreExitCode = true,
   rootMarkers = {
     '.eslintrc',
