@@ -161,7 +161,7 @@ Credits goes to the following projects for inspiration:
 
 [efm-langserver]: https://github.com/mattn/efm-langserver
 [schema-file]: https://github.com/mattn/efm-langserver/blob/master/schema.json
-[ale]: https://github.com/dense-analyses/ale
+[ale]: https://github.com/dense-analysis/ale
 [nvim-lsp]: https://neovim.io/doc/user/lsp.html
 [neovim]: https://github.com/neovim/neovim
 [lspconfig]: https://github.com/neovim/nvim-lspconfig
