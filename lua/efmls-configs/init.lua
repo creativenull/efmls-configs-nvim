@@ -12,11 +12,11 @@ end
 local M = {}
 
 M.init = function(user_efmls_opts)
-  -- DEPRECATED
+  -- REMOVED
 end
 
 M.setup = function(filetypes)
-  -- DEPRECATED
+  -- REMOVED
 end
 
 return M
