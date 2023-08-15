@@ -25,8 +25,7 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 
 ## Requirements
 
-+ [Neovim >= 0.5][neovim]
-+ [nvim-lspconfig][lspconfig]
++ [Neovim >= 0.7][neovim]
 + [efm-langserver][efm-langserver], installed globally - follow instructions on the repo
 
 ## Installation
