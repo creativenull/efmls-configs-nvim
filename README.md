@@ -4,8 +4,7 @@
   <img src="https://dotfyle.com/plugins/creativenull/efmls-configs-nvim/shield" alt="Configs on dotfyle">
 </a>
 
-An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] to work with the
-built-in [nvim-lsp][nvim-lsp]. Works only for Neovim >= 0.5.
+An unofficial collection of linters and formatters configured for [efm-langserver][efm-langserver] for neovim.
 
 ## Supported linters and formatters
 
@@ -13,11 +12,11 @@ Check out [SUPPORTED_LIST.md](./doc/SUPPORTED_LIST.md)
 
 ## Features
 
-+ Out-of-box configurations for 70+ linters & formatters
-+ Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
+- Out-of-box configurations for 70+ linters & formatters
+- Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
   ruby/bundler (additional support for other build tools coming soon)
-+ Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
-+ Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup))
+- Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
+- Ability to customize configurations for your specific project use-cases (see [Advanced Setup](#advanced-configuration-setup))
 
 ## Documentation
 
@@ -25,8 +24,8 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 
 ## Requirements
 
-+ [Neovim >= 0.7][neovim]
-+ [efm-langserver][efm-langserver], installed globally - follow instructions on the repo
+- [Neovim >= 0.7][neovim]
+- [efm-langserver][efm-langserver], installed globally. If using mason.nvim then install with `:MasonInstall efm`.
 
 ## Installation
 
@@ -61,7 +60,7 @@ Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v1.*' } " tag is optional, but
 
 ## Setup
 
-See also `:help efmls-configs-setup` to view inside neovim.
+See also `:help efmls-configs-setup` to view docs inside neovim.
 
 To get started, make a `languages` table that define the linters/formatters for the language. Or use the defaults provided
 by this plugin if you don't want to list for each language.
@@ -101,11 +100,12 @@ require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
 }))
 ```
 
-## Default Configuration
+### Default Configuration
 
 See also `:help efmls-configs-defaults` to view docs inside neovim.
 
-Default configurations are an opt-in feature. To see all the configurations provided by default go to [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md).
+Default configurations are an opt-in feature. To see all the configurations provided by default go to
+[`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md).
 
 You can use a list of defaults provided by this plugin, in-case you don't want to specify configuration
 for each language.
@@ -114,24 +114,36 @@ for each language.
 local languages = require('efmls-configs.defaults').languages()
 ```
 
-To extend and add additional tools or to override existing defaults registered:
+To add additional tools which are not provided by default you can extend via `vim.tbl_extend()`. This can also be used
+as a way to override defaults.
 
 ```lua
 local languages = require('efmls-configs.defaults').languages()
 languages = vim.tbl_extend('force', languages, {
-  -- you custom languages, or overrides
+  -- Custom languages, or override existing ones
   html = {
-    require('efmls-configs.formatters.prettier')
-  }
+    require('efmls-configs.formatters.prettier'),
+  },
 })
 ```
+
+## Alternatives
+
+- ALE - [https://github.com/dense-analyses/ale](https://github.com/dense-analyses/ale)
+- diagnostic-languageserver - [https://github.com/iamcco/diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver)
+- guard.nvim - [https://github.com/nvimdev/guard.nvim](https://github.com/nvimdev/guard.nvim)
+- nvim-lint - [https://github.com/mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
+- formatter.nvim - [https://github.com/mhartington/formatter.nvim](https://github.com/mhartington/formatter.nvim)
 
 ## Credits
 
 Credits goes to the following projects for inspiration:
 
-+ [efm-langserver][efm-langserver] - for the awesome language server to provide linters/formatters through a LSP protocol
-+ [ale][ale] - for a huge list of supported linters/formatters to look through
+- [efm-langserver][efm-langserver] - for the awesome language server to provide an interface to run linters/formatters
+  through a LSP protocol
+- [ale][ale] - for a huge list of linters/formatters to look through and add them in here
+
+---
 
 [efm-langserver]: https://github.com/mattn/efm-langserver
 [schema-file]: https://github.com/mattn/efm-langserver/blob/master/schema.json
