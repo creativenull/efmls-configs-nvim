@@ -8,7 +8,7 @@ An unofficial collection of linters and formatters configured for [efm-langserve
 
 ## Supported linters and formatters
 
-Check out [SUPPORTED_LIST.md](./doc/SUPPORTED_LIST.md)
+[doc/SUPPORTED_LIST.md](./doc/SUPPORTED_LIST.md)
 
 ## Features
 
@@ -129,7 +129,7 @@ languages = vim.tbl_extend('force', languages, {
 
 ## Alternatives
 
-- ALE - [https://github.com/dense-analyses/ale](https://github.com/dense-analyses/ale)
+- ALE - [https://github.com/dense-analysis/ale](https://github.com/dense-analysis/ale)
 - diagnostic-languageserver - [https://github.com/iamcco/diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver)
 - guard.nvim - [https://github.com/nvimdev/guard.nvim](https://github.com/nvimdev/guard.nvim)
 - nvim-lint - [https://github.com/mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
@@ -143,11 +143,9 @@ Credits goes to the following projects for inspiration:
   through a LSP protocol
 - [ale][ale] - for a huge list of linters/formatters to look through and add them in here
 
----
-
 [efm-langserver]: https://github.com/mattn/efm-langserver
 [schema-file]: https://github.com/mattn/efm-langserver/blob/master/schema.json
-[ale]: https://github.com/dense-analyses/ale
+[ale]: https://github.com/dense-analysis/ale
 [nvim-lsp]: https://neovim.io/doc/user/lsp.html
 [neovim]: https://github.com/neovim/neovim
 [lspconfig]: https://github.com/neovim/nvim-lspconfig
