@@ -78,6 +78,7 @@ local languages = {
 
 -- Or use the defaults provided by this plugin
 -- check doc/SUPPORTED_LIST.md for all the defaults provided
+--
 -- local languages = require('efmls-configs.defaults').languages()
 
 local efmls_config = {
@@ -94,6 +95,7 @@ local efmls_config = {
 
 require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
   -- Pass your cutom config below like on_attach and capabilities
+  --
   -- on_attach = on_attach,
   -- capabilities = capabilities,
 }))
