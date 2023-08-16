@@ -139,9 +139,9 @@ languages = vim.tbl_extend('force', languages, {
 
 Credits goes to the following projects for inspiration:
 
-- [efm-langserver][efm-langserver] - for the awesome language server to provide an interface to run linters/formatters
+- [efm-langserver][efm-langserver] for this awesome language server to provide an interface to run linters/formatters
   through a LSP protocol
-- [ale][ale] - for a huge list of linters/formatters to look through and add them in here
+- [ALE][ale] for a huge list of linters/formatters to look through and add them in here
 
 [efm-langserver]: https://github.com/mattn/efm-langserver
 [schema-file]: https://github.com/mattn/efm-langserver/blob/master/schema.json
