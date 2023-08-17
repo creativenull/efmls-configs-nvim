@@ -3,9 +3,11 @@
 -- url: https://github.com/serokell/nixfmt
 
 local fs = require('efmls-configs.fs')
+
 local formatter = fs.executable('alejandra')
+local command = string.format('%s -', fs.executable(formatter))
 return {
-  formatCommand = formatter,
+  formatCommand = command,
   formatStdin = true,
   -- rootMarkers = {
   --   'flake.nix',
