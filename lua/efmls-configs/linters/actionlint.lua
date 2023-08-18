@@ -11,6 +11,11 @@ return {
   prefix = linter,
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '%f:%l:%c: %m' },
+  lintFormats = {
+    "%f:%l:%c: %m: SC%n:%trror:%m",
+    "%f:%l:%c: %m: SC%n:%tarning:%m",
+    "%f:%l:%c: %m: SC%n:%tnfo:%m",
+    '%f:%l:%c: %m',
+  },
   rootMarkers = { '.github' },
 }
