@@ -63,8 +63,8 @@ Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v1.*' } " tag is optional, but
 
 See also `:help efmls-configs-setup` to view docs inside neovim.
 
-To get started, make a `languages` table that define the linters/formatters for the language. Or use the defaults provided
-by this plugin if you don't want to list for each language.
+To get started, make a `languages` table that defines you configuration for the language of your choice. Or use the
+defaults provided by this plugin.
 
 ```lua
 -- Register linters and formatters per language
@@ -77,7 +77,7 @@ local languages = {
 }
 
 -- Or use the defaults provided by this plugin
--- check doc/SUPPORTED_LIST.md for all the defaults provided
+-- check doc/SUPPORTED_LIST.md for the supported languages
 --
 -- local languages = require('efmls-configs.defaults').languages()
 
@@ -101,7 +101,7 @@ require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
 }))
 ```
 
-### Default Configuration
+### Default Configurations
 
 See also `:help efmls-configs-defaults` to view docs inside neovim.
 
@@ -127,6 +127,19 @@ languages = vim.tbl_extend('force', languages, {
   },
 })
 ```
+
+## Troubleshooting
+
+See also `:help efmls-configs-issues` to view docs inside neovim.
+
+Always run `:checkhealth` to see if there are any issue, when you get no response from the linter or formatter
+as you expected.
+
+If you get "no executable found" issues in `:checkhealth`, this means that the linter or formatter was not found in the
+provided filepath. Ensure that it is installed globally or in a valid filepath.
+
+For nodejs/npm, php/composer, ruby/bundler: check if the linter or formatter is installed in your node_modules (npm),
+vendor (composer/bundler) project folder, or installed globally.
 
 ## Alternatives
 

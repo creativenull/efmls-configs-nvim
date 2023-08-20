@@ -10,7 +10,7 @@ TABLE OF CONTENTS
 SETUP ......................................... |efmls-configs-setup|
 DEFAULT CONFIGURATIONS ..................... |efmls-configs-defaults|
 TROUBLESHOOTING ..................... |efmls-configs-troubleshooting|
-EFM LANGSERVER SCHEMA ........................ |efmls-configs-schema|
+EFM-LANGSERVER SCHEMA ........................ |efmls-configs-schema|
 SUPPORTED LINTERS AND FORMATTERS .......... |efmls-configs-supported|
 
 SETUP                                            *efmls-configs-setup*
@@ -34,6 +34,7 @@ each language.
     
     -- Or use the defaults provided by this plugin
     -- check doc/SUPPORTED_LIST.md for all the defaults provided
+    --
     -- local languages = require('efmls-configs.defaults').languages()
     
     local efmls_config = {
@@ -50,6 +51,7 @@ each language.
     
     require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
       -- Pass your cutom config below like on_attach and capabilities
+      --
       -- on_attach = on_attach,
       -- capabilities = capabilities,
     }))
