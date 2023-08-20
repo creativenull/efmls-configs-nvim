@@ -229,6 +229,12 @@ local xo = require('efmls-configs.linters.xo')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `eslint` [https://eslint.org](https://eslint.org)
 
 ```lua
@@ -427,6 +433,28 @@ local black = require('efmls-configs.formatters.black')
 local yapf = require('efmls-configs.formatters.yapf')
 ```
 
+### Yaml
+
+#### Linters
+
+`actionlint` [https://github.com/rhysd/actionlint](https://github.com/rhysd/actionlint)
+
+```lua
+local actionlint = require('efmls-configs.linters.actionlint')
+```
+
+`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
+
+```lua
+local ansible_lint = require('efmls-configs.linters.ansible_lint')
+```
+
+`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
+
+```lua
+local yamllint = require('efmls-configs.linters.yamllint')
+```
+
 ### Php
 
 #### Linters
@@ -543,22 +571,6 @@ local rubocop = require('efmls-configs.linters.rubocop')
 
 ```lua
 local sorbet = require('efmls-configs.linters.sorbet')
-```
-
-### Yaml
-
-#### Linters
-
-`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
-
-```lua
-local ansible_lint = require('efmls-configs.linters.ansible_lint')
-```
-
-`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
-
-```lua
-local yamllint = require('efmls-configs.linters.yamllint')
 ```
 
 ### Lua
@@ -845,6 +857,12 @@ local xo = require('efmls-configs.linters.xo')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `eslint` [https://eslint.org](https://eslint.org)
 
 ```lua
@@ -993,6 +1011,12 @@ local uncrustify = require('efmls-configs.formatters.uncrustify')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
 
 ```lua
@@ -1015,6 +1039,22 @@ local prettier_d = require('efmls-configs.formatters.prettier_d')
 local cbfmt = require('efmls-configs.formatters.cbfmt')
 ```
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Sml
+
+#### Formatters
+
+`smlfmt` [https://github.com/shwestrick/smlfmt](https://github.com/shwestrick/smlfmt)
+
+```lua
+local smlfmt = require('efmls-configs.formatters.smlfmt')
+```
+
 ### Terraform
 
 #### Formatters
@@ -1029,9 +1069,35 @@ local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `rustfmt` [https://github.com/rust-lang-nursery/rustfmt](https://github.com/rust-lang-nursery/rustfmt)
 
 ```lua
 local rustfmt = require('efmls-configs.formatters.rustfmt')
+```
+
+### Toml
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Roslyn
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
 ```
 
