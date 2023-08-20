@@ -25,7 +25,8 @@ Documentation can be accessed via [`:help efmls-configs`](./doc/efmls-configs.tx
 ## Requirements
 
 - [Neovim >= 0.7][neovim]
-- [efm-langserver][efm-langserver], installed globally. If using mason.nvim then install with `:MasonInstall efm`.
+- [efm-langserver][efm-langserver] installed globally. If using [mason.nvim](https://github.com/williamboman/mason.nvim)
+  then install with `:MasonInstall efm`.
 
 ## Installation
 
