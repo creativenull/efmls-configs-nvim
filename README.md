@@ -63,7 +63,7 @@ Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v1.*' } " tag is optional, but
 
 See also `:help efmls-configs-setup` to view docs inside neovim.
 
-To get started, make a `languages` table that defines you configuration for the language of your choice. Or use the
+To get started, make a `languages` table that will define configurations for the language of your choice. Or use the
 defaults provided by this plugin.
 
 ```lua
