@@ -12,7 +12,7 @@ An unofficial collection of linters and formatters configured for [efm-langserve
 
 ## Features
 
-- Out-of-box configurations for 70+ linters & formatters
+- Out-of-box configurations for 90+ tools (linters and formatters)
 - Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
   ruby/bundler (additional support for other build tools coming soon)
 - Use `:checkhealth` for a quick diagnostic on tools, to check if tool is available
