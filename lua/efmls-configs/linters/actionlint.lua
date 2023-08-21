@@ -18,5 +18,5 @@ return {
     '%f:%l:%c: %m',
   },
   requireMarker = true,
-  rootMarkers = { '.github' },
+  rootMarkers = { '.github/' },
 }
