@@ -281,7 +281,7 @@ Please create an Pull Request if you see any mismatched documentation or typos.
 ## Default Configurations
 
 Here is a list of languages that are automatically set and configured when you call \`languages()\`. For more information
-check the docs: [\`:help efmls-configs-defaults\`](../README.md#default-configuration).
+check the docs: [\`:help efmls-configs-defaults\`](../README.md#default-configurations).
 
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
