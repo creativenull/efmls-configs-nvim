@@ -6,9 +6,8 @@ Please create an Pull Request if you see any mismatched documentation or typos.
 
 ## Default Configurations
 
-Here is a list of languages that are automatically set and configured when `default_config` is enabled. For information
-on how to set `default_config` check the docs:
-[`:help efmls-configs-defaults`](https://github.com/creativenull/efmls-configs-nvim#default-configuration).
+Here is a list of languages that are automatically set and configured when you call `languages()`. For more information
+check the docs: [`:help efmls-configs-defaults`](../README.md#default-configuration).
 
 | **Filetype** | **Default Linter** | **Default Formatter** |
 |--------------|--------------------|-----------------------|
@@ -26,8 +25,7 @@ on how to set `default_config` check the docs:
 
 Below are the supported linters and formatters that are configured to run with efm-langserver. You can access
 the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
-to search). Copy the `require` code into your `setup()` function (See example code:
-[`:help efmls-configs-setup`](https://github.com/creativenull/efmls-configs-nvim#setup)).
+to search, <kbd>Cmd</kbd> + <kbd>F</kbd> if on Mac OS). See example code: [`:help efmls-configs-setup`](../README.md#setup).
 
 ### Misc (Text, LaTeX, Markdown, RST, etc)
 
@@ -231,6 +229,12 @@ local xo = require('efmls-configs.linters.xo')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `eslint` [https://eslint.org](https://eslint.org)
 
 ```lua
@@ -429,6 +433,28 @@ local black = require('efmls-configs.formatters.black')
 local yapf = require('efmls-configs.formatters.yapf')
 ```
 
+### Yaml
+
+#### Linters
+
+`actionlint` [https://github.com/rhysd/actionlint](https://github.com/rhysd/actionlint)
+
+```lua
+local actionlint = require('efmls-configs.linters.actionlint')
+```
+
+`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
+
+```lua
+local ansible_lint = require('efmls-configs.linters.ansible_lint')
+```
+
+`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
+
+```lua
+local yamllint = require('efmls-configs.linters.yamllint')
+```
+
 ### Php
 
 #### Linters
@@ -545,22 +571,6 @@ local rubocop = require('efmls-configs.linters.rubocop')
 
 ```lua
 local sorbet = require('efmls-configs.linters.sorbet')
-```
-
-### Yaml
-
-#### Linters
-
-`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
-
-```lua
-local ansible_lint = require('efmls-configs.linters.ansible_lint')
-```
-
-`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
-
-```lua
-local yamllint = require('efmls-configs.linters.yamllint')
 ```
 
 ### Lua
@@ -847,6 +857,12 @@ local xo = require('efmls-configs.linters.xo')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `eslint` [https://eslint.org](https://eslint.org)
 
 ```lua
@@ -995,6 +1011,12 @@ local uncrustify = require('efmls-configs.formatters.uncrustify')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
 
 ```lua
@@ -1017,6 +1039,22 @@ local prettier_d = require('efmls-configs.formatters.prettier_d')
 local cbfmt = require('efmls-configs.formatters.cbfmt')
 ```
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Sml
+
+#### Formatters
+
+`smlfmt` [https://github.com/shwestrick/smlfmt](https://github.com/shwestrick/smlfmt)
+
+```lua
+local smlfmt = require('efmls-configs.formatters.smlfmt')
+```
+
 ### Terraform
 
 #### Formatters
@@ -1031,9 +1069,35 @@ local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
 
 #### Formatters
 
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 `rustfmt` [https://github.com/rust-lang-nursery/rustfmt](https://github.com/rust-lang-nursery/rustfmt)
 
 ```lua
 local rustfmt = require('efmls-configs.formatters.rustfmt')
+```
+
+### Toml
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Roslyn
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
 ```
 
