@@ -16,7 +16,6 @@ An unofficial collection of linters and formatters configured for [efm-langserve
 - Intelligently detect tools installed project-wide or system-wide - works only for node/npm, php/composer and
   ruby/bundler (additional support for other build tools coming soon, welcome any contributions)
 - `:checkhealth` integration for status check
-- Customize configurations for your specific use-case (see [Advanced Setup](#advanced-configuration-setup))
 
 ## Documentation
 
