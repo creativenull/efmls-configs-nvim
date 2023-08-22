@@ -8,7 +8,7 @@ local formatter = 'gersemi'
 local command = string.format('%s -', fs.executable(formatter))
 
 return {
-  prefix = 'gersemi',
+  prefix = formatter,
   formatCommand = command,
   formatStdin = true,
 }
