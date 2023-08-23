@@ -427,7 +427,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [ ] [scss-lint](https://github.com/brigade/scss-lint)
   + [X] [stylelint](https://github.com/stylelint/stylelint)
 + Slim
-  + [ ] [slim-lint](https://github.com/sds/slim-lint)
+  + [X] [slim-lint](https://github.com/sds/slim-lint)
 + SML
   + [ ] [smlnj](http://www.smlnj.org/)
 + Solidity
