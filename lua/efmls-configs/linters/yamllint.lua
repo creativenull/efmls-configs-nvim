@@ -11,5 +11,6 @@ local command = string.format('%s %s', fs.executable(linter), args)
 return {
   prefix = linter,
   lintCommand = command,
+  lintSource = "yamllint",
   lintStdin = true,
 }
