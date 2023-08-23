@@ -1,6 +1,6 @@
 -- Metadata
 -- languages: nix
--- url: https://github.com/serokell/nixfmt
+-- url: https://github.com/kamadorueda/alejandra
 
 local fs = require('efmls-configs.fs')
 
@@ -10,4 +10,3 @@ return {
   formatCommand = command,
   formatStdin = true,
 }
-
