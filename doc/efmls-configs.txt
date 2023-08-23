@@ -5,89 +5,89 @@ efm-langserver to work with the builtin nvim-lsp.
 
 Check out |efmls-configs-supported| for a list of supported languages.
 
+TABLE OF CONTENTS
+
+SETUP ......................................... |efmls-configs-setup|
+DEFAULT CONFIGURATIONS ..................... |efmls-configs-defaults|
+TROUBLESHOOTING ..................... |efmls-configs-troubleshooting|
+EFM-LANGSERVER SCHEMA ........................ |efmls-configs-schema|
+SUPPORTED LINTERS AND FORMATTERS .......... |efmls-configs-supported|
+
 SETUP                                            *efmls-configs-setup*
 
-You need to first initialize the plugin with the init(), this is
-where you pass your LSP options like on_attach, capabilities, etc.
+To get started, make a `languages` table that define the
+linters/formatters for the language. Or use the defaults
+provided by this plugin if you don't want to list for
+each language.
 
->
-    local function on_attach(client)
-      print('Attached to ' .. client.name)
-    end
-
-    local efmls = require 'efmls-configs'
-    efmls.init {
-      -- Your custom attach function
-      on_attach = on_attach,
-
-      -- You may also want to enable document formatting
-      -- to enable formatting via LSP
+>lua
+    -- Register linters and formatters per language
+    local languages = {
+      typescript = {
+        require('efmls-configs.linters.eslint'),
+        require('efmls-configs.formatters.prettier'),
+      },
+      lua = {
+        require('efmls-configs.formatters.stylua'),
+      },
+    }
+    
+    -- Or use the defaults provided by this plugin
+    -- check doc/SUPPORTED_LIST.md for all the defaults provided
+    --
+    -- local languages = require('efmls-configs.defaults').languages()
+    
+    local efmls_config = {
+      filetypes = vim.tbl_keys(languages),
+      settings = {
+        rootMarkers = { '.git/' },
+        languages = languages,
+      },
       init_options = {
         documentFormatting = true,
+        documentRangeFormatting = true,
       },
     }
-<
-
-Finally, register the linters and formatters you want to run on
-the specific filetypes with the setup() function. Below is an
-example to setup eslint and prettier to work with a javascript
-filetype.
-
->
-    local eslint = require 'efmls-configs.linters.eslint'
-    local pretter = require 'efmls-configs.formatters.prettier'
-    efmls.setup {
-      javascript = {
-        linter = eslint,
-        formatter = prettier,
-      },
-    }
+    
+    require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
+      -- Pass your cutom config below like on_attach and capabilities
+      --
+      -- on_attach = on_attach,
+      -- capabilities = capabilities,
+    }))
 <
 
 DEFAULT CONFIGURATIONS                          *efmls-configs-defaults*
 
-A default configuration for the supported filetypes is provided but not
-activated by default.
+Default configurations are an opt-in feature.
 
-To activate the default configuration you can pass the default_config flag
-as true in the init function. Below are the default values for init:
+To see all the configurations provided by default go to
+https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md
 
->
-    efmls.init {
-      -- Use a list of default configurations
-      -- set by this plugin
-      -- (Default: false)
-      default_config = false,
-    }
+You can use a list of defaults provided by this plugin, in-case
+you don't want to specify configuration for each language.
 
-    efmls.setup()
+>lua
+    local languages = require('efmls-configs.defaults').languages()
 <
 
-You will still need to call the `setup()` after `init()` for the
-changes to take effect. You can still pass your custom configurations
-to `setup()` as show in the |efmls-configs-setup| section and it will
-override any default configuration set by `default_config` if it's the
-same filetype.
+To extend and add additional tools or to override existing
+defaults registered:
 
-ADVANCED SETUP                                 *efmls-configs-advanced*
-
-If you want to change some settings that are not provided in the
-default config, you can change them with vim.tbl_extend. These configs
-take the same keys referenced in the schema file (|efmls-configs-schema|)
-
->
-    local eslint = require 'efmls-configs.linters.eslint'
-    eslint = vim.tbl_extend('force', eslint, {
-      prefix = 'new eslint prefix',
-      lintCommand = 'eslint --format visualstudio --stdin',
+>lua
+    local languages = require('efmls-configs.defaults').languages()
+    languages = vim.tbl_extend('force', languages, {
+      -- you custom languages, or overrides
+      html = {
+        require('efmls-configs.formatters.prettier')
+      }
     })
-
-    efmls.setup {
-      javascript = { linter = eslint },
-    }
 <
 
 TROUBLESHOOTING                                 *efmls-configs-issues*
+
+Always run `:checkhealth` to see if there are any issue, when you
+get no response from the linter or formatter as you expected.
 
 If you get "no executable found" issues in `:checkhealth`,
 this means that the linter or formatter was not found in the provided
@@ -103,6 +103,6 @@ https://github.com/mattn/efm-langserver/blob/master/schema.json
 
 SUPPORTED LINTERS AND FORMATTERS               *efmls-configs-supported*
 
-https://github.com/creativenull/efmls-configs-nvim#language-support-todo
+https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md
 
  vim:tw=78:ts=8:noet:ft=help:norl:
