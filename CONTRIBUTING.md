@@ -41,11 +41,11 @@ directory. For example, adding eslint to an html filetype. The following values 
 }
 ```
 
-## Auto-generating Documentation
+<!-- ## Auto-generating Documentation
 
-Never touch the [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md)to add documentation for the tool you've add, to
+Never touch the [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md) to add documentation for the tool you've add, to
 create documentation for run the following:
 
 ```sh
 deno task gen
-```
+``` -->
