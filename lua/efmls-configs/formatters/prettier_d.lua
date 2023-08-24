@@ -15,5 +15,15 @@ return {
   formatCanRange = true,
   formatCommand = command,
   formatStdin = true,
-  rootMarkers = require('efmls-configs.formatters.prettier').rootMarkers,
+  rootMarkers = {
+    '.prettierrc',
+    '.prettierrc.json',
+    '.prettierrc.js',
+    '.prettierrc.yml',
+    '.prettierrc.yaml',
+    '.prettierrc.json5',
+    '.prettierrc.mjs',
+    '.prettierrc.cjs',
+    '.prettierrc.toml',
+  },
 }
