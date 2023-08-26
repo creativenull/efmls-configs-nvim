@@ -10,6 +10,7 @@ local command = string.format('%s --color=never --format=gcc -', fs.executable(l
 return {
   prefix = linter,
   lintCommand = command,
+  lintIgnoreExitCode = true,
   lintStdin = true,
   lintFormats = { '-:%l:%c: %trror: %m', '-:%l:%c: %tarning: %m', '-:%l:%c: %tote: %m' },
   rootMarkers = {},
