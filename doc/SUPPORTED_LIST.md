@@ -74,24 +74,6 @@ local vale = require('efmls-configs.linters.vale')
 local write_good = require('efmls-configs.linters.write_good')
 ```
 
-### Sh
-
-#### Linters
-
-`shellcheck` [https://www.shellcheck.net/](https://www.shellcheck.net/)
-
-```lua
-local shellcheck = require('efmls-configs.linters.shellcheck')
-```
-
-#### Formatters
-
-`shfmt` [https://github.com/mvdan/sh](https://github.com/mvdan/sh)
-
-```lua
-local shfmt = require('efmls-configs.formatters.shfmt')
-```
-
 ### Bash
 
 #### Linters
@@ -110,170 +92,40 @@ local shellcheck = require('efmls-configs.linters.shellcheck')
 
 #### Formatters
 
+`beautysh` [https://github.com/illvart/beautysh-action](https://github.com/illvart/beautysh-action)
+
+```lua
+local beautysh = require('efmls-configs.formatters.beautysh')
+```
+
 `shfmt` [https://github.com/mvdan/sh](https://github.com/mvdan/sh)
 
 ```lua
 local shfmt = require('efmls-configs.formatters.shfmt')
 ```
 
-### Yaml
+### C#
 
 #### Linters
 
-`actionlint` [https://github.com/rhysd/actionlint](https://github.com/rhysd/actionlint)
+`mcs` [http://www.mono-project.com/docs/about-mono/languages/csharp/](http://www.mono-project.com/docs/about-mono/languages/csharp/)
 
 ```lua
-local actionlint = require('efmls-configs.linters.actionlint')
-```
-
-`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
-
-```lua
-local ansible_lint = require('efmls-configs.linters.ansible_lint')
-```
-
-`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
-
-```lua
-local yamllint = require('efmls-configs.linters.yamllint')
-```
-
-### Php
-
-#### Linters
-
-`djlint` [https://djlint.com/](https://djlint.com/)
-
-```lua
-local djlint = require('efmls-configs.linters.djlint')
-```
-
-`phan` [https://github.com/phan/phan](https://github.com/phan/phan)
-
-```lua
-local phan = require('efmls-configs.linters.phan')
-```
-
-`php` [https://secure.php.net/](https://secure.php.net/)
-
-```lua
-local php = require('efmls-configs.linters.php')
-```
-
-`phpcs` [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
-
-```lua
-local phpcs = require('efmls-configs.linters.phpcs')
-```
-
-`phpstan` [https://github.com/phpstan/phpstan](https://github.com/phpstan/phpstan)
-
-```lua
-local phpstan = require('efmls-configs.linters.phpstan')
-```
-
-`psalm` [https://getpsalm.org](https://getpsalm.org)
-
-```lua
-local psalm = require('efmls-configs.linters.psalm')
+local mcs = require('efmls-configs.linters.mcs')
 ```
 
 #### Formatters
 
-`php_cs_fixer` [https://github.com/PHP-CS-Fixer/PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+`dotnet_format` [https://github.com/dotnet/format](https://github.com/dotnet/format)
 
 ```lua
-local php_cs_fixer = require('efmls-configs.formatters.php_cs_fixer')
+local dotnet_format = require('efmls-configs.formatters.dotnet_format')
 ```
 
-`phpcbf` [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
 
 ```lua
-local phpcbf = require('efmls-configs.formatters.phpcbf')
-```
-
-`pint` [https://github.com/laravel/pint](https://github.com/laravel/pint)
-
-```lua
-local pint = require('efmls-configs.formatters.pint')
-```
-
-### Go
-
-#### Linters
-
-`djlint` [https://djlint.com/](https://djlint.com/)
-
-```lua
-local djlint = require('efmls-configs.linters.djlint')
-```
-
-`go_revive` [https://github.com/mgechev/revive](https://github.com/mgechev/revive)
-
-```lua
-local go_revive = require('efmls-configs.linters.go_revive')
-```
-
-`golangci_lint` [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
-
-```lua
-local golangci_lint = require('efmls-configs.linters.golangci_lint')
-```
-
-`golint` [https://godoc.org/github.com/golang/lint](https://godoc.org/github.com/golang/lint)
-
-```lua
-local golint = require('efmls-configs.linters.golint')
-```
-
-`staticcheck` [https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
-
-```lua
-local staticcheck = require('efmls-configs.linters.staticcheck')
-```
-
-#### Formatters
-
-`gofmt` [https://pkg.go.dev/cmd/gofmt](https://pkg.go.dev/cmd/gofmt)
-
-```lua
-local gofmt = require('efmls-configs.formatters.gofmt')
-```
-
-`goimports` [https://godoc.org/golang.org/x/tools/cmd/goimports](https://godoc.org/golang.org/x/tools/cmd/goimports)
-
-```lua
-local goimports = require('efmls-configs.formatters.goimports')
-```
-
-`golines` [https://github.com/segmentio/golines](https://github.com/segmentio/golines)
-
-```lua
-local golines = require('efmls-configs.formatters.golines')
-```
-
-### Clojure
-
-#### Linters
-
-`clj_kondo` [https://github.com/borkdude/clj-kondo](https://github.com/borkdude/clj-kondo)
-
-```lua
-local clj_kondo = require('efmls-configs.linters.clj_kondo')
-```
-
-`joker` [https://github.com/candid82/joker](https://github.com/candid82/joker)
-
-```lua
-local joker = require('efmls-configs.linters.joker')
-```
-
-#### Formatters
-
-`joker` [https://github.com/candid82/joker](https://github.com/candid82/joker)
-
-```lua
-local joker = require('efmls-configs.formatters.joker')
+local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
 
 ### C++
@@ -336,7 +188,231 @@ local clang_tidy = require('efmls-configs.formatters.clang_tidy')
 local uncrustify = require('efmls-configs.formatters.uncrustify')
 ```
 
-### Python
+### C
+
+#### Linters
+
+`clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
+
+```lua
+local clang_tidy = require('efmls-configs.linters.clang_tidy')
+```
+
+`cppcheck` [http://cppcheck.sourceforge.net](http://cppcheck.sourceforge.net)
+
+```lua
+local cppcheck = require('efmls-configs.linters.cppcheck')
+```
+
+`cpplint` [https://github.com/google/styleguide/tree/gh-pages/cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint)
+
+```lua
+local cpplint = require('efmls-configs.linters.cpplint')
+```
+
+`flawfinder` [https://www.dwheeler.com/flawfinder/](https://www.dwheeler.com/flawfinder/)
+
+```lua
+local flawfinder = require('efmls-configs.linters.flawfinder')
+```
+
+`gcc` [https://gcc.gnu.org/](https://gcc.gnu.org/)
+
+```lua
+local gcc = require('efmls-configs.linters.gcc')
+```
+
+#### Formatters
+
+`astyle` [http://astyle.sourceforge.net/](http://astyle.sourceforge.net/)
+
+```lua
+local astyle = require('efmls-configs.formatters.astyle')
+```
+
+`clang_format` [https://clang.llvm.org/docs/ClangFormat.html](https://clang.llvm.org/docs/ClangFormat.html)
+
+```lua
+local clang_format = require('efmls-configs.formatters.clang_format')
+```
+
+`clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
+
+```lua
+local clang_tidy = require('efmls-configs.formatters.clang_tidy')
+```
+
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
+
+```lua
+local uncrustify = require('efmls-configs.formatters.uncrustify')
+```
+
+### Clojure
+
+#### Linters
+
+`clj_kondo` [https://github.com/borkdude/clj-kondo](https://github.com/borkdude/clj-kondo)
+
+```lua
+local clj_kondo = require('efmls-configs.linters.clj_kondo')
+```
+
+`joker` [https://github.com/candid82/joker](https://github.com/candid82/joker)
+
+```lua
+local joker = require('efmls-configs.linters.joker')
+```
+
+#### Formatters
+
+`joker` [https://github.com/candid82/joker](https://github.com/candid82/joker)
+
+```lua
+local joker = require('efmls-configs.formatters.joker')
+```
+
+### Cmake
+
+#### Formatters
+
+`gersemi` [https://github.com/BlankSpruce/gersemi](https://github.com/BlankSpruce/gersemi)
+
+```lua
+local gersemi = require('efmls-configs.formatters.gersemi')
+```
+
+### Crystal
+
+#### Linters
+
+`ameba` [https://github.com/veelenga/ameba](https://github.com/veelenga/ameba)
+
+```lua
+local ameba = require('efmls-configs.linters.ameba')
+```
+
+### Csh
+
+#### Formatters
+
+`beautysh` [https://github.com/illvart/beautysh-action](https://github.com/illvart/beautysh-action)
+
+```lua
+local beautysh = require('efmls-configs.formatters.beautysh')
+```
+
+### Css
+
+#### Linters
+
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.linters.stylelint')
+```
+
+#### Formatters
+
+`fecs` [http://fecs.baidu.com/](http://fecs.baidu.com/)
+
+```lua
+local fecs = require('efmls-configs.formatters.fecs')
+```
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### D
+
+#### Linters
+
+`dmd` [https://dlang.org/dmd-linux.html](https://dlang.org/dmd-linux.html)
+
+```lua
+local dmd = require('efmls-configs.linters.dmd')
+```
+
+#### Formatters
+
+`dfmt` [https://github.com/dlang-community/dfmt](https://github.com/dlang-community/dfmt)
+
+```lua
+local dfmt = require('efmls-configs.formatters.dfmt')
+```
+
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
+
+```lua
+local uncrustify = require('efmls-configs.formatters.uncrustify')
+```
+
+### Dart
+
+#### Linters
+
+`dartanalyzer` [https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli)
+
+```lua
+local dartanalyzer = require('efmls-configs.linters.dartanalyzer')
+```
+
+#### Formatters
+
+`dartfmt` [https://github.com/dart-lang/sdk/tree/master/utils/dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
+
+```lua
+local dartfmt = require('efmls-configs.formatters.dartfmt')
+```
+
+### Docker
+
+#### Linters
+
+`hadolint` [https://github.com/hadolint/hadolint](https://github.com/hadolint/hadolint)
+
+```lua
+local hadolint = require('efmls-configs.linters.hadolint')
+```
+
+### Fish
+
+#### Linters
+
+`fish` [https://linux.die.net/man/1/fish](https://linux.die.net/man/1/fish)
+
+```lua
+local fish = require('efmls-configs.linters.fish')
+```
+
+#### Formatters
+
+`fish_indent` [https://fishshell.com/docs/current/cmds/fish_indent.html](https://fishshell.com/docs/current/cmds/fish_indent.html)
+
+```lua
+local fish_indent = require('efmls-configs.formatters.fish_indent')
+```
+
+### Gitcommit
+
+#### Linters
+
+`gitlint` [https://jorisroovers.com/gitlint/latest/](https://jorisroovers.com/gitlint/latest/)
+
+```lua
+local gitlint = require('efmls-configs.linters.gitlint')
+```
+
+### Go
 
 #### Linters
 
@@ -346,61 +422,93 @@ local uncrustify = require('efmls-configs.formatters.uncrustify')
 local djlint = require('efmls-configs.linters.djlint')
 ```
 
-`flake8` [http://flake8.pycqa.org/en/latest/](http://flake8.pycqa.org/en/latest/)
+`go_revive` [https://github.com/mgechev/revive](https://github.com/mgechev/revive)
 
 ```lua
-local flake8 = require('efmls-configs.linters.flake8')
+local go_revive = require('efmls-configs.linters.go_revive')
 ```
 
-`pylint` [https://www.pylint.org/](https://www.pylint.org/)
+`golangci_lint` [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
 
 ```lua
-local pylint = require('efmls-configs.linters.pylint')
+local golangci_lint = require('efmls-configs.linters.golangci_lint')
 ```
 
-`vulture` [https://github.com/jendrikseipp/vulture](https://github.com/jendrikseipp/vulture)
+`golint` [https://godoc.org/github.com/golang/lint](https://godoc.org/github.com/golang/lint)
 
 ```lua
-local vulture = require('efmls-configs.linters.vulture')
+local golint = require('efmls-configs.linters.golint')
+```
+
+`staticcheck` [https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
+
+```lua
+local staticcheck = require('efmls-configs.linters.staticcheck')
 ```
 
 #### Formatters
 
-`autopep8` [https://github.com/hhatto/autopep8](https://github.com/hhatto/autopep8)
+`gofmt` [https://pkg.go.dev/cmd/gofmt](https://pkg.go.dev/cmd/gofmt)
 
 ```lua
-local autopep8 = require('efmls-configs.formatters.autopep8')
+local gofmt = require('efmls-configs.formatters.gofmt')
 ```
 
-`black` [https://github.com/ambv/black](https://github.com/ambv/black)
+`goimports` [https://godoc.org/golang.org/x/tools/cmd/goimports](https://godoc.org/golang.org/x/tools/cmd/goimports)
 
 ```lua
-local black = require('efmls-configs.formatters.black')
+local goimports = require('efmls-configs.formatters.goimports')
 ```
 
-`yapf` [https://github.com/google/yapf](https://github.com/google/yapf)
+`golines` [https://github.com/segmentio/golines](https://github.com/segmentio/golines)
 
 ```lua
-local yapf = require('efmls-configs.formatters.yapf')
+local golines = require('efmls-configs.formatters.golines')
 ```
 
-### C#
+### Haskell
+
+#### Formatters
+
+`fourmolu` [https://github.com/fourmolu/fourmolu](https://github.com/fourmolu/fourmolu)
+
+```lua
+local fourmolu = require('efmls-configs.formatters.fourmolu')
+```
+
+### Html
 
 #### Linters
 
-`mcs` [http://www.mono-project.com/docs/about-mono/languages/csharp/](http://www.mono-project.com/docs/about-mono/languages/csharp/)
+`djlint` [https://djlint.com/](https://djlint.com/)
 
 ```lua
-local mcs = require('efmls-configs.linters.mcs')
+local djlint = require('efmls-configs.linters.djlint')
 ```
 
 #### Formatters
 
-`dotnet_format` [https://github.com/dotnet/format](https://github.com/dotnet/format)
+`fecs` [http://fecs.baidu.com/](http://fecs.baidu.com/)
 
 ```lua
-local dotnet_format = require('efmls-configs.formatters.dotnet_format')
+local fecs = require('efmls-configs.formatters.fecs')
 ```
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### Java
+
+#### Formatters
 
 `uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
 
@@ -504,6 +612,486 @@ local prettier_standard = require('efmls-configs.formatters.prettier_standard')
 local xo = require('efmls-configs.formatters.xo')
 ```
 
+### Json
+
+#### Linters
+
+`jq` [https://jqlang.github.io/jq/](https://jqlang.github.io/jq/)
+
+```lua
+local jq = require('efmls-configs.linters.jq')
+```
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+`jq` [https://jqlang.github.io/jq/](https://jqlang.github.io/jq/)
+
+```lua
+local jq = require('efmls-configs.formatters.jq')
+```
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### Ksh
+
+#### Formatters
+
+`beautysh` [https://github.com/illvart/beautysh-action](https://github.com/illvart/beautysh-action)
+
+```lua
+local beautysh = require('efmls-configs.formatters.beautysh')
+```
+
+### Less
+
+#### Linters
+
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.linters.stylelint')
+```
+
+#### Formatters
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### Lua
+
+#### Linters
+
+`luacheck` [https://github.com/mpeterv/luacheck](https://github.com/mpeterv/luacheck)
+
+```lua
+local luacheck = require('efmls-configs.linters.luacheck')
+```
+
+`selene` [https://kampfkarren.github.io/selene/](https://kampfkarren.github.io/selene/)
+
+```lua
+local selene = require('efmls-configs.linters.selene')
+```
+
+#### Formatters
+
+`lua_format` [https://github.com/Koihik/LuaFormatter](https://github.com/Koihik/LuaFormatter)
+
+```lua
+local lua_format = require('efmls-configs.formatters.lua_format')
+```
+
+`stylua` [https://github.com/johnnymorganz/stylua](https://github.com/johnnymorganz/stylua)
+
+```lua
+local stylua = require('efmls-configs.formatters.stylua')
+```
+
+### Markdown
+
+#### Formatters
+
+`cbfmt` [https://github.com/lukas-reineke/cbfmt](https://github.com/lukas-reineke/cbfmt)
+
+```lua
+local cbfmt = require('efmls-configs.formatters.cbfmt')
+```
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Nix
+
+#### Linters
+
+`statix` [https://github.com/NerdyPepper/statix](https://github.com/NerdyPepper/statix)
+
+```lua
+local statix = require('efmls-configs.linters.statix')
+```
+
+#### Formatters
+
+`alejandra` [https://github.com/kamadorueda/alejandra](https://github.com/kamadorueda/alejandra)
+
+```lua
+local alejandra = require('efmls-configs.formatters.alejandra')
+```
+
+`nixfmt` [https://github.com/serokell/nixfmt](https://github.com/serokell/nixfmt)
+
+```lua
+local nixfmt = require('efmls-configs.formatters.nixfmt')
+```
+
+### Objective-c++
+
+#### Formatters
+
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
+
+```lua
+local uncrustify = require('efmls-configs.formatters.uncrustify')
+```
+
+### Objective-c
+
+#### Formatters
+
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
+
+```lua
+local uncrustify = require('efmls-configs.formatters.uncrustify')
+```
+
+### Pawn
+
+#### Formatters
+
+`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
+
+```lua
+local uncrustify = require('efmls-configs.formatters.uncrustify')
+```
+
+### Php
+
+#### Linters
+
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.linters.djlint')
+```
+
+`phan` [https://github.com/phan/phan](https://github.com/phan/phan)
+
+```lua
+local phan = require('efmls-configs.linters.phan')
+```
+
+`php` [https://secure.php.net/](https://secure.php.net/)
+
+```lua
+local php = require('efmls-configs.linters.php')
+```
+
+`phpcs` [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+```lua
+local phpcs = require('efmls-configs.linters.phpcs')
+```
+
+`phpstan` [https://github.com/phpstan/phpstan](https://github.com/phpstan/phpstan)
+
+```lua
+local phpstan = require('efmls-configs.linters.phpstan')
+```
+
+`psalm` [https://getpsalm.org](https://getpsalm.org)
+
+```lua
+local psalm = require('efmls-configs.linters.psalm')
+```
+
+#### Formatters
+
+`php_cs_fixer` [https://github.com/PHP-CS-Fixer/PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+
+```lua
+local php_cs_fixer = require('efmls-configs.formatters.php_cs_fixer')
+```
+
+`phpcbf` [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+```lua
+local phpcbf = require('efmls-configs.formatters.phpcbf')
+```
+
+`pint` [https://github.com/laravel/pint](https://github.com/laravel/pint)
+
+```lua
+local pint = require('efmls-configs.formatters.pint')
+```
+
+### Python
+
+#### Linters
+
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.linters.djlint')
+```
+
+`flake8` [http://flake8.pycqa.org/en/latest/](http://flake8.pycqa.org/en/latest/)
+
+```lua
+local flake8 = require('efmls-configs.linters.flake8')
+```
+
+`mypy` [https://mypy-lang.org/](https://mypy-lang.org/)
+
+```lua
+local mypy = require('efmls-configs.linters.mypy')
+```
+
+`pylint` [https://www.pylint.org/](https://www.pylint.org/)
+
+```lua
+local pylint = require('efmls-configs.linters.pylint')
+```
+
+`vulture` [https://github.com/jendrikseipp/vulture](https://github.com/jendrikseipp/vulture)
+
+```lua
+local vulture = require('efmls-configs.linters.vulture')
+```
+
+#### Formatters
+
+`autopep8` [https://github.com/hhatto/autopep8](https://github.com/hhatto/autopep8)
+
+```lua
+local autopep8 = require('efmls-configs.formatters.autopep8')
+```
+
+`black` [https://github.com/ambv/black](https://github.com/ambv/black)
+
+```lua
+local black = require('efmls-configs.formatters.black')
+```
+
+`isort` [https://pycqa.github.io/isort/](https://pycqa.github.io/isort/)
+
+```lua
+local isort = require('efmls-configs.formatters.isort')
+```
+
+`yapf` [https://github.com/google/yapf](https://github.com/google/yapf)
+
+```lua
+local yapf = require('efmls-configs.formatters.yapf')
+```
+
+### Roslyn
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+### Ruby
+
+#### Linters
+
+`debride` [https://github.com/seattlerb/debride](https://github.com/seattlerb/debride)
+
+```lua
+local debride = require('efmls-configs.linters.debride')
+```
+
+`reek` [https://github.com/troessner/reek](https://github.com/troessner/reek)
+
+```lua
+local reek = require('efmls-configs.linters.reek')
+```
+
+`rubocop` [https://github.com/bbatsov/rubocop](https://github.com/bbatsov/rubocop)
+
+```lua
+local rubocop = require('efmls-configs.linters.rubocop')
+```
+
+`sorbet` [https://github.com/sorbet/sorbet](https://github.com/sorbet/sorbet)
+
+```lua
+local sorbet = require('efmls-configs.linters.sorbet')
+```
+
+### Rust
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
+`rustfmt` [https://github.com/rust-lang-nursery/rustfmt](https://github.com/rust-lang-nursery/rustfmt)
+
+```lua
+local rustfmt = require('efmls-configs.formatters.rustfmt')
+```
+
+### Sass
+
+#### Linters
+
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.linters.stylelint')
+```
+
+#### Formatters
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### Scss
+
+#### Linters
+
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.linters.stylelint')
+```
+
+#### Formatters
+
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
+`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
+
+```lua
+local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+### Sh
+
+#### Linters
+
+`shellcheck` [https://www.shellcheck.net/](https://www.shellcheck.net/)
+
+```lua
+local shellcheck = require('efmls-configs.linters.shellcheck')
+```
+
+#### Formatters
+
+`beautysh` [https://github.com/illvart/beautysh-action](https://github.com/illvart/beautysh-action)
+
+```lua
+local beautysh = require('efmls-configs.formatters.beautysh')
+```
+
+`shfmt` [https://github.com/mvdan/sh](https://github.com/mvdan/sh)
+
+```lua
+local shfmt = require('efmls-configs.formatters.shfmt')
+```
+
+### Slim
+
+#### Linters
+
+`slim_lint` [https://github.com/sds/slim-lint](https://github.com/sds/slim-lint)
+
+```lua
+local slim_lint = require('efmls-configs.linters.slim_lint')
+```
+
+### Sml
+
+#### Formatters
+
+`smlfmt` [https://github.com/shwestrick/smlfmt](https://github.com/shwestrick/smlfmt)
+
+```lua
+local smlfmt = require('efmls-configs.formatters.smlfmt')
+```
+
+### Solidity
+
+#### Linters
+
+`slither` [https://github.com/crytic/slither](https://github.com/crytic/slither)
+
+```lua
+local slither = require('efmls-configs.linters.slither')
+```
+
+`solhint` [https://github.com/protofire/solhint](https://github.com/protofire/solhint)
+
+```lua
+local solhint = require('efmls-configs.linters.solhint')
+```
+
+#### Formatters
+
+`forge_fmt` [https://github.com/foundry-rs/foundry/tree/master/forge](https://github.com/foundry-rs/foundry/tree/master/forge)
+
+```lua
+local forge_fmt = require('efmls-configs.formatters.forge_fmt')
+```
+
+### Terraform
+
+#### Formatters
+
+`terraform_fmt` [https://github.com/hashicorp/terraform](https://github.com/hashicorp/terraform)
+
+```lua
+local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
+```
+
+### Toml
+
+#### Formatters
+
+`dprint` [https://dprint.dev/](https://dprint.dev/)
+
+```lua
+local dprint = require('efmls-configs.formatters.dprint')
+```
+
 ### Typescript
 
 #### Linters
@@ -582,348 +1170,14 @@ local prettier_standard = require('efmls-configs.formatters.prettier_standard')
 local xo = require('efmls-configs.formatters.xo')
 ```
 
-### Dart
-
-#### Linters
-
-`dartanalyzer` [https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli)
-
-```lua
-local dartanalyzer = require('efmls-configs.linters.dartanalyzer')
-```
+### Vala
 
 #### Formatters
-
-`dartfmt` [https://github.com/dart-lang/sdk/tree/master/utils/dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
-
-```lua
-local dartfmt = require('efmls-configs.formatters.dartfmt')
-```
-
-### Nix
-
-#### Linters
-
-`statix` [https://github.com/NerdyPepper/statix](https://github.com/NerdyPepper/statix)
-
-```lua
-local statix = require('efmls-configs.linters.statix')
-```
-
-#### Formatters
-
-`alejandra` [https://github.com/serokell/nixfmt](https://github.com/serokell/nixfmt)
-
-```lua
-local alejandra = require('efmls-configs.formatters.alejandra')
-```
-
-`nixfmt` [https://github.com/serokell/nixfmt](https://github.com/serokell/nixfmt)
-
-```lua
-local nixfmt = require('efmls-configs.formatters.nixfmt')
-```
-
-### Ruby
-
-#### Linters
-
-`debride` [https://github.com/seattlerb/debride](https://github.com/seattlerb/debride)
-
-```lua
-local debride = require('efmls-configs.linters.debride')
-```
-
-`reek` [https://github.com/troessner/reek](https://github.com/troessner/reek)
-
-```lua
-local reek = require('efmls-configs.linters.reek')
-```
-
-`rubocop` [https://github.com/bbatsov/rubocop](https://github.com/bbatsov/rubocop)
-
-```lua
-local rubocop = require('efmls-configs.linters.rubocop')
-```
-
-`sorbet` [https://github.com/sorbet/sorbet](https://github.com/sorbet/sorbet)
-
-```lua
-local sorbet = require('efmls-configs.linters.sorbet')
-```
-
-### Css
-
-#### Linters
-
-`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
-
-```lua
-local stylelint = require('efmls-configs.linters.stylelint')
-```
-
-#### Formatters
-
-`fecs` [http://fecs.baidu.com/](http://fecs.baidu.com/)
-
-```lua
-local fecs = require('efmls-configs.formatters.fecs')
-```
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### Scss
-
-#### Linters
-
-`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
-
-```lua
-local stylelint = require('efmls-configs.linters.stylelint')
-```
-
-#### Formatters
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### Sass
-
-#### Linters
-
-`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
-
-```lua
-local stylelint = require('efmls-configs.linters.stylelint')
-```
-
-#### Formatters
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### Less
-
-#### Linters
-
-`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
-
-```lua
-local stylelint = require('efmls-configs.linters.stylelint')
-```
-
-#### Formatters
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### C
-
-#### Linters
-
-`clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
-
-```lua
-local clang_tidy = require('efmls-configs.linters.clang_tidy')
-```
-
-`cppcheck` [http://cppcheck.sourceforge.net](http://cppcheck.sourceforge.net)
-
-```lua
-local cppcheck = require('efmls-configs.linters.cppcheck')
-```
-
-`cpplint` [https://github.com/google/styleguide/tree/gh-pages/cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint)
-
-```lua
-local cpplint = require('efmls-configs.linters.cpplint')
-```
-
-`flawfinder` [https://www.dwheeler.com/flawfinder/](https://www.dwheeler.com/flawfinder/)
-
-```lua
-local flawfinder = require('efmls-configs.linters.flawfinder')
-```
-
-`gcc` [https://gcc.gnu.org/](https://gcc.gnu.org/)
-
-```lua
-local gcc = require('efmls-configs.linters.gcc')
-```
-
-#### Formatters
-
-`astyle` [http://astyle.sourceforge.net/](http://astyle.sourceforge.net/)
-
-```lua
-local astyle = require('efmls-configs.formatters.astyle')
-```
-
-`clang_format` [https://clang.llvm.org/docs/ClangFormat.html](https://clang.llvm.org/docs/ClangFormat.html)
-
-```lua
-local clang_format = require('efmls-configs.formatters.clang_format')
-```
-
-`clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
-
-```lua
-local clang_tidy = require('efmls-configs.formatters.clang_tidy')
-```
 
 `uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
 
 ```lua
 local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Solidity
-
-#### Linters
-
-`slither` [https://github.com/crytic/slither](https://github.com/crytic/slither)
-
-```lua
-local slither = require('efmls-configs.linters.slither')
-```
-
-`solhint` [https://github.com/protofire/solhint](https://github.com/protofire/solhint)
-
-```lua
-local solhint = require('efmls-configs.linters.solhint')
-```
-
-#### Formatters
-
-`forge_fmt` [https://github.com/foundry-rs/foundry/tree/master/forge](https://github.com/foundry-rs/foundry/tree/master/forge)
-
-```lua
-local forge_fmt = require('efmls-configs.formatters.forge_fmt')
-```
-
-### Lua
-
-#### Linters
-
-`luacheck` [https://github.com/mpeterv/luacheck](https://github.com/mpeterv/luacheck)
-
-```lua
-local luacheck = require('efmls-configs.linters.luacheck')
-```
-
-#### Formatters
-
-`lua_format` [https://github.com/Koihik/LuaFormatter](https://github.com/Koihik/LuaFormatter)
-
-```lua
-local lua_format = require('efmls-configs.formatters.lua_format')
-```
-
-`stylua` [https://github.com/johnnymorganz/stylua](https://github.com/johnnymorganz/stylua)
-
-```lua
-local stylua = require('efmls-configs.formatters.stylua')
-```
-
-### D
-
-#### Linters
-
-`dmd` [https://dlang.org/dmd-linux.html](https://dlang.org/dmd-linux.html)
-
-```lua
-local dmd = require('efmls-configs.linters.dmd')
-```
-
-#### Formatters
-
-`dfmt` [https://github.com/dlang-community/dfmt](https://github.com/dlang-community/dfmt)
-
-```lua
-local dfmt = require('efmls-configs.formatters.dfmt')
-```
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Html
-
-#### Linters
-
-`djlint` [https://djlint.com/](https://djlint.com/)
-
-```lua
-local djlint = require('efmls-configs.linters.djlint')
-```
-
-#### Formatters
-
-`fecs` [http://fecs.baidu.com/](http://fecs.baidu.com/)
-
-```lua
-local fecs = require('efmls-configs.formatters.fecs')
-```
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### Docker
-
-#### Linters
-
-`hadolint` [https://github.com/hadolint/hadolint](https://github.com/hadolint/hadolint)
-
-```lua
-local hadolint = require('efmls-configs.linters.hadolint')
 ```
 
 ### Vim
@@ -936,175 +1190,35 @@ local hadolint = require('efmls-configs.linters.hadolint')
 local vint = require('efmls-configs.linters.vint')
 ```
 
-### Fish
+### Yaml
 
 #### Linters
 
-`fish` [https://linux.die.net/man/1/fish](https://linux.die.net/man/1/fish)
+`actionlint` [https://github.com/rhysd/actionlint](https://github.com/rhysd/actionlint)
 
 ```lua
-local fish = require('efmls-configs.linters.fish')
+local actionlint = require('efmls-configs.linters.actionlint')
 ```
+
+`ansible_lint` [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint)
+
+```lua
+local ansible_lint = require('efmls-configs.linters.ansible_lint')
+```
+
+`yamllint` [https://yamllint.readthedocs.io/](https://yamllint.readthedocs.io/)
+
+```lua
+local yamllint = require('efmls-configs.linters.yamllint')
+```
+
+### Zsh
 
 #### Formatters
 
-`fish_indent` [https://fishshell.com/docs/current/cmds/fish_indent.html](https://fishshell.com/docs/current/cmds/fish_indent.html)
+`beautysh` [https://github.com/illvart/beautysh-action](https://github.com/illvart/beautysh-action)
 
 ```lua
-local fish_indent = require('efmls-configs.formatters.fish_indent')
-```
-
-### Crystal
-
-#### Linters
-
-`ameba` [https://github.com/veelenga/ameba](https://github.com/veelenga/ameba)
-
-```lua
-local ameba = require('efmls-configs.linters.ameba')
-```
-
-### Terraform
-
-#### Formatters
-
-`terraform_fmt` [https://github.com/hashicorp/terraform](https://github.com/hashicorp/terraform)
-
-```lua
-local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
-```
-
-### Markdown
-
-#### Formatters
-
-`cbfmt` [https://github.com/lukas-reineke/cbfmt](https://github.com/lukas-reineke/cbfmt)
-
-```lua
-local cbfmt = require('efmls-configs.formatters.cbfmt')
-```
-
-`dprint` [https://dprint.dev/](https://dprint.dev/)
-
-```lua
-local dprint = require('efmls-configs.formatters.dprint')
-```
-
-### Json
-
-#### Formatters
-
-`dprint` [https://dprint.dev/](https://dprint.dev/)
-
-```lua
-local dprint = require('efmls-configs.formatters.dprint')
-```
-
-`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
-
-```lua
-local prettier = require('efmls-configs.formatters.prettier')
-```
-
-`prettier_d` [https://github.com/fsouza/prettierd](https://github.com/fsouza/prettierd)
-
-```lua
-local prettier_d = require('efmls-configs.formatters.prettier_d')
-```
-
-### Toml
-
-#### Formatters
-
-`dprint` [https://dprint.dev/](https://dprint.dev/)
-
-```lua
-local dprint = require('efmls-configs.formatters.dprint')
-```
-
-### Rust
-
-#### Formatters
-
-`dprint` [https://dprint.dev/](https://dprint.dev/)
-
-```lua
-local dprint = require('efmls-configs.formatters.dprint')
-```
-
-`rustfmt` [https://github.com/rust-lang-nursery/rustfmt](https://github.com/rust-lang-nursery/rustfmt)
-
-```lua
-local rustfmt = require('efmls-configs.formatters.rustfmt')
-```
-
-### Roslyn
-
-#### Formatters
-
-`dprint` [https://dprint.dev/](https://dprint.dev/)
-
-```lua
-local dprint = require('efmls-configs.formatters.dprint')
-```
-
-### Java
-
-#### Formatters
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Objective-c
-
-#### Formatters
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Objective-c++
-
-#### Formatters
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Pawn
-
-#### Formatters
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Vala
-
-#### Formatters
-
-`uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
-
-```lua
-local uncrustify = require('efmls-configs.formatters.uncrustify')
-```
-
-### Sml
-
-#### Formatters
-
-`smlfmt` [https://github.com/shwestrick/smlfmt](https://github.com/shwestrick/smlfmt)
-
-```lua
-local smlfmt = require('efmls-configs.formatters.smlfmt')
+local beautysh = require('efmls-configs.formatters.beautysh')
 ```
 
