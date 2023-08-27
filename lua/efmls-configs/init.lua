@@ -1,6 +1,4 @@
-require('efmls-configs.logger').info(
-  '[efmls-configs] init() and setup() is no longer required, check `:help efmls-configs-setup` for the new way.'
-)
+local info = require('efmls-configs.logger').info
 
 local lspconfig_ok, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_ok then
@@ -11,12 +9,14 @@ end
 
 local M = {}
 
+-- REMOVED
 M.init = function(user_efmls_opts)
-  -- REMOVED
+  info('[efmls-configs] init() and setup() is no longer required, check `:help efmls-configs-setup` for the new way.')
 end
 
+-- REMOVED
 M.setup = function(filetypes)
-  -- REMOVED
+  info('[efmls-configs] init() and setup() is no longer required, check `:help efmls-configs-setup` for the new way.')
 end
 
 return M
