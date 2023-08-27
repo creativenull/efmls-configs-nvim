@@ -235,8 +235,10 @@ async function renderLanguages(): Promise<string> {
   languageString += getRenderMiscLanguages(languages.get("misc") as LanguageTool);
   languages.delete("misc");
 
-  // Render the rest of languages
-  for (const [lang, tools] of languages) {
+  // Sort languages
+  const sortedLanguages = new Map([...languages.entries()].sort());
+
+  for (const [lang, tools] of sortedLanguages) {
     languageString += `### ${capitalize(lang)}\n\n`;
 
     if (tools.linters) {
