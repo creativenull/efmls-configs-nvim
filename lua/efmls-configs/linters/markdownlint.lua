@@ -5,7 +5,7 @@
 local fs = require("efmls-configs.fs")
 
 local linter = "markdownlint"
-local command = string.format("%s --config %q --stdin", fs.executable(linter))
+local command = string.format("%s --stdin", fs.executable(linter))
 
 return {
 	prefix = linter,
