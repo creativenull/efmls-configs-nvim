@@ -7,7 +7,7 @@ local fs = require("efmls-configs.fs")
 local linter = "codespell"
 
 -- HACK piping to `sed` to change severity to warning
-local command = string.format("%s --ignore-words %q ${INPUT} | sed 's/^/w /'", fs.executable(linter))
+local command = string.format("%s ${INPUT} | sed 's/^/w /'", fs.executable(linter))
 
 return {
 	prefix = linter,
