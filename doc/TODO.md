@@ -260,7 +260,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [alex](https://github.com/wooorm/alex)
   + [X] [cbfmt](https://github.com/lukas-reineke/cbfmt)
   + [X] [languagetool](https://languagetool.org/)
-  + [ ] [markdownlint](https://github.com/DavidAnson/markdownlint)
+  + [X] [markdownlint](https://github.com/DavidAnson/markdownlint)
   + [ ] [mdl](https://github.com/mivok/markdownlint)
   + [ ] [pandoc](https://pandoc.org)
   + [X] [prettier](https://github.com/prettier/prettier)
