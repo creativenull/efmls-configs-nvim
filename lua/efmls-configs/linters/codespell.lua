@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: misc
+-- url: https://github.com/codespell-project/codespell
+
 local fs = require("efmls-configs.fs")
 
 local linter = "codespell"

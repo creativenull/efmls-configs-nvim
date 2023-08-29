@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: typescript, javascript, json
+-- url: https://github.com/rome/tools
+
 local fs = require('efmls-configs.fs')
 
 local formatter = "rome"

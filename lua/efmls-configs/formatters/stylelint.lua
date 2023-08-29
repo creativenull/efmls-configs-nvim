@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: css,scss,sass,less
+-- url: https://github.com/codespell-project/codespell
+
 local fs = require("efmls-configs.fs")
 
 local formatter = "stylelint"

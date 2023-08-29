@@ -1,3 +1,7 @@
+-- Metadata
+-- languages: markdown
+-- url: https://github.com/DavidAnson/markdownlint
+
 local fs = require("efmls-configs.fs")
 
 local linter = "markdownlint"
