@@ -6,8 +6,7 @@ local fs = require("efmls-configs.fs")
 
 local linter = "codespell"
 
--- HACK piping to `sed` to change severity to warning
-local command = string.format("%s ${INPUT} | sed 's/^/w /'", fs.executable(linter))
+local command = string.format("%s --disable-colors ${INPUT}", fs.executable(linter))
 
 return {
 	prefix = linter,
@@ -15,5 +14,5 @@ return {
 	lintCommand = command,
 	lintIgnoreExitCode = true,
 	lintStdin = false,
-	lintFormats = { "%t %f:%l:%m" },
+	lintFormats = { "%f:%l:%m" },
 }
