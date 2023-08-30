@@ -1,5 +1,5 @@
 -- Metadata
--- languages: typescript, javascript, json
+-- languages: typescript, javascript, json, jsonc
 -- url: https://biomejs.dev/
 
 local fs = require('efmls-configs.fs')
