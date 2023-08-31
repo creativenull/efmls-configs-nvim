@@ -21,6 +21,7 @@ check the docs: [`:help efmls-configs-defaults`](../README.md#default-configurat
 | Python | `flake8` | `autopep8` |
 | Ruby | `reek` |  |
 | VIM | `vint` |  |
+| Blade |  | `blade_formatter` |
 
 ## Languages
 
@@ -36,6 +37,12 @@ to search, <kbd>Cmd</kbd> + <kbd>F</kbd> if on Mac OS). See example code: [`:hel
 
 ```lua
 local alex = require('efmls-configs.linters.alex')
+```
+
+`codespell` [https://github.com/codespell-project/codespell](https://github.com/codespell-project/codespell)
+
+```lua
+local codespell = require('efmls-configs.linters.codespell')
 ```
 
 `languagetool` [https://languagetool.org/](https://languagetool.org/)
@@ -102,6 +109,16 @@ local beautysh = require('efmls-configs.formatters.beautysh')
 
 ```lua
 local shfmt = require('efmls-configs.formatters.shfmt')
+```
+
+### Blade
+
+#### Formatters
+
+`blade_formatter` [https://github.com/shufo/blade-formatter](https://github.com/shufo/blade-formatter)
+
+```lua
+local blade_formatter = require('efmls-configs.formatters.blade_formatter')
 ```
 
 ### C#
@@ -332,6 +349,12 @@ local prettier = require('efmls-configs.formatters.prettier')
 local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.formatters.stylelint')
+```
+
 ### D
 
 #### Linters
@@ -510,6 +533,12 @@ local prettier_d = require('efmls-configs.formatters.prettier_d')
 
 #### Formatters
 
+`google_java_format` [https://github.com/google/google-java-format](https://github.com/google/google-java-format)
+
+```lua
+local google_java_format = require('efmls-configs.formatters.google_java_format')
+```
+
 `uncrustify` [https://github.com/uncrustify/uncrustify](https://github.com/uncrustify/uncrustify)
 
 ```lua
@@ -551,6 +580,12 @@ local xo = require('efmls-configs.linters.xo')
 ```
 
 #### Formatters
+
+`biome` [https://biomejs.dev/](https://biomejs.dev/)
+
+```lua
+local biome = require('efmls-configs.formatters.biome')
+```
 
 `dprint` [https://dprint.dev/](https://dprint.dev/)
 
@@ -606,6 +641,12 @@ local prettier_eslint = require('efmls-configs.formatters.prettier_eslint')
 local prettier_standard = require('efmls-configs.formatters.prettier_standard')
 ```
 
+`rome` [https://github.com/rome/tools](https://github.com/rome/tools)
+
+```lua
+local rome = require('efmls-configs.formatters.rome')
+```
+
 `xo` [https://github.com/sindresorhus/xo](https://github.com/sindresorhus/xo)
 
 ```lua
@@ -623,6 +664,12 @@ local jq = require('efmls-configs.linters.jq')
 ```
 
 #### Formatters
+
+`biome` [https://biomejs.dev/](https://biomejs.dev/)
+
+```lua
+local biome = require('efmls-configs.formatters.biome')
+```
 
 `dprint` [https://dprint.dev/](https://dprint.dev/)
 
@@ -646,6 +693,22 @@ local prettier = require('efmls-configs.formatters.prettier')
 
 ```lua
 local prettier_d = require('efmls-configs.formatters.prettier_d')
+```
+
+`rome` [https://github.com/rome/tools](https://github.com/rome/tools)
+
+```lua
+local rome = require('efmls-configs.formatters.rome')
+```
+
+### Jsonc
+
+#### Formatters
+
+`biome` [https://biomejs.dev/](https://biomejs.dev/)
+
+```lua
+local biome = require('efmls-configs.formatters.biome')
 ```
 
 ### Ksh
@@ -682,6 +745,12 @@ local prettier = require('efmls-configs.formatters.prettier')
 local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.formatters.stylelint')
+```
+
 ### Lua
 
 #### Linters
@@ -714,6 +783,14 @@ local stylua = require('efmls-configs.formatters.stylua')
 
 ### Markdown
 
+#### Linters
+
+`markdownlint` [https://github.com/DavidAnson/markdownlint](https://github.com/DavidAnson/markdownlint)
+
+```lua
+local markdownlint = require('efmls-configs.linters.markdownlint')
+```
+
 #### Formatters
 
 `cbfmt` [https://github.com/lukas-reineke/cbfmt](https://github.com/lukas-reineke/cbfmt)
@@ -726,6 +803,12 @@ local cbfmt = require('efmls-configs.formatters.cbfmt')
 
 ```lua
 local dprint = require('efmls-configs.formatters.dprint')
+```
+
+`mdformat` [https://mdformat.readthedocs.io/](https://mdformat.readthedocs.io/)
+
+```lua
+local mdformat = require('efmls-configs.formatters.mdformat')
 ```
 
 ### Nix
@@ -896,6 +979,12 @@ local black = require('efmls-configs.formatters.black')
 local isort = require('efmls-configs.formatters.isort')
 ```
 
+`ruff` [https://github.com/astral-sh/ruff](https://github.com/astral-sh/ruff)
+
+```lua
+local ruff = require('efmls-configs.formatters.ruff')
+```
+
 `yapf` [https://github.com/google/yapf](https://github.com/google/yapf)
 
 ```lua
@@ -980,6 +1069,12 @@ local prettier = require('efmls-configs.formatters.prettier')
 local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.formatters.stylelint')
+```
+
 ### Scss
 
 #### Linters
@@ -1004,6 +1099,12 @@ local prettier = require('efmls-configs.formatters.prettier')
 local prettier_d = require('efmls-configs.formatters.prettier_d')
 ```
 
+`stylelint` [https://github.com/stylelint/stylelint](https://github.com/stylelint/stylelint)
+
+```lua
+local stylelint = require('efmls-configs.formatters.stylelint')
+```
+
 ### Sh
 
 #### Linters
@@ -1020,6 +1121,12 @@ local shellcheck = require('efmls-configs.linters.shellcheck')
 
 ```lua
 local beautysh = require('efmls-configs.formatters.beautysh')
+```
+
+`shellharden` [https://github.com/anordal/shellharden](https://github.com/anordal/shellharden)
+
+```lua
+local shellharden = require('efmls-configs.formatters.shellharden')
 ```
 
 `shfmt` [https://github.com/mvdan/sh](https://github.com/mvdan/sh)
@@ -1116,6 +1223,12 @@ local xo = require('efmls-configs.linters.xo')
 
 #### Formatters
 
+`biome` [https://biomejs.dev/](https://biomejs.dev/)
+
+```lua
+local biome = require('efmls-configs.formatters.biome')
+```
+
 `dprint` [https://dprint.dev/](https://dprint.dev/)
 
 ```lua
@@ -1162,6 +1275,12 @@ local prettier_eslint = require('efmls-configs.formatters.prettier_eslint')
 
 ```lua
 local prettier_standard = require('efmls-configs.formatters.prettier_standard')
+```
+
+`rome` [https://github.com/rome/tools](https://github.com/rome/tools)
+
+```lua
+local rome = require('efmls-configs.formatters.rome')
 ```
 
 `xo` [https://github.com/sindresorhus/xo](https://github.com/sindresorhus/xo)
