@@ -45,6 +45,12 @@ local alex = require('efmls-configs.linters.alex')
 local codespell = require('efmls-configs.linters.codespell')
 ```
 
+`cspell` [https://github.com/streetsidesoftware/cspell](https://github.com/streetsidesoftware/cspell)
+
+```lua
+local cspell = require('efmls-configs.linters.cspell')
+```
+
 `languagetool` [https://languagetool.org/](https://languagetool.org/)
 
 ```lua
