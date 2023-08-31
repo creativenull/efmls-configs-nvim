@@ -15,4 +15,6 @@ return {
   lintIgnoreExitCode = true,
   lintStdin = false,
   lintFormats = { '%f:%l:%m' },
+  -- Min severity should start from warning
+  lintSeverity = 2,
 }
