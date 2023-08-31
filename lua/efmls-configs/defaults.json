@@ -7,7 +7,7 @@
       "formatters": ["prettier"]
     },
     {
-      "languages": ["javascript", "javascriptreact", "typescript", "typescriptreact"], 
+      "languages": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
       "alias": "JavaScript/JSX TypeScript/TSX",
       "linters": ["eslint"],
       "formatters": ["prettier"]
@@ -49,6 +49,10 @@
       "languages": ["vim"],
       "alias": "VIM",
       "linters": ["vint"]
+    },
+    {
+      "languages": ["blade"],
+      "formatters": ["blade_formatter"]
     }
   ]
 }
