@@ -8,7 +8,6 @@ local formatter = 'latexindent'
 local command = string.format('%s -', fs.executable(formatter))
 
 return {
-  prefix = formatter,
   formatCommand = command,
   formatStdin = true,
 }
