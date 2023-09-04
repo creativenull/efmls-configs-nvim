@@ -2,6 +2,7 @@
 -- languages: php
 -- url: https://github.com/phpstan/phpstan
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'phpstan'
@@ -10,6 +11,7 @@ local command = string.format('%s %s', fs.executable(linter, fs.Scope.COMPOSER),
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = false,
   lintFormats = { '%.%#:%l:%m' },

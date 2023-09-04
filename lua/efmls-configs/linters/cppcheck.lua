@@ -2,6 +2,7 @@
 -- languages: c,c++
 -- url: http://cppcheck.sourceforge.net
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'cppcheck'
@@ -12,6 +13,7 @@ local command = string.format(
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = false,
   lintFormats = { '%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m', '%f:%l:%c: %tote: %m' },
