@@ -1195,6 +1195,24 @@ local forge_fmt = require('efmls-configs.formatters.forge_fmt')
 local terraform_fmt = require('efmls-configs.formatters.terraform_fmt')
 ```
 
+### Tex
+
+#### Linters
+
+`chktex` [https://www.nongnu.org/chktex/](https://www.nongnu.org/chktex/)
+
+```lua
+local chktex = require('efmls-configs.linters.chktex')
+```
+
+#### Formatters
+
+`latexindent` [https://github.com/cmhughes/latexindent.pl](https://github.com/cmhughes/latexindent.pl)
+
+```lua
+local latexindent = require('efmls-configs.formatters.latexindent')
+```
+
 ### Toml
 
 #### Formatters
