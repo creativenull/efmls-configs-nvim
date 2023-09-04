@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'mcs'
-local command = string.format('%s -unsafe --parse ${INPUT}', fs.executable(linter))
+local command = string.format('%s -unsafe --parse "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,

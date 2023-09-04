@@ -10,7 +10,7 @@ local args = {
   '--extra-arg=-Xclang',
   '--extra-arg=-analyzer-output=text',
   '--extra-arg=-fno-color-diagnostics',
-  '${INPUT}',
+  '"${INPUT}"',
 }
 local command = string.format('%s %s', fs.executable(linter), table.concat(args, ' '))
 

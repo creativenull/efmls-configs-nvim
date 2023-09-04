@@ -1,7 +1,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'perlcritic'
-local command = string.format('%s --nocolor --verbose "%s" ${INPUT}', fs.executable(linter), [[%l:%c:%s %m [%p]\n]])
+local command = string.format('%s --nocolor --verbose "%s" "${INPUT}"', fs.executable(linter), [[%l:%c:%s %m [%p]\n]])
 
 return {
   prefix = linter,

@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'pylint'
-local command = string.format('%s --score=no ${INPUT}', fs.executable(linter))
+local command = string.format('%s --score=no "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,

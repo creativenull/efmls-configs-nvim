@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'gcc'
-local args = { '-Wpedantic', '-Wall', '-Wextra', '-fno-diagnostics-color', '-fsyntax-only', '${INPUT}' }
+local args = { '-Wpedantic', '-Wall', '-Wextra', '-fno-diagnostics-color', '-fsyntax-only', '"${INPUT}"' }
 local command = string.format('%s %s', fs.executable(linter), table.concat(args, ' '))
 
 return {
