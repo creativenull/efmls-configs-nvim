@@ -6,7 +6,7 @@ local fs = require('efmls-configs.fs')
 
 local linter = 'codespell'
 
-local command = string.format('%s --disable-colors ${INPUT}', fs.executable(linter))
+local command = string.format('%s --disable-colors "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,

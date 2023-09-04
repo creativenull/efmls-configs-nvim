@@ -6,7 +6,7 @@ local fs = require('efmls-configs.fs')
 
 local linter = 'cspell'
 
-local command = string.format('%s --no-color --no-progress --no-summary ${INPUT}', fs.executable(linter))
+local command = string.format('%s --no-color --no-progress --no-summary "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,

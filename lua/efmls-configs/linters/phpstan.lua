@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'phpstan'
-local args = 'analyse --no-progress --no-ansi --error-format=raw ${INPUT}'
+local args = 'analyse --no-progress --no-ansi --error-format=raw "${INPUT}"'
 local command = string.format('%s %s', fs.executable(linter, fs.Scope.COMPOSER), args)
 
 return {

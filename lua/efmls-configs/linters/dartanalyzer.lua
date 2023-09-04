@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'dartanalyzer'
-local command = string.format('%s --format machine ${INPUT}', fs.executable(linter))
+local command = string.format('%s --format machine "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,

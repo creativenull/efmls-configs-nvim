@@ -6,7 +6,7 @@ local fs = require('efmls-configs.fs')
 
 local linter = 'cppcheck'
 local command = string.format(
-  '%s --quiet --force --enable=warning,style,performance,portability --error-exitcode=1  ${INPUT}',
+  '%s --quiet --force --enable=warning,style,performance,portability --error-exitcode=1  "${INPUT}"',
   fs.executable(linter)
 )
 

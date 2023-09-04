@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local linter = 'golangci-lint'
-local command = string.format('%s run --color never --out-format tab ${INPUT}', fs.executable(linter))
+local command = string.format('%s run --color never --out-format tab "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,
