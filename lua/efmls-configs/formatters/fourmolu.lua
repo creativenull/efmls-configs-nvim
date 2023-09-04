@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local formatter = 'fourmolu'
-local command = string.format('%s --stdin-input-file ${INPUT} -', fs.executable(formatter))
+local command = string.format("%s --stdin-input-file '${INPUT}' -", fs.executable(formatter))
 
 return {
   prefix = formatter,

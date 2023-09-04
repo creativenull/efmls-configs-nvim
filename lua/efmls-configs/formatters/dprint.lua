@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local formatter = 'dprint'
-local command = string.format('%s fmt --stdin ${INPUT}', fs.executable(formatter, fs.Scope.NODE))
+local command = string.format("%s fmt --stdin '${INPUT}'", fs.executable(formatter, fs.Scope.NODE))
 
 return {
   formatCommand = command,
