@@ -1081,6 +1081,16 @@ local prettier_d = require('efmls-configs.formatters.prettier_d')
 local stylelint = require('efmls-configs.formatters.stylelint')
 ```
 
+### Scala
+
+#### Formatters
+
+`scalafmt` [https://scalameta.org/scalafmt/](https://scalameta.org/scalafmt/)
+
+```lua
+local scalafmt = require('efmls-configs.formatters.scalafmt')
+```
+
 ### Scss
 
 #### Linters
@@ -1223,6 +1233,12 @@ local latexindent = require('efmls-configs.formatters.latexindent')
 local dprint = require('efmls-configs.formatters.dprint')
 ```
 
+`taplo` [https://github.com/tamasfe/taplo](https://github.com/tamasfe/taplo)
+
+```lua
+local taplo = require('efmls-configs.formatters.taplo')
+```
+
 ### Typescript
 
 #### Linters
@@ -1353,6 +1369,14 @@ local ansible_lint = require('efmls-configs.linters.ansible_lint')
 
 ```lua
 local yamllint = require('efmls-configs.linters.yamllint')
+```
+
+#### Formatters
+
+`yq` [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq)
+
+```lua
+local yq = require('efmls-configs.formatters.yq')
 ```
 
 ### Zsh
