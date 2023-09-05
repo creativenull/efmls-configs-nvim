@@ -2,6 +2,7 @@
 -- languages: javascript
 -- url: http://fecs.baidu.com/
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'fecs'
@@ -11,6 +12,7 @@ local command = string.format('%s %s', bin, args)
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
   lintFormats = {

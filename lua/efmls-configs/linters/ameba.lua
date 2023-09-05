@@ -2,6 +2,7 @@
 -- languages: crystal
 -- url: https://github.com/veelenga/ameba
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'ameba'
@@ -9,6 +10,7 @@ local command = string.format('%s --no-color --format flycheck "${INPUT}"', fs.e
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = false,
   lintIgnoreExitCode = true,

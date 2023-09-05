@@ -2,6 +2,7 @@
 -- languages: vim
 -- url: https://github.com/ValeLint/vale
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'vint'
@@ -11,6 +12,7 @@ local command = string.format('%s %s %q', fs.executable(linter), args, format)
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = false,
   lintFormats = { '%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m' },

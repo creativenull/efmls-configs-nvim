@@ -2,6 +2,7 @@
 -- languages: yaml
 -- url: https://github.com/rhysd/actionlint
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'actionlint'
@@ -9,6 +10,7 @@ local command = string.format('%s -no-color -oneline -stdin-filename "${INPUT}" 
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
   lintFormats = {

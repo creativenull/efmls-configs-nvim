@@ -2,6 +2,7 @@
 -- languages: javascript,typescript
 -- url: https://github.com/mantoni/eslint_d.js
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'eslint_d'
@@ -11,6 +12,7 @@ local command = string.format('%s %s', bin, args)
 
 return {
   prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
   lintFormats = { '%f(%l,%c): %trror %m', '%f(%l,%c): %tarning %m' },

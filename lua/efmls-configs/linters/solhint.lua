@@ -2,6 +2,7 @@
 -- languages: solidity
 -- url: https://github.com/protofire/solhint
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'solhint'
@@ -10,6 +11,8 @@ local args = '--formatter unix stdin'
 local command = string.format('%s %s | tr -s " "', bin, args)
 
 return {
+  prefix = linter,
+  lintSource = sourceText(linter),
   lintCommand = command,
   lintIgnoreExitCode = true,
   lintSource = linter,

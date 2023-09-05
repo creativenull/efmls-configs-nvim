@@ -8,6 +8,7 @@
 -- https://github.com/crytic/slither/issues/2054
 -- * `remappings.txt` needs to generated, e.g. `forge remappings > remappings.txt`
 
+local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'slither'
@@ -39,6 +40,8 @@ local command = string.format(
 )
 
 return {
+  prefix = linter,
+  lintSource = sourceText(linter),
   lintCategoryMap = {
     I = 'N',
     O = 'N',
