@@ -683,6 +683,12 @@ local biome = require('efmls-configs.formatters.biome')
 local dprint = require('efmls-configs.formatters.dprint')
 ```
 
+`fixjson` [https://github.com/rhysd/fixjson](https://github.com/rhysd/fixjson)
+
+```lua
+local fixjson = require('efmls-configs.formatters.fixjson')
+```
+
 `jq` [https://jqlang.github.io/jq/](https://jqlang.github.io/jq/)
 
 ```lua
