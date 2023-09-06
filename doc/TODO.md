@@ -212,7 +212,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [xo](https://github.com/sindresorhus/xo)
 + JSON
   + [X] [eslint](http://eslint.org/)
-  + [ ] [fixjson](https://github.com/rhysd/fixjson)
+  + [X] [fixjson](https://github.com/rhysd/fixjson)
   + [ ] [jq](https://stedolan.github.io/jq/)
   + [ ] [jsonlint](https://github.com/zaach/jsonlint)
   + [X] [prettier](https://github.com/prettier/prettier)
