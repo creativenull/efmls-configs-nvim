@@ -483,6 +483,12 @@ local staticcheck = require('efmls-configs.linters.staticcheck')
 local gofmt = require('efmls-configs.formatters.gofmt')
 ```
 
+`gofumpt` [https://github.com/mvdan/gofumpt](https://github.com/mvdan/gofumpt)
+
+```lua
+local gofumpt = require('efmls-configs.formatters.gofumpt')
+```
+
 `goimports` [https://godoc.org/golang.org/x/tools/cmd/goimports](https://godoc.org/golang.org/x/tools/cmd/goimports)
 
 ```lua
