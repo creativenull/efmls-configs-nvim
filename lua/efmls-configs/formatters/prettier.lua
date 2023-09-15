@@ -1,5 +1,5 @@
 -- Metadata
--- languages: javascript,typescript,css,scss,sass,less,html,json
+-- languages: javascript,typescript,css,scss,sass,less,html,json,yaml
 -- url: https://github.com/prettier/prettier
 
 local fs = require('efmls-configs.fs')
