@@ -1385,6 +1385,12 @@ local yamllint = require('efmls-configs.linters.yamllint')
 
 #### Formatters
 
+`prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
+
+```lua
+local prettier = require('efmls-configs.formatters.prettier')
+```
+
 `yq` [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq)
 
 ```lua
