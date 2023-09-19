@@ -127,6 +127,33 @@ languages = vim.tbl_extend('force', languages, {
 })
 ```
 
+### Tips and Tricks
+
+#### Format on save
+
+There are couple ways you can format your code on save.
+
+1. Register an autocmd to run format on save:
+
+```lua
+local lsp_fmt_group = vim.api.nvim_create_augroup('LspFormattingGroup', {})
+vim.api.nvim_create_autocmd('BufWritePost', {
+  group = lsp_fmt_group,
+  callback = function()
+    local efm = vim.lsp.get_active_clients({ name = 'efm' })
+
+    if vim.tbl_isempty(efm) then
+      return
+    end
+
+    vim.lsp.buf.format({ name = 'efm' })
+  end,
+})
+```
+
+2. If you do not want to write and maintain the code above, then you can rely on a plugin like
+[lukas-reineke/lsp-format.nvim][lsp-format] which makes it easier to format on save.
+
 ## Troubleshooting
 
 See also `:help efmls-configs-issues` to view docs inside neovim.
@@ -162,3 +189,4 @@ Credits goes to the following projects for inspiration:
 [nvim-lsp]: https://neovim.io/doc/user/lsp.html
 [neovim]: https://github.com/neovim/neovim
 [lspconfig]: https://github.com/neovim/nvim-lspconfig
+[lsp-format]: https://github.com/lukas-reineke/lsp-format.nvim
