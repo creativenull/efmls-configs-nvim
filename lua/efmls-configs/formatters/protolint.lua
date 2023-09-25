@@ -9,7 +9,7 @@ local command = string.format("%s lint -fix '${INPUT}'", fs.executable(formatter
 
 return {
   formatCommand = command,
-  formatStdin = true,
+  formatStdin = false,
   rootMarkers = {
     '.protolint.yaml',
     '.protolint.yml',
