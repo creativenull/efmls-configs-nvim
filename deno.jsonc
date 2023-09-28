@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "gen": "deno run --allow-read=lua/efmls-configs --allow-write=doc/SUPPORTED_LIST.md generate.ts"
+    "gen": "deno run --allow-read=lua/efmls-configs --allow-write=doc/SUPPORTED_LIST.md,doc/supported-list.json generate.ts"
   },
   "fmt": {
     "lineWidth": 100

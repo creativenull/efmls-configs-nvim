@@ -1,5 +1,6 @@
 const basepath = "./lua/efmls-configs";
-const outputfile = "./doc/SUPPORTED_LIST.md";
+const supportedListMdFilepath = "./doc/SUPPORTED_LIST.md";
+const supportedListJsonFilepath = "./doc/supported-list.json";
 
 type DefaultConfiguration = {
   languages: string[];
@@ -222,14 +223,10 @@ local ${formatter.name} = require('efmls-configs.formatters.${formatter.name}')
 /**
  * Render language section.
  *
- * @async
  * @returns {string}
  */
-async function renderLanguages(): Promise<string> {
+function renderLanguages(): string {
   let languageString = "";
-
-  await generateLanguageLinters();
-  await generateLanguageFormatters();
 
   // Render misc languages first then the rest
   languageString += getRenderMiscLanguages(languages.get("misc") as LanguageTool);
@@ -299,13 +296,41 @@ check the docs: [\`:help efmls-configs-defaults\`](../README.md#default-configur
 the table of contents of this document on the left hand corner of the file, in github (Or just a simple <kbd>Ctrl</kbd> + <kbd>F</kbd>
 to search, <kbd>Cmd</kbd> + <kbd>F</kbd> if on Mac OS). See example code: [\`:help efmls-configs-setup\`](../README.md#setup).\n\n`;
 
-  contents += await renderLanguages();
+  contents += renderLanguages();
 
   console.log("Generating SUPPORTED_LIST.md");
-  await Deno.writeTextFile(outputfile, contents);
+  await Deno.writeTextFile(supportedListMdFilepath, contents);
+  console.log("Done!");
+}
+
+async function createOrUpdateLanguagesJson(): Promise<void> {
+  const sortedLanguages = new Map([...languages.entries()].sort());
+  const jsonLanguages: Record<string, { linters?: ToolMetadata[]; formatters?: ToolMetadata[] }> =
+    {};
+
+  for (const [lang, tools] of sortedLanguages) {
+    jsonLanguages[lang] = {};
+
+    if (tools.linters) {
+      jsonLanguages[lang].linters = tools.linters;
+    }
+
+    if (tools.formatters) {
+      jsonLanguages[lang].formatters = tools.formatters;
+    }
+  }
+
+  const jsonContent = JSON.stringify(jsonLanguages, null, 2);
+  console.log("Generating supported-list.json");
+  await Deno.writeTextFile(supportedListJsonFilepath, jsonContent);
   console.log("Done!");
 }
 
 if (import.meta.main) {
+  await generateLanguageLinters();
+  await generateLanguageFormatters();
+
+  await createOrUpdateLanguagesJson();
+
   await generateSupportedList();
 }
