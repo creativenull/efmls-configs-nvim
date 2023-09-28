@@ -1,0 +1,1028 @@
+{
+  "bash": {
+    "linters": [
+      {
+        "name": "bashate",
+        "url": "https://github.com/openstack/bashate"
+      },
+      {
+        "name": "shellcheck",
+        "url": "https://www.shellcheck.net/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "beautysh",
+        "url": "https://github.com/illvart/beautysh-action"
+      },
+      {
+        "name": "shfmt",
+        "url": "https://github.com/mvdan/sh"
+      }
+    ]
+  },
+  "blade": {
+    "formatters": [
+      {
+        "name": "blade_formatter",
+        "url": "https://github.com/shufo/blade-formatter"
+      }
+    ]
+  },
+  "c#": {
+    "linters": [
+      {
+        "name": "mcs",
+        "url": "http://www.mono-project.com/docs/about-mono/languages/csharp/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "dotnet_format",
+        "url": "https://github.com/dotnet/format"
+      },
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "c++": {
+    "linters": [
+      {
+        "name": "clang_tidy",
+        "url": "http://clang.llvm.org/extra/clang-tidy/"
+      },
+      {
+        "name": "clazy",
+        "url": "https://github.com/KDE/clazy"
+      },
+      {
+        "name": "cppcheck",
+        "url": "http://cppcheck.sourceforge.net"
+      },
+      {
+        "name": "cpplint",
+        "url": "https://github.com/google/styleguide/tree/gh-pages/cpplint"
+      },
+      {
+        "name": "gcc",
+        "url": "https://gcc.gnu.org/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "astyle",
+        "url": "http://astyle.sourceforge.net/"
+      },
+      {
+        "name": "clang_format",
+        "url": "https://clang.llvm.org/docs/ClangFormat.html"
+      },
+      {
+        "name": "clang_tidy",
+        "url": "http://clang.llvm.org/extra/clang-tidy/"
+      },
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "c": {
+    "linters": [
+      {
+        "name": "clang_tidy",
+        "url": "http://clang.llvm.org/extra/clang-tidy/"
+      },
+      {
+        "name": "cppcheck",
+        "url": "http://cppcheck.sourceforge.net"
+      },
+      {
+        "name": "cpplint",
+        "url": "https://github.com/google/styleguide/tree/gh-pages/cpplint"
+      },
+      {
+        "name": "flawfinder",
+        "url": "https://www.dwheeler.com/flawfinder/"
+      },
+      {
+        "name": "gcc",
+        "url": "https://gcc.gnu.org/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "astyle",
+        "url": "http://astyle.sourceforge.net/"
+      },
+      {
+        "name": "clang_format",
+        "url": "https://clang.llvm.org/docs/ClangFormat.html"
+      },
+      {
+        "name": "clang_tidy",
+        "url": "http://clang.llvm.org/extra/clang-tidy/"
+      },
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "clojure": {
+    "linters": [
+      {
+        "name": "clj_kondo",
+        "url": "https://github.com/borkdude/clj-kondo"
+      },
+      {
+        "name": "joker",
+        "url": "https://github.com/candid82/joker"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "joker",
+        "url": "https://github.com/candid82/joker"
+      }
+    ]
+  },
+  "cmake": {
+    "linters": [
+      {
+        "name": "cmake_lint",
+        "url": "https://github.com/cheshirekow/cmake_format"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "gersemi",
+        "url": "https://github.com/BlankSpruce/gersemi"
+      }
+    ]
+  },
+  "crystal": {
+    "linters": [
+      {
+        "name": "ameba",
+        "url": "https://github.com/veelenga/ameba"
+      }
+    ]
+  },
+  "csh": {
+    "formatters": [
+      {
+        "name": "beautysh",
+        "url": "https://github.com/illvart/beautysh-action"
+      }
+    ]
+  },
+  "css": {
+    "linters": [
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "fecs",
+        "url": "http://fecs.baidu.com/"
+      },
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ]
+  },
+  "d": {
+    "linters": [
+      {
+        "name": "dmd",
+        "url": "https://dlang.org/dmd-linux.html"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "dfmt",
+        "url": "https://github.com/dlang-community/dfmt"
+      },
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "dart": {
+    "linters": [
+      {
+        "name": "dartanalyzer",
+        "url": "https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "dartfmt",
+        "url": "https://github.com/dart-lang/sdk/tree/master/utils/dartfmt"
+      }
+    ]
+  },
+  "docker": {
+    "linters": [
+      {
+        "name": "hadolint",
+        "url": "https://github.com/hadolint/hadolint"
+      }
+    ]
+  },
+  "fish": {
+    "linters": [
+      {
+        "name": "fish",
+        "url": "https://linux.die.net/man/1/fish"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "fish_indent",
+        "url": "https://fishshell.com/docs/current/cmds/fish_indent.html"
+      }
+    ]
+  },
+  "gitcommit": {
+    "linters": [
+      {
+        "name": "gitlint",
+        "url": "https://jorisroovers.com/gitlint/latest/"
+      }
+    ]
+  },
+  "go": {
+    "linters": [
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
+      {
+        "name": "go_revive",
+        "url": "https://github.com/mgechev/revive"
+      },
+      {
+        "name": "golangci_lint",
+        "url": "https://github.com/golangci/golangci-lint"
+      },
+      {
+        "name": "golint",
+        "url": "https://godoc.org/github.com/golang/lint"
+      },
+      {
+        "name": "staticcheck",
+        "url": "https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "gofmt",
+        "url": "https://pkg.go.dev/cmd/gofmt"
+      },
+      {
+        "name": "gofumpt",
+        "url": "https://github.com/mvdan/gofumpt"
+      },
+      {
+        "name": "goimports",
+        "url": "https://godoc.org/golang.org/x/tools/cmd/goimports"
+      },
+      {
+        "name": "golines",
+        "url": "https://github.com/segmentio/golines"
+      }
+    ]
+  },
+  "haskell": {
+    "formatters": [
+      {
+        "name": "fourmolu",
+        "url": "https://github.com/fourmolu/fourmolu"
+      }
+    ]
+  },
+  "html": {
+    "linters": [
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "fecs",
+        "url": "http://fecs.baidu.com/"
+      },
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      }
+    ]
+  },
+  "java": {
+    "formatters": [
+      {
+        "name": "google_java_format",
+        "url": "https://github.com/google/google-java-format"
+      },
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "javascript": {
+    "linters": [
+      {
+        "name": "eslint",
+        "url": "http://eslint.org/"
+      },
+      {
+        "name": "eslint_d",
+        "url": "https://github.com/mantoni/eslint_d.js"
+      },
+      {
+        "name": "fecs",
+        "url": "http://fecs.baidu.com/"
+      },
+      {
+        "name": "js_standard",
+        "url": "http://standardjs.com/"
+      },
+      {
+        "name": "xo",
+        "url": "https://github.com/sindresorhus/xo"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "biome",
+        "url": "https://biomejs.dev/"
+      },
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "eslint",
+        "url": "https://eslint.org"
+      },
+      {
+        "name": "eslint_d",
+        "url": "https://github.com/mantoni/eslint_d.js"
+      },
+      {
+        "name": "fecs",
+        "url": "http://fecs.baidu.com/"
+      },
+      {
+        "name": "js_standard",
+        "url": "http://standardjs.com/"
+      },
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "prettier_eslint",
+        "url": "https://github.com/prettier/prettier-eslint"
+      },
+      {
+        "name": "prettier_standard",
+        "url": "https://github.com/sheerun/prettier-standard"
+      },
+      {
+        "name": "rome",
+        "url": "https://github.com/rome/tools"
+      },
+      {
+        "name": "xo",
+        "url": "https://github.com/sindresorhus/xo"
+      }
+    ]
+  },
+  "json": {
+    "linters": [
+      {
+        "name": "jq",
+        "url": "https://jqlang.github.io/jq/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "biome",
+        "url": "https://biomejs.dev/"
+      },
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "fixjson",
+        "url": "https://github.com/rhysd/fixjson"
+      },
+      {
+        "name": "jq",
+        "url": "https://jqlang.github.io/jq/"
+      },
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "rome",
+        "url": "https://github.com/rome/tools"
+      }
+    ]
+  },
+  "jsonc": {
+    "formatters": [
+      {
+        "name": "biome",
+        "url": "https://biomejs.dev/"
+      }
+    ]
+  },
+  "ksh": {
+    "formatters": [
+      {
+        "name": "beautysh",
+        "url": "https://github.com/illvart/beautysh-action"
+      }
+    ]
+  },
+  "less": {
+    "linters": [
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ]
+  },
+  "lua": {
+    "linters": [
+      {
+        "name": "luacheck",
+        "url": "https://github.com/mpeterv/luacheck"
+      },
+      {
+        "name": "selene",
+        "url": "https://kampfkarren.github.io/selene/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "lua_format",
+        "url": "https://github.com/Koihik/LuaFormatter"
+      },
+      {
+        "name": "stylua",
+        "url": "https://github.com/johnnymorganz/stylua"
+      }
+    ]
+  },
+  "make": {
+    "linters": [
+      {
+        "name": "checkmake",
+        "url": "https://github.com/mrtazz/checkmake"
+      }
+    ]
+  },
+  "markdown": {
+    "linters": [
+      {
+        "name": "markdownlint",
+        "url": "https://github.com/DavidAnson/markdownlint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "cbfmt",
+        "url": "https://github.com/lukas-reineke/cbfmt"
+      },
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "mdformat",
+        "url": "https://mdformat.readthedocs.io/"
+      }
+    ]
+  },
+  "misc": {
+    "linters": [
+      {
+        "name": "alex",
+        "url": "https://alexjs.com/"
+      },
+      {
+        "name": "codespell",
+        "url": "https://github.com/codespell-project/codespell"
+      },
+      {
+        "name": "cspell",
+        "url": "https://github.com/streetsidesoftware/cspell"
+      },
+      {
+        "name": "languagetool",
+        "url": "https://languagetool.org/"
+      },
+      {
+        "name": "proselint",
+        "url": "http://proselint.com/"
+      },
+      {
+        "name": "redpen",
+        "url": "http://redpen.cc/"
+      },
+      {
+        "name": "textlint",
+        "url": "https://textlint.github.io/"
+      },
+      {
+        "name": "vale",
+        "url": "https://github.com/ValeLint/vale"
+      },
+      {
+        "name": "write_good",
+        "url": "https://github.com/btford/write-good"
+      }
+    ]
+  },
+  "nix": {
+    "linters": [
+      {
+        "name": "statix",
+        "url": "https://github.com/NerdyPepper/statix"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "alejandra",
+        "url": "https://github.com/kamadorueda/alejandra"
+      },
+      {
+        "name": "nixfmt",
+        "url": "https://github.com/serokell/nixfmt"
+      }
+    ]
+  },
+  "objective-c++": {
+    "formatters": [
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "objective-c": {
+    "formatters": [
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "pawn": {
+    "formatters": [
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "php": {
+    "linters": [
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
+      {
+        "name": "phan",
+        "url": "https://github.com/phan/phan"
+      },
+      {
+        "name": "php",
+        "url": "https://secure.php.net/"
+      },
+      {
+        "name": "phpcs",
+        "url": "https://github.com/squizlabs/PHP_CodeSniffer"
+      },
+      {
+        "name": "phpstan",
+        "url": "https://github.com/phpstan/phpstan"
+      },
+      {
+        "name": "psalm",
+        "url": "https://getpsalm.org"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "php_cs_fixer",
+        "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer"
+      },
+      {
+        "name": "phpcbf",
+        "url": "https://github.com/squizlabs/PHP_CodeSniffer"
+      },
+      {
+        "name": "pint",
+        "url": "https://github.com/laravel/pint"
+      }
+    ]
+  },
+  "proto": {
+    "formatters": [
+      {
+        "name": "protolint",
+        "url": "https://github.com/yoheimuta/protolint"
+      }
+    ]
+  },
+  "python": {
+    "linters": [
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
+      {
+        "name": "flake8",
+        "url": "http://flake8.pycqa.org/en/latest/"
+      },
+      {
+        "name": "mypy",
+        "url": "https://mypy-lang.org/"
+      },
+      {
+        "name": "pylint",
+        "url": "https://www.pylint.org/"
+      },
+      {
+        "name": "vulture",
+        "url": "https://github.com/jendrikseipp/vulture"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "autopep8",
+        "url": "https://github.com/hhatto/autopep8"
+      },
+      {
+        "name": "black",
+        "url": "https://github.com/ambv/black"
+      },
+      {
+        "name": "isort",
+        "url": "https://pycqa.github.io/isort/"
+      },
+      {
+        "name": "ruff",
+        "url": "https://github.com/astral-sh/ruff"
+      },
+      {
+        "name": "yapf",
+        "url": "https://github.com/google/yapf"
+      }
+    ]
+  },
+  "roslyn": {
+    "formatters": [
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      }
+    ]
+  },
+  "ruby": {
+    "linters": [
+      {
+        "name": "debride",
+        "url": "https://github.com/seattlerb/debride"
+      },
+      {
+        "name": "reek",
+        "url": "https://github.com/troessner/reek"
+      },
+      {
+        "name": "rubocop",
+        "url": "https://github.com/bbatsov/rubocop"
+      },
+      {
+        "name": "sorbet",
+        "url": "https://github.com/sorbet/sorbet"
+      }
+    ]
+  },
+  "rust": {
+    "formatters": [
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "rustfmt",
+        "url": "https://github.com/rust-lang-nursery/rustfmt"
+      }
+    ]
+  },
+  "sass": {
+    "linters": [
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ]
+  },
+  "scala": {
+    "formatters": [
+      {
+        "name": "scalafmt",
+        "url": "https://scalameta.org/scalafmt/"
+      }
+    ]
+  },
+  "scss": {
+    "linters": [
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "stylelint",
+        "url": "https://github.com/stylelint/stylelint"
+      }
+    ]
+  },
+  "sh": {
+    "linters": [
+      {
+        "name": "shellcheck",
+        "url": "https://www.shellcheck.net/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "beautysh",
+        "url": "https://github.com/illvart/beautysh-action"
+      },
+      {
+        "name": "shellharden",
+        "url": "https://github.com/anordal/shellharden"
+      },
+      {
+        "name": "shfmt",
+        "url": "https://github.com/mvdan/sh"
+      }
+    ]
+  },
+  "slim": {
+    "linters": [
+      {
+        "name": "slim_lint",
+        "url": "https://github.com/sds/slim-lint"
+      }
+    ]
+  },
+  "sml": {
+    "formatters": [
+      {
+        "name": "smlfmt",
+        "url": "https://github.com/shwestrick/smlfmt"
+      }
+    ]
+  },
+  "solidity": {
+    "linters": [
+      {
+        "name": "slither",
+        "url": "https://github.com/crytic/slither"
+      },
+      {
+        "name": "solhint",
+        "url": "https://github.com/protofire/solhint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "forge_fmt",
+        "url": "https://github.com/foundry-rs/foundry/tree/master/forge"
+      }
+    ]
+  },
+  "terraform": {
+    "formatters": [
+      {
+        "name": "terraform_fmt",
+        "url": "https://github.com/hashicorp/terraform"
+      }
+    ]
+  },
+  "tex": {
+    "linters": [
+      {
+        "name": "chktex",
+        "url": "https://www.nongnu.org/chktex/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "latexindent",
+        "url": "https://github.com/cmhughes/latexindent.pl"
+      }
+    ]
+  },
+  "toml": {
+    "formatters": [
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "taplo",
+        "url": "https://github.com/tamasfe/taplo"
+      }
+    ]
+  },
+  "typescript": {
+    "linters": [
+      {
+        "name": "eslint",
+        "url": "http://eslint.org/"
+      },
+      {
+        "name": "eslint_d",
+        "url": "https://github.com/mantoni/eslint_d.js"
+      },
+      {
+        "name": "xo",
+        "url": "https://github.com/sindresorhus/xo"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "biome",
+        "url": "https://biomejs.dev/"
+      },
+      {
+        "name": "dprint",
+        "url": "https://dprint.dev/"
+      },
+      {
+        "name": "eslint",
+        "url": "https://eslint.org"
+      },
+      {
+        "name": "eslint_d",
+        "url": "https://github.com/mantoni/eslint_d.js"
+      },
+      {
+        "name": "fecs",
+        "url": "http://fecs.baidu.com/"
+      },
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "prettier_d",
+        "url": "https://github.com/fsouza/prettierd"
+      },
+      {
+        "name": "prettier_eslint",
+        "url": "https://github.com/prettier/prettier-eslint"
+      },
+      {
+        "name": "prettier_standard",
+        "url": "https://github.com/sheerun/prettier-standard"
+      },
+      {
+        "name": "rome",
+        "url": "https://github.com/rome/tools"
+      },
+      {
+        "name": "xo",
+        "url": "https://github.com/sindresorhus/xo"
+      }
+    ]
+  },
+  "vala": {
+    "formatters": [
+      {
+        "name": "uncrustify",
+        "url": "https://github.com/uncrustify/uncrustify"
+      }
+    ]
+  },
+  "vim": {
+    "linters": [
+      {
+        "name": "vint",
+        "url": "https://github.com/ValeLint/vale"
+      }
+    ]
+  },
+  "yaml": {
+    "linters": [
+      {
+        "name": "actionlint",
+        "url": "https://github.com/rhysd/actionlint"
+      },
+      {
+        "name": "ansible_lint",
+        "url": "https://github.com/willthames/ansible-lint"
+      },
+      {
+        "name": "yamllint",
+        "url": "https://yamllint.readthedocs.io/"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "prettier",
+        "url": "https://github.com/prettier/prettier"
+      },
+      {
+        "name": "yq",
+        "url": "https://github.com/mikefarah/yq"
+      }
+    ]
+  },
+  "zsh": {
+    "formatters": [
+      {
+        "name": "beautysh",
+        "url": "https://github.com/illvart/beautysh-action"
+      }
+    ]
+  }
+}
