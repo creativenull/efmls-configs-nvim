@@ -297,6 +297,14 @@ local joker = require('efmls-configs.formatters.joker')
 
 ### Cmake
 
+#### Linters
+
+`cmake_lint` [https://github.com/cheshirekow/cmake_format](https://github.com/cheshirekow/cmake_format)
+
+```lua
+local cmake_lint = require('efmls-configs.linters.cmake_lint')
+```
+
 #### Formatters
 
 `gersemi` [https://github.com/BlankSpruce/gersemi](https://github.com/BlankSpruce/gersemi)
@@ -799,6 +807,16 @@ local lua_format = require('efmls-configs.formatters.lua_format')
 local stylua = require('efmls-configs.formatters.stylua')
 ```
 
+### Make
+
+#### Linters
+
+`checkmake` [https://github.com/mrtazz/checkmake](https://github.com/mrtazz/checkmake)
+
+```lua
+local checkmake = require('efmls-configs.linters.checkmake')
+```
+
 ### Markdown
 
 #### Linters
@@ -941,6 +959,16 @@ local phpcbf = require('efmls-configs.formatters.phpcbf')
 
 ```lua
 local pint = require('efmls-configs.formatters.pint')
+```
+
+### Proto
+
+#### Formatters
+
+`protolint` [https://github.com/yoheimuta/protolint](https://github.com/yoheimuta/protolint)
+
+```lua
+local protolint = require('efmls-configs.formatters.protolint')
 ```
 
 ### Python
