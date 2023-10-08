@@ -167,6 +167,14 @@ provided filepath. Ensure that it is installed globally or in a valid filepath.
 For nodejs/npm, php/composer, ruby/bundler: check if the linter or formatter is installed in your node_modules (npm),
 vendor (composer/bundler) project folder, or installed globally.
 
+### Mason setup issue (`:help efmls-configs-mason`)
+
+If you use mason, then you don't need to add anything extra for efmls-configs for it to work. But if you are having
+problems setting up then check the following:
+
+1. Make sure you call mason `setup()` before efm `setup()`
+2. Run `:!which <tool>` to check if the path is provided by mason
+
 ## Alternatives
 
 - ALE - [https://github.com/dense-analysis/ale](https://github.com/dense-analysis/ale)
