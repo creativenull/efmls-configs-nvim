@@ -84,7 +84,7 @@ M.executable = function(name, context)
 
   table.insert(
     _G._efmls.healthcheck.ok,
-    string.format('%q: Found at %s', name, context and bin_or_err or vim.fn.exepath(bin_or_err))
+    string.format('%q: Found at %s', name, context and bin_or_err or vim.fn.exepath(name))
   )
 
   return bin_or_err
