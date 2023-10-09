@@ -9,17 +9,25 @@ end
 
 local M = {}
 
-local has_issues = function()
-  return _G.efmls_healthcheck ~= nil and not vim.tbl_isempty(_G.efmls_healthcheck)
+local function has_errors()
+  return _G._efmls and not vim.tbl_isempty(_G._efmls.healthcheck.errors)
 end
 
-M.check = function()
-  if has_issues() then
-    for _, issue in pairs(_G.efmls_healthcheck) do
-      health.report_error(issue)
+local function has_ok()
+  return _G._efmls and not vim.tbl_isempty(_G._efmls.healthcheck.ok)
+end
+
+function M.check()
+  if has_errors() then
+    for _, err in pairs(_G._efmls.healthcheck.errors) do
+      health.report_error(err)
     end
-  else
-    health.report_ok('All checks passed')
+  end
+
+  if has_ok() then
+    for _, ok in pairs(_G._efmls.healthcheck.ok) do
+      health.report_ok(ok)
+    end
   end
 end
 

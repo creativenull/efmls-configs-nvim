@@ -26,69 +26,68 @@ local FilepathByScope = {
   BUNDLE = 'vendor/bundle',
 }
 
----Add error to :checkhealth issues
----@param name string
----@return nil
-local add_checkhealth_error = function(name)
-  local errmsg = string.format('%q: no executable found, check |efmls-configs-issues| for help', name)
-  table.insert(_G.efmls_healthcheck, errmsg)
-end
-
----Get the full path to project local executable
----@param name string
----@param context ScopeType
+---Get local executable based on scope, if present.
+---@param binary string
+---@param context string
 ---@return string
-local get_local_exec = function(name, context)
-  local local_bin_path = FilepathByScope[context]
-  local current_working_dir = vim.loop.cwd()
-  local binpath = string.format('%s/%s/%s', current_working_dir, local_bin_path, name)
+local function local_executable(binary, context)
+  local relativepath = FilepathByScope[context]
+  local binarypath = string.format('%s/%s/%s', vim.loop.cwd(), relativepath, binary)
 
-  if vim.fn.filereadable(binpath) == 0 then
-    binpath = ''
+  if vim.fn.filereadable(binarypath) == 0 then
+    error(string.format('%q: No local executable found, check |efmls-configs-issues| for help', binary), 0)
   end
 
-  return binpath
+  return binarypath
 end
 
----Get the full path to project local executable
----@param name string
+---Get global executable, if present.
+---@param binary string
 ---@return string
-local get_global_exec = function(name)
-  if vim.fn.executable(name) == 1 then
-    return vim.fn.exepath(name)
-  else
-    return ''
+local function global_executable(binary)
+  if vim.fn.executable(binary) == 0 then
+    error(string.format('%q: No global executable found, check |efmls-configs-issues| for help', binary), 0)
   end
+
+  return vim.fn.exepath(binary)
 end
 
----Get the full path to executable, search for project installed
----binary, else search for globally install binary. If no executable
----found, then add to the health check, but post no error
+---Get binary path, first from project-local then from
+---global paths otherwise. Report to :checkhealth if
+---found or not.
 ---@param name string
 ---@param context ScopeType
 M.executable = function(name, context)
   -- Track linter/formatter status
-  if _G.efmls_healthcheck == nil then
-    _G.efmls_healthcheck = {}
+  if _G._efmls == nil then
+    _G._efmls = { healthcheck = { errors = {}, ok = {} } }
   end
 
-  local binpath
+  local bin_or_err
+  local ok = true
 
-  if context ~= nil then
-    binpath = get_local_exec(name, context)
-
-    if binpath == '' then
-      binpath = get_global_exec(name)
-    end
-  else
-    binpath = get_global_exec(name)
+  if context then
+    -- get info from local path
+    ok, bin_or_err = pcall(local_executable, name, context)
   end
 
-  if binpath == '' then
-    add_checkhealth_error(name)
+  if not ok then
+    -- if that fails then get from global
+    ok, bin_or_err = pcall(global_executable, name)
   end
 
-  return binpath
+  if not ok then
+    table.insert(_G._efmls.healthcheck.errors, bin_or_err)
+
+    return name
+  end
+
+  table.insert(
+    _G._efmls.healthcheck.ok,
+    string.format('%q: Found at %s', name, context and bin_or_err or vim.fn.exepath(bin_or_err))
+  )
+
+  return bin_or_err
 end
 
 M.get_plugin_path = function()
