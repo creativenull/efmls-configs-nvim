@@ -63,31 +63,35 @@ M.executable = function(name, context)
     _G._efmls = { healthcheck = { errors = {}, ok = {} } }
   end
 
-  local bin_or_err
-  local ok = true
+  local local_ok, local_binarypath, global_ok, global_binarypath
 
   if context then
     -- get info from local path
-    ok, bin_or_err = pcall(local_executable, name, context)
+    local_ok, local_binarypath = pcall(local_executable, name, context)
   end
 
-  if not ok then
-    -- if that fails then get from global
-    ok, bin_or_err = pcall(global_executable, name)
-  end
+  -- if that fails then get from global
+  global_ok, global_binarypath = pcall(global_executable, name)
 
-  if not ok then
-    table.insert(_G._efmls.healthcheck.errors, bin_or_err)
+  if not global_ok and not local_ok then
+    local reason = local_binarypath
+    table.insert(_G._efmls.healthcheck.errors, reason)
+
+    reason = global_binarypath
+    table.insert(_G._efmls.healthcheck.errors, reason)
 
     return name
   end
 
-  table.insert(
-    _G._efmls.healthcheck.ok,
-    string.format('%q: Found at %s', name, context and bin_or_err or vim.fn.exepath(name))
-  )
+  if local_ok then
+    table.insert(_G._efmls.healthcheck.ok, string.format('%q: Found at %s', name, local_binarypath))
 
-  return bin_or_err
+    return local_binarypath
+  end
+
+  table.insert(_G._efmls.healthcheck.ok, string.format('%q: Found at %s', name, global_binarypath))
+
+  return global_binarypath
 end
 
 M.get_plugin_path = function()
