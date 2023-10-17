@@ -1,6 +1,6 @@
 local M = {}
 
----Report ok message to :checkhealth support only for nvim >= 0.8
+---Report ok message to :checkhealth support only for nvim >= 0.7
 ---@param msg string
 ---@return nil
 local function report_ok(msg)
@@ -8,10 +8,12 @@ local function report_ok(msg)
     vim.health.ok(msg)
   elseif vim.fn.has('nvim-0.8') == 1 then
     vim.health.report_ok(msg)
+  elseif vim.fn.has('nvim-0.7') == 1 then
+    require('health').report_ok(msg)
   end
 end
 
----Report error message to :checkhealth support only for nvim >= 0.8
+---Report error message to :checkhealth support only for nvim >= 0.7
 ---@param msg string
 ---@return nil
 local function report_error(msg)
@@ -19,6 +21,8 @@ local function report_error(msg)
     vim.health.error(msg)
   elseif vim.fn.has('nvim-0.8') == 1 then
     vim.health.report_error(msg)
+  elseif vim.fn.has('nvim-0.7') == 1 then
+    require('health').report_error(msg)
   end
 end
 
