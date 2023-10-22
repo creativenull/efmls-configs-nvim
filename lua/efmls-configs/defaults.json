@@ -53,6 +53,11 @@
     {
       "languages": ["blade"],
       "formatters": ["blade_formatter"]
+    },
+    {
+      "languages": ["proto"],
+      "formatters": ["buf"],
+      "linters": ["buf"]
     }
   ]
 }
