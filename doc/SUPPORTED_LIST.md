@@ -1369,6 +1369,16 @@ local rome = require('efmls-configs.formatters.rome')
 local xo = require('efmls-configs.formatters.xo')
 ```
 
+### Typst
+
+#### Formatters
+
+`typstfmt` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
+
+```lua
+local typstfmt = require('efmls-configs.formatters.typstfmt')
+```
+
 ### Vala
 
 #### Formatters
