@@ -975,6 +975,14 @@
       }
     ]
   },
+  "typst": {
+    "formatters": [
+      {
+        "name": "typstfmt",
+        "url": "https://github.com/astrale-sharp/typstfmt"
+      }
+    ]
+  },
   "vala": {
     "formatters": [
       {
