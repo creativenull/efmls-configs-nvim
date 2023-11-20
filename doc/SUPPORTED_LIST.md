@@ -22,6 +22,7 @@ check the docs: [`:help efmls-configs-defaults`](../README.md#default-configurat
 | Ruby | `reek` |  |
 | VIM | `vint` |  |
 | Blade |  | `blade_formatter` |
+| Proto | `buf` | `buf` |
 
 ## Languages
 
@@ -289,6 +290,12 @@ local joker = require('efmls-configs.linters.joker')
 
 #### Formatters
 
+`cljstyle` [https://github.com/greglook/cljstyle](https://github.com/greglook/cljstyle)
+
+```lua
+local cljstyle = require('efmls-configs.formatters.cljstyle')
+```
+
 `joker` [https://github.com/candid82/joker](https://github.com/candid82/joker)
 
 ```lua
@@ -419,6 +426,16 @@ local dartfmt = require('efmls-configs.formatters.dartfmt')
 
 ```lua
 local hadolint = require('efmls-configs.linters.hadolint')
+```
+
+### Fennel
+
+#### Formatters
+
+`fnlfmt` [https://git.sr.ht/~technomancy/fnlfmt](https://git.sr.ht/~technomancy/fnlfmt)
+
+```lua
+local fnlfmt = require('efmls-configs.formatters.fnlfmt')
 ```
 
 ### Fish
@@ -963,7 +980,21 @@ local pint = require('efmls-configs.formatters.pint')
 
 ### Proto
 
+#### Linters
+
+`buf` [https://github.com/bufbuild/buf](https://github.com/bufbuild/buf)
+
+```lua
+local buf = require('efmls-configs.linters.buf')
+```
+
 #### Formatters
+
+`buf` [https://github.com/bufbuild/buf](https://github.com/bufbuild/buf)
+
+```lua
+local buf = require('efmls-configs.formatters.buf')
+```
 
 `protolint` [https://github.com/yoheimuta/protolint](https://github.com/yoheimuta/protolint)
 
@@ -997,6 +1028,12 @@ local mypy = require('efmls-configs.linters.mypy')
 
 ```lua
 local pylint = require('efmls-configs.linters.pylint')
+```
+
+`ruff` [https://github.com/astral-sh/ruff](https://github.com/astral-sh/ruff)
+
+```lua
+local ruff = require('efmls-configs.linters.ruff')
 ```
 
 `vulture` [https://github.com/jendrikseipp/vulture](https://github.com/jendrikseipp/vulture)
@@ -1235,6 +1272,16 @@ local solhint = require('efmls-configs.linters.solhint')
 local forge_fmt = require('efmls-configs.formatters.forge_fmt')
 ```
 
+### Sql
+
+#### Formatters
+
+`sql-formatter` [https://github.com/sql-formatter-org/sql-formatter](https://github.com/sql-formatter-org/sql-formatter)
+
+```lua
+local sql-formatter = require('efmls-configs.formatters.sql-formatter')
+```
+
 ### Terraform
 
 #### Formatters
@@ -1373,10 +1420,10 @@ local xo = require('efmls-configs.formatters.xo')
 
 #### Formatters
 
-`typstfmt` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
+`typst` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
 
 ```lua
-local typstfmt = require('efmls-configs.formatters.typstfmt')
+local typst = require('efmls-configs.formatters.typst')
 ```
 
 ### Vala

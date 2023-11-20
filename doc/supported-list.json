@@ -144,6 +144,10 @@
     ],
     "formatters": [
       {
+        "name": "cljstyle",
+        "url": "https://github.com/greglook/cljstyle"
+      },
+      {
         "name": "joker",
         "url": "https://github.com/candid82/joker"
       }
@@ -242,6 +246,14 @@
       {
         "name": "hadolint",
         "url": "https://github.com/hadolint/hadolint"
+      }
+    ]
+  },
+  "fennel": {
+    "formatters": [
+      {
+        "name": "fnlfmt",
+        "url": "https://git.sr.ht/~technomancy/fnlfmt"
       }
     ]
   },
@@ -678,7 +690,17 @@
     ]
   },
   "proto": {
+    "linters": [
+      {
+        "name": "buf",
+        "url": "https://github.com/bufbuild/buf"
+      }
+    ],
     "formatters": [
+      {
+        "name": "buf",
+        "url": "https://github.com/bufbuild/buf"
+      },
       {
         "name": "protolint",
         "url": "https://github.com/yoheimuta/protolint"
@@ -702,6 +724,10 @@
       {
         "name": "pylint",
         "url": "https://www.pylint.org/"
+      },
+      {
+        "name": "ruff",
+        "url": "https://github.com/astral-sh/ruff"
       },
       {
         "name": "vulture",
@@ -879,6 +905,14 @@
       }
     ]
   },
+  "sql": {
+    "formatters": [
+      {
+        "name": "sql-formatter",
+        "url": "https://github.com/sql-formatter-org/sql-formatter"
+      }
+    ]
+  },
   "terraform": {
     "formatters": [
       {
@@ -978,7 +1012,7 @@
   "typst": {
     "formatters": [
       {
-        "name": "typstfmt",
+        "name": "typst",
         "url": "https://github.com/astrale-sharp/typstfmt"
       }
     ]
