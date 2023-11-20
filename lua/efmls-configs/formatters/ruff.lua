@@ -15,6 +15,6 @@ return {
     'pyproject.toml',
     'setup.py',
     'requirements.txt',
-    'ruff.toml'
+    'ruff.toml',
   },
 }
