@@ -25,5 +25,8 @@ return {
     '.prettierrc.mjs',
     '.prettierrc.cjs',
     '.prettierrc.toml',
+    'prettier.config.js',
+    'prettier.config.cjs',
+    'prettier.config.mjs',
   },
 }
