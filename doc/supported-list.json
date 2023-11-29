@@ -1012,7 +1012,7 @@
   "typst": {
     "formatters": [
       {
-        "name": "typst",
+        "name": "typstfmt",
         "url": "https://github.com/astrale-sharp/typstfmt"
       }
     ]

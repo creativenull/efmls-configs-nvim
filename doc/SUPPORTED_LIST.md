@@ -1420,10 +1420,10 @@ local xo = require('efmls-configs.formatters.xo')
 
 #### Formatters
 
-`typst` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
+`typstfmt` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
 
 ```lua
-local typst = require('efmls-configs.formatters.typst')
+local typstfmt = require('efmls-configs.formatters.typstfmt')
 ```
 
 ### Vala
