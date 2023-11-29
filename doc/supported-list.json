@@ -906,6 +906,12 @@
     ]
   },
   "sql": {
+    "linters": [
+      {
+        "name": "sqlfluff",
+        "url": "https://github.com/sqlfluff/sqlfluff"
+      }
+    ],
     "formatters": [
       {
         "name": "sql-formatter",
@@ -1012,7 +1018,7 @@
   "typst": {
     "formatters": [
       {
-        "name": "typst",
+        "name": "typstfmt",
         "url": "https://github.com/astrale-sharp/typstfmt"
       }
     ]

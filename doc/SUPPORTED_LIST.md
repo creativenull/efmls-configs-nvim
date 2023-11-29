@@ -1274,6 +1274,14 @@ local forge_fmt = require('efmls-configs.formatters.forge_fmt')
 
 ### Sql
 
+#### Linters
+
+`sqlfluff` [https://github.com/sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff)
+
+```lua
+local sqlfluff = require('efmls-configs.linters.sqlfluff')
+```
+
 #### Formatters
 
 `sql-formatter` [https://github.com/sql-formatter-org/sql-formatter](https://github.com/sql-formatter-org/sql-formatter)
@@ -1420,10 +1428,10 @@ local xo = require('efmls-configs.formatters.xo')
 
 #### Formatters
 
-`typst` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
+`typstfmt` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
 
 ```lua
-local typst = require('efmls-configs.formatters.typst')
+local typstfmt = require('efmls-configs.formatters.typstfmt')
 ```
 
 ### Vala
