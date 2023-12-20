@@ -7,7 +7,7 @@ local fs = require('efmls-configs.fs')
 local formatter = 'prettierd'
 local command = string.format(
   "%s '${INPUT}' ${--range-start=charStart} ${--range-end=charEnd} "
-    .. '${--tab-width=tabSize} ${--use-tabs=!insertSpaces}',
+    .. '${--tab-width=tabWidth} ${--use-tabs=!insertSpaces}',
   fs.executable(formatter, fs.Scope.NODE)
 )
 
