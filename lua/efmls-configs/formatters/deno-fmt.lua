@@ -1,5 +1,5 @@
 -- Metadata
--- languages: javascript,typescript
+-- languages: javascript,typescript,javascriptreact,typescriptreact
 -- url: https://docs.deno.com/runtime/manual/tools/formatter
 
 local fs = require('efmls-configs.fs')
