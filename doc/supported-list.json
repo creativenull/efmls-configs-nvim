@@ -392,6 +392,10 @@
         "url": "https://biomejs.dev/"
       },
       {
+        "name": "deno_fmt",
+        "url": "https://docs.deno.com/runtime/manual/tools/formatter"
+      },
+      {
         "name": "dprint",
         "url": "https://dprint.dev/"
       },
@@ -434,6 +438,14 @@
       {
         "name": "xo",
         "url": "https://github.com/sindresorhus/xo"
+      }
+    ]
+  },
+  "javascriptreact": {
+    "formatters": [
+      {
+        "name": "deno_fmt",
+        "url": "https://docs.deno.com/runtime/manual/tools/formatter"
       }
     ]
   },
@@ -919,6 +931,20 @@
       }
     ]
   },
+  "swift": {
+    "linters": [
+      {
+        "name": "swiftlint",
+        "url": "https://github.com/realm/SwiftLint"
+      }
+    ],
+    "formatters": [
+      {
+        "name": "swiftformat",
+        "url": "https://github.com/nicklockwood/SwiftFormat"
+      }
+    ]
+  },
   "terraform": {
     "formatters": [
       {
@@ -974,6 +1000,10 @@
         "url": "https://biomejs.dev/"
       },
       {
+        "name": "deno_fmt",
+        "url": "https://docs.deno.com/runtime/manual/tools/formatter"
+      },
+      {
         "name": "dprint",
         "url": "https://dprint.dev/"
       },
@@ -1015,8 +1045,20 @@
       }
     ]
   },
+  "typescriptreact": {
+    "formatters": [
+      {
+        "name": "deno_fmt",
+        "url": "https://docs.deno.com/runtime/manual/tools/formatter"
+      }
+    ]
+  },
   "typst": {
     "formatters": [
+      {
+        "name": "prettypst",
+        "url": "https://github.com/antonWetzel/prettypst"
+      },
       {
         "name": "typstfmt",
         "url": "https://github.com/astrale-sharp/typstfmt"

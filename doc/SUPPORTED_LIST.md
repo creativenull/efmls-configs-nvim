@@ -624,6 +624,12 @@ local xo = require('efmls-configs.linters.xo')
 local biome = require('efmls-configs.formatters.biome')
 ```
 
+`deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
+
+```lua
+local deno_fmt = require('efmls-configs.formatters.deno_fmt')
+```
+
 `dprint` [https://dprint.dev/](https://dprint.dev/)
 
 ```lua
@@ -688,6 +694,16 @@ local rome = require('efmls-configs.formatters.rome')
 
 ```lua
 local xo = require('efmls-configs.formatters.xo')
+```
+
+### Javascriptreact
+
+#### Formatters
+
+`deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
+
+```lua
+local deno_fmt = require('efmls-configs.formatters.deno_fmt')
 ```
 
 ### Json
@@ -1290,6 +1306,24 @@ local sqlfluff = require('efmls-configs.linters.sqlfluff')
 local sql-formatter = require('efmls-configs.formatters.sql-formatter')
 ```
 
+### Swift
+
+#### Linters
+
+`swiftlint` [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
+
+```lua
+local swiftlint = require('efmls-configs.linters.swiftlint')
+```
+
+#### Formatters
+
+`swiftformat` [https://github.com/nicklockwood/SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
+
+```lua
+local swiftformat = require('efmls-configs.formatters.swiftformat')
+```
+
 ### Terraform
 
 #### Formatters
@@ -1364,6 +1398,12 @@ local xo = require('efmls-configs.linters.xo')
 local biome = require('efmls-configs.formatters.biome')
 ```
 
+`deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
+
+```lua
+local deno_fmt = require('efmls-configs.formatters.deno_fmt')
+```
+
 `dprint` [https://dprint.dev/](https://dprint.dev/)
 
 ```lua
@@ -1424,9 +1464,25 @@ local rome = require('efmls-configs.formatters.rome')
 local xo = require('efmls-configs.formatters.xo')
 ```
 
+### Typescriptreact
+
+#### Formatters
+
+`deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
+
+```lua
+local deno_fmt = require('efmls-configs.formatters.deno_fmt')
+```
+
 ### Typst
 
 #### Formatters
+
+`prettypst` [https://github.com/antonWetzel/prettypst](https://github.com/antonWetzel/prettypst)
+
+```lua
+local prettypst = require('efmls-configs.formatters.prettypst')
+```
 
 `typstfmt` [https://github.com/astrale-sharp/typstfmt](https://github.com/astrale-sharp/typstfmt)
 
