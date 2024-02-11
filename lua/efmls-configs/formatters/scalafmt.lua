@@ -6,7 +6,7 @@ local fs = require('efmls-configs.fs')
 
 local formatter = 'scalafmt'
 local args = '--stdin'
-local command = string.format(fs.executable(formatter), args)
+local command = string.format('%s %s', fs.executable(formatter), args)
 
 return {
   formatCanRange = true,
