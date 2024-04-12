@@ -6,14 +6,16 @@ local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'xo'
-local command = string.format('%s --reporter visualstudio --stdin', fs.executable(linter, fs.Scope.NODE))
+local bin = fs.executable(linter, fs.Scope.NODE)
+local args = '--reporter visualstudio --stdin-filename "${INPUT}" --stdin'
+local command = string.format('%s %s', bin, args)
 
 return {
   prefix = linter,
   lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '<text>(%l,%c): %trror %m', '<text>(%l,%c): %tarning %m' },
+  lintFormats = { '%f(%l,%c): %trror %m', '%f(%l,%c): %tarning %m' },
   rootMarkers = {
     '.xo-config',
     '.xo-config.json',
