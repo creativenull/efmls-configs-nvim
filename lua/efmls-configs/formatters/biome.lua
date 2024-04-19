@@ -11,5 +11,5 @@ local command = string.format('%s %s', fs.executable(formatter, fs.Scope.NODE), 
 return {
   formatCommand = command,
   formatStdin = true,
-  rootMarkers = { 'rome.json', 'biome.json' },
+  rootMarkers = { 'rome.json', 'biome.json', 'package.json' },
 }
