@@ -16,8 +16,8 @@ return {
   lintIgnoreExitCode = true,
   lintStdin = false,
   lintFormats = {
-    '::%totice title=SQLFluff,file=%f,line=%l,col=%c::%m',
-    '::%tarning title=SQLFluff,file=%f,line=%l,col=%c::%m',
-    '::%trror title=SQLFluff,file=%f,line=%l,col=%c::%m',
+    '::%totice title=SQLFluff,file=%f,line=%l,col=%c,endLine=%e,endColumn=%k::%m',
+    '::%tarning title=SQLFluff,file=%f,line=%l,col=%c,endLine=%e,endColumn=%k::%m',
+    '::%trror title=SQLFluff,file=%f,line=%l,col=%c,endLine=%e,endColumn=%k::%m',
   },
 }
