@@ -1490,6 +1490,12 @@ local prettypst = require('efmls-configs.formatters.prettypst')
 local typstfmt = require('efmls-configs.formatters.typstfmt')
 ```
 
+`typstyle` [https://github.com/Enter-tainer/typstyle](https://github.com/Enter-tainer/typstyle)
+
+```lua
+local typstyle = require('efmls-configs.formatters.typstyle')
+```
+
 ### Vala
 
 #### Formatters
