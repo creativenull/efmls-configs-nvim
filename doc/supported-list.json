@@ -1062,6 +1062,10 @@
       {
         "name": "typstfmt",
         "url": "https://github.com/astrale-sharp/typstfmt"
+      },
+      {
+        "name": "typstyle",
+        "url": "https://github.com/Enter-tainer/typstyle"
       }
     ]
   },
