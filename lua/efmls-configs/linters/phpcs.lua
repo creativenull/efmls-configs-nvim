@@ -6,7 +6,7 @@ local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'phpcs'
-local command = string.format('%s --no-colors --report=emacs -', fs.executable(linter, fs.Scope.COMPOSER))
+local command = string.format('%s --no-colors --report=emacs --stdin-path="${INPUT}" -', fs.executable(linter, fs.Scope.COMPOSER))
 
 return {
   prefix = linter,
