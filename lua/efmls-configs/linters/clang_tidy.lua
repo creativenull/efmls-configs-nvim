@@ -10,6 +10,7 @@ local command = string.format('%s "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,
+  lintIgnoreExitCode = true,
   lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = false,
