@@ -50,6 +50,10 @@
   "c++": {
     "linters": [
       {
+        "name": "clang_format",
+        "url": "https://clang.llvm.org/docs/ClangFormat.html"
+      },
+      {
         "name": "clang_tidy",
         "url": "http://clang.llvm.org/extra/clang-tidy/"
       },
@@ -91,6 +95,10 @@
   },
   "c": {
     "linters": [
+      {
+        "name": "clang_format",
+        "url": "https://clang.llvm.org/docs/ClangFormat.html"
+      },
       {
         "name": "clang_tidy",
         "url": "http://clang.llvm.org/extra/clang-tidy/"

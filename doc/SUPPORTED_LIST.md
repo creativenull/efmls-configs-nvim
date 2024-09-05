@@ -156,6 +156,12 @@ local uncrustify = require('efmls-configs.formatters.uncrustify')
 
 #### Linters
 
+`clang_format` [https://clang.llvm.org/docs/ClangFormat.html](https://clang.llvm.org/docs/ClangFormat.html)
+
+```lua
+local clang_format = require('efmls-configs.linters.clang_format')
+```
+
 `clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
 
 ```lua
@@ -215,6 +221,12 @@ local uncrustify = require('efmls-configs.formatters.uncrustify')
 ### C
 
 #### Linters
+
+`clang_format` [https://clang.llvm.org/docs/ClangFormat.html](https://clang.llvm.org/docs/ClangFormat.html)
+
+```lua
+local clang_format = require('efmls-configs.linters.clang_format')
+```
 
 `clang_tidy` [http://clang.llvm.org/extra/clang-tidy/](http://clang.llvm.org/extra/clang-tidy/)
 
