@@ -88,6 +88,26 @@ local vale = require('efmls-configs.linters.vale')
 local write_good = require('efmls-configs.linters.write_good')
 ```
 
+### HTML
+
+#### Linters
+
+`markuplint` [https://markuplint.dev/](https://markuplint.dev/)
+
+```lua
+local markuplint = require('efmls-configs.linters.markuplint')
+```
+
+### JSON
+
+#### Linters
+
+`jsonlint` [https://github.com/zaach/jsonlint](https://github.com/zaach/jsonlint)
+
+```lua
+local jsonlint = require('efmls-configs.linters.jsonlint')
+```
+
 ### Bash
 
 #### Linters
@@ -438,6 +458,16 @@ local dartfmt = require('efmls-configs.formatters.dartfmt')
 
 ```lua
 local hadolint = require('efmls-configs.linters.hadolint')
+```
+
+### Elixir
+
+#### Formatters
+
+`mix` [https://github.com/astral-sh/ruff](https://github.com/astral-sh/ruff)
+
+```lua
+local mix = require('efmls-configs.formatters.mix')
 ```
 
 ### Fennel
@@ -1096,6 +1126,12 @@ local isort = require('efmls-configs.formatters.isort')
 local ruff = require('efmls-configs.formatters.ruff')
 ```
 
+`ruff_sort` [https://github.com/astral-sh/ruff](https://github.com/astral-sh/ruff)
+
+```lua
+local ruff_sort = require('efmls-configs.formatters.ruff_sort')
+```
+
 `yapf` [https://github.com/google/yapf](https://github.com/google/yapf)
 
 ```lua
@@ -1316,6 +1352,12 @@ local sqlfluff = require('efmls-configs.linters.sqlfluff')
 
 ```lua
 local sql-formatter = require('efmls-configs.formatters.sql-formatter')
+```
+
+`sqlfluff` [https://github.com/sql-formatter-org/sql-formatter](https://github.com/sql-formatter-org/sql-formatter)
+
+```lua
+local sqlfluff = require('efmls-configs.formatters.sqlfluff')
 ```
 
 ### Swift
