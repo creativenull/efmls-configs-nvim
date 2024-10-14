@@ -1,4 +1,20 @@
 {
+  "HTML": {
+    "linters": [
+      {
+        "name": "markuplint",
+        "url": "https://markuplint.dev/"
+      }
+    ]
+  },
+  "JSON": {
+    "linters": [
+      {
+        "name": "jsonlint",
+        "url": "https://github.com/zaach/jsonlint"
+      }
+    ]
+  },
   "bash": {
     "linters": [
       {
@@ -254,6 +270,14 @@
       {
         "name": "hadolint",
         "url": "https://github.com/hadolint/hadolint"
+      }
+    ]
+  },
+  "elixir": {
+    "formatters": [
+      {
+        "name": "mix",
+        "url": "https://hexdocs.pm/mix/Mix.html"
       }
     ]
   },
@@ -772,6 +796,10 @@
         "url": "https://github.com/astral-sh/ruff"
       },
       {
+        "name": "ruff_sort",
+        "url": "https://github.com/astral-sh/ruff"
+      },
+      {
         "name": "yapf",
         "url": "https://github.com/google/yapf"
       }
@@ -935,6 +963,10 @@
     "formatters": [
       {
         "name": "sql-formatter",
+        "url": "https://github.com/sql-formatter-org/sql-formatter"
+      },
+      {
+        "name": "sqlfluff",
         "url": "https://github.com/sql-formatter-org/sql-formatter"
       }
     ]
