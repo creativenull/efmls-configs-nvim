@@ -464,7 +464,7 @@ local hadolint = require('efmls-configs.linters.hadolint')
 
 #### Formatters
 
-`mix` [https://github.com/astral-sh/ruff](https://github.com/astral-sh/ruff)
+`mix` [https://hexdocs.pm/mix/Mix.html](https://hexdocs.pm/mix/Mix.html)
 
 ```lua
 local mix = require('efmls-configs.formatters.mix')

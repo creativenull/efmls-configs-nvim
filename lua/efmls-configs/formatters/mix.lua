@@ -1,6 +1,6 @@
 -- Metadata
 -- languages: elixir
--- url: https://github.com/astral-sh/ruff
+-- url: https://hexdocs.pm/mix/Mix.html
 
 local fs = require('efmls-configs.fs')
 

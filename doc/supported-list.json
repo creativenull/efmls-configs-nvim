@@ -277,7 +277,7 @@
     "formatters": [
       {
         "name": "mix",
-        "url": "https://github.com/astral-sh/ruff"
+        "url": "https://hexdocs.pm/mix/Mix.html"
       }
     ]
   },
