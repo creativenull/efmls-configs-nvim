@@ -544,6 +544,12 @@ local staticcheck = require('efmls-configs.linters.staticcheck')
 
 #### Formatters
 
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.formatters.djlint')
+```
+
 `gofmt` [https://pkg.go.dev/cmd/gofmt](https://pkg.go.dev/cmd/gofmt)
 
 ```lua
@@ -589,6 +595,12 @@ local djlint = require('efmls-configs.linters.djlint')
 ```
 
 #### Formatters
+
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.formatters.djlint')
+```
 
 `fecs` [http://fecs.baidu.com/](http://fecs.baidu.com/)
 
@@ -1018,6 +1030,12 @@ local psalm = require('efmls-configs.linters.psalm')
 
 #### Formatters
 
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.formatters.djlint')
+```
+
 `php_cs_fixer` [https://github.com/PHP-CS-Fixer/PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
 
 ```lua
@@ -1112,6 +1130,12 @@ local autopep8 = require('efmls-configs.formatters.autopep8')
 
 ```lua
 local black = require('efmls-configs.formatters.black')
+```
+
+`djlint` [https://djlint.com/](https://djlint.com/)
+
+```lua
+local djlint = require('efmls-configs.formatters.djlint')
 ```
 
 `isort` [https://pycqa.github.io/isort/](https://pycqa.github.io/isort/)
