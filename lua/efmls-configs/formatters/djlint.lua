@@ -11,5 +11,8 @@ local command = string.format('%s %s', fs.executable(formatter), args)
 return {
   formatCommand = command,
   formatStdin = true,
-  rootMarkers = { '.djlintrc' },
+  rootMarkers = {
+    '.djlintrc',
+    'pyproject.toml',
+  },
 }
