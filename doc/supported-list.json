@@ -336,6 +336,10 @@
     ],
     "formatters": [
       {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
+      {
         "name": "gofmt",
         "url": "https://pkg.go.dev/cmd/gofmt"
       },
@@ -369,6 +373,10 @@
       }
     ],
     "formatters": [
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
       {
         "name": "fecs",
         "url": "http://fecs.baidu.com/"
@@ -720,6 +728,10 @@
     ],
     "formatters": [
       {
+        "name": "djlint",
+        "url": "https://djlint.com/"
+      },
+      {
         "name": "php_cs_fixer",
         "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer"
       },
@@ -786,6 +798,10 @@
       {
         "name": "black",
         "url": "https://github.com/ambv/black"
+      },
+      {
+        "name": "djlint",
+        "url": "https://djlint.com/"
       },
       {
         "name": "isort",
