@@ -535,6 +535,14 @@
       }
     ]
   },
+  "kdl": {
+    "formatters": [
+      {
+        "name": "kdlfmt",
+        "url": "https://github.com/hougesen/kdlfmt"
+      }
+    ]
+  },
   "ksh": {
     "formatters": [
       {

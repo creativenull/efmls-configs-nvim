@@ -824,6 +824,16 @@ local rome = require('efmls-configs.formatters.rome')
 local biome = require('efmls-configs.formatters.biome')
 ```
 
+### Kdl
+
+#### Formatters
+
+`kdlfmt` [https://github.com/hougesen/kdlfmt](https://github.com/hougesen/kdlfmt)
+
+```lua
+local kdlfmt = require('efmls-configs.formatters.kdlfmt')
+```
+
 ### Ksh
 
 #### Formatters
