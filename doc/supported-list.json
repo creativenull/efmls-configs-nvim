@@ -311,6 +311,14 @@
       }
     ]
   },
+  "gleam": {
+    "formatters": [
+      {
+        "name": "gleam_format",
+        "url": "https://gleam.run/language-server/#code-formatting"
+      }
+    ]
+  },
   "go": {
     "linters": [
       {
@@ -1184,3 +1192,4 @@
     ]
   }
 }
+
