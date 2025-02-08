@@ -687,7 +687,7 @@
       },
       {
         "name": "nixfmt",
-        "url": "https://github.com/serokell/nixfmt"
+        "url": "https://github.com/NixOS/nixfmt"
       }
     ]
   },
@@ -1192,4 +1192,3 @@
     ]
   }
 }
-

@@ -1,6 +1,6 @@
 -- Metadata
 -- languages: nix
--- url: https://github.com/serokell/nixfmt
+-- url: https://github.com/NixOS/nixfmt
 
 local fs = require('efmls-configs.fs')
 local formatter = fs.executable('nixfmt')

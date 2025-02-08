@@ -508,6 +508,16 @@ local fish_indent = require('efmls-configs.formatters.fish_indent')
 local gitlint = require('efmls-configs.linters.gitlint')
 ```
 
+### Gleam
+
+#### Formatters
+
+`gleam_format` [https://gleam.run/language-server/#code-formatting](https://gleam.run/language-server/#code-formatting)
+
+```lua
+local gleam_format = require('efmls-configs.formatters.gleam_format')
+```
+
 ### Go
 
 #### Linters
@@ -962,7 +972,7 @@ local statix = require('efmls-configs.linters.statix')
 local alejandra = require('efmls-configs.formatters.alejandra')
 ```
 
-`nixfmt` [https://github.com/serokell/nixfmt](https://github.com/serokell/nixfmt)
+`nixfmt` [https://github.com/NixOS/nixfmt](https://github.com/NixOS/nixfmt)
 
 ```lua
 local nixfmt = require('efmls-configs.formatters.nixfmt')
