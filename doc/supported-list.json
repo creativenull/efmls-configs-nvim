@@ -1000,6 +1000,10 @@
       {
         "name": "sqlfluff",
         "url": "https://github.com/sql-formatter-org/sql-formatter"
+      },
+      {
+        "name": "sqruff",
+        "url": "https://github.com/quarylabs/sqruff"
       }
     ]
   },
