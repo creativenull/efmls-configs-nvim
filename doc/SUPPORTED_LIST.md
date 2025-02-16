@@ -1404,6 +1404,12 @@ local sql-formatter = require('efmls-configs.formatters.sql-formatter')
 local sqlfluff = require('efmls-configs.formatters.sqlfluff')
 ```
 
+`sqruff` [https://github.com/quarylabs/sqruff](https://github.com/quarylabs/sqruff)
+
+```lua
+local sqruff = require('efmls-configs.formatters.sqruff')
+```
+
 ### Swift
 
 #### Linters
