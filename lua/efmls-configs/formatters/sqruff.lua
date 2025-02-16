@@ -5,8 +5,8 @@
 local fs = require('efmls-configs.fs')
 
 local formatter = 'sqruff'
-local args = 'fix -'
-local command = string.format('%s %s ${INPUT}', fs.executable(formatter, fs.Scope.NODE), args)
+local args = 'fix --force -'
+local command = string.format('%s %s', fs.executable(formatter), args)
 
 return {
   formatCommand = command,
