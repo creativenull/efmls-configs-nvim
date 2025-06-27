@@ -1187,6 +1187,14 @@
       }
     ]
   },
+  "zig": {
+    "linters": [
+      {
+        "name": "ZLint",
+        "url": "https://github.com/DonIsaac/zlint"
+      }
+    ]
+  },
   "zsh": {
     "formatters": [
       {

@@ -1656,6 +1656,16 @@ local prettier = require('efmls-configs.formatters.prettier')
 local yq = require('efmls-configs.formatters.yq')
 ```
 
+### Zig
+
+#### Linters
+
+`zlint` [https://github.com/DonIsaac/zlint](https://github.com/DonIsaac/zlint)
+
+```lua
+local zlint = require('efmls-configs.linters.zlint')
+```
+
 ### Zsh
 
 #### Formatters
