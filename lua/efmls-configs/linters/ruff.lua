@@ -15,8 +15,8 @@ return {
   lintCommand = command,
   lintStdin = true,
   lintFormats = {
-    '::%trror title=Ruff%.%#,file=%f,line=%l,col=%c,%.%#: %m',
-    '::%tarning title=Ruff%.%#,file=%f,line=%l,col=%c,%.%#: %m',
+    '::%trror title=%.%#,file=%.%#,line=%.%#,col=%.%#,endLine=%.%#,endColumn=%.%#::%f:%l:%c: %m',
+    '::%tarning title=%.%#,file=%.%#,line=%.%#,col=%.%#,endLine=%.%#,endColumn=%.%#::%f:%l:%c: %m',
   },
   lintSeverity = 2,
   rootMarkers = {
