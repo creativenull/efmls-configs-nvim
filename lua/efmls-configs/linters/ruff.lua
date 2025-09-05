@@ -6,15 +6,19 @@ local sourceText = require('efmls-configs.utils').sourceText
 local fs = require('efmls-configs.fs')
 
 local linter = 'ruff'
-local command = string.format('%s check --stdin-filename "${INPUT}"', fs.executable(linter))
+local command =
+  string.format('%s check --quiet --output-format github --stdin-filename "${INPUT}"', fs.executable(linter))
 
 return {
   prefix = linter,
   lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '%.%#:%l:%c: %t%n %m' },
-  lintSeverity = 4,
+  lintFormats = {
+    '::%trror title=Ruff%.%#,file=%f,line=%l,col=%c,%.%#: %m',
+    '::%tarning title=Ruff%.%#,file=%f,line=%l,col=%c,%.%#: %m',
+  },
+  lintSeverity = 2,
   rootMarkers = {
     'ruff.toml',
     'pyproject.toml',
