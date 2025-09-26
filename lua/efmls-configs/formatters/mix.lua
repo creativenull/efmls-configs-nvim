@@ -5,7 +5,7 @@
 local fs = require('efmls-configs.fs')
 
 local formatter = 'mix'
-local args = 'format --stdin-filename $FILENAME -'
+local args = 'format --stdin-filename ${INPUT} -'
 local command = string.format('%s %s', fs.executable(formatter), args)
 
 return {
