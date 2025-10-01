@@ -41,16 +41,6 @@ Install with your favorite plugin manager or just use builtin packages.
 }
 ```
 
-### packer.nvim
-
-```lua
-use {
-  'creativenull/efmls-configs-nvim',
-  tag = 'v1.*', -- tag is optional, but recommended
-  requires = { 'neovim/nvim-lspconfig' }, -- not required if using nvim >= 0.11
-}
-```
-
 ### vim-plug
 
 ```vim
