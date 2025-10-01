@@ -37,24 +37,14 @@ Install with your favorite plugin manager or just use builtin packages.
 {
   'creativenull/efmls-configs-nvim',
   version = 'v1.x.x', -- version is optional, but recommended
-  dependencies = { 'neovim/nvim-lspconfig' },
-}
-```
-
-### packer.nvim
-
-```lua
-use {
-  'creativenull/efmls-configs-nvim',
-  tag = 'v1.*', -- tag is optional, but recommended
-  requires = { 'neovim/nvim-lspconfig' },
+  dependencies = { 'neovim/nvim-lspconfig' }, -- not required if using nvim >= 0.11
 }
 ```
 
 ### vim-plug
 
 ```vim
-Plug 'neovim/nvim-lspconfig'
+Plug 'neovim/nvim-lspconfig' " not required if using nvim >= 0.11
 Plug 'creativenull/efmls-configs-nvim', { 'tag': 'v1.*' } " tag is optional, but recommended
 ```
 
@@ -92,6 +82,17 @@ local efmls_config = {
   },
 }
 
+-- If using nvim >= 0.11 then use the following
+vim.lsp.config('efm', vim.tbl_extend('force', efmls_config, {
+  cmd = { 'efm-langserver' },
+
+  -- Pass your custom lsp config below like on_attach and capabilities
+  --
+  -- on_attach = on_attach,
+  -- capabilities = capabilities,
+}))
+
+-- If using nvim <= 0.10 then use the following
 require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
   -- Pass your custom lsp config below like on_attach and capabilities
   --

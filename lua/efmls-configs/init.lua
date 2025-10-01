@@ -1,10 +1,12 @@
 local info = require('efmls-configs.logger').info
 
-local lspconfig_ok, lspconfig = pcall(require, 'lspconfig')
-if not lspconfig_ok then
-  local errmsg = '[efmls-configs] `nvim-lspconfig` plugin is required! Please install via your plugin manager.'
-  vim.api.nvim_err_writeln(errmsg)
-  return
+if vim.fn.has('nvim-0.11') == 0 then
+  local lspconfig_ok, lspconfig = pcall(require, 'lspconfig')
+  if not lspconfig_ok then
+    local errmsg = '[efmls-configs] `nvim-lspconfig` plugin is required! Please install via your plugin manager.'
+    vim.api.nvim_err_writeln(errmsg)
+    return
+  end
 end
 
 local M = {}

@@ -49,6 +49,17 @@ each language.
       },
     }
     
+    -- If using nvim >= 0.11 then use the following
+    vim.lsp.config('efm', vim.tbl_extend('force', efmls_config, {
+      cmd = { 'efm-langserver' },
+    
+      -- Pass your custom lsp config below like on_attach and capabilities
+      --
+      -- on_attach = on_attach,
+      -- capabilities = capabilities,
+    }))
+    
+    -- If using nvim <= 0.10 then use the following
     require('lspconfig').efm.setup(vim.tbl_extend('force', efmls_config, {
       -- Pass your cutom config below like on_attach and capabilities
       --
