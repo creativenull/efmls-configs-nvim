@@ -1230,7 +1230,7 @@ local sorbet = require('efmls-configs.linters.sorbet')
 local dprint = require('efmls-configs.formatters.dprint')
 ```
 
-`rustfmt` [https://github.com/rust-lang-nursery/rustfmt](https://github.com/rust-lang-nursery/rustfmt)
+`rustfmt` [https://github.com/rust-lang/rustfmt](https://github.com/rust-lang/rustfmt)
 
 ```lua
 local rustfmt = require('efmls-configs.formatters.rustfmt')

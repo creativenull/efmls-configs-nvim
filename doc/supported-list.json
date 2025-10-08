@@ -873,7 +873,7 @@
       },
       {
         "name": "rustfmt",
-        "url": "https://github.com/rust-lang-nursery/rustfmt"
+        "url": "https://github.com/rust-lang/rustfmt"
       }
     ]
   },
@@ -1190,7 +1190,7 @@
   "zig": {
     "linters": [
       {
-        "name": "ZLint",
+        "name": "zlint",
         "url": "https://github.com/DonIsaac/zlint"
       }
     ]
