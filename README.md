@@ -108,8 +108,8 @@ See also `:help efmls-configs-defaults` to view docs inside neovim.
 Default configurations are an opt-in feature. To see all the configurations provided by default go to
 [`doc/SUPPORTED_LIST.md`](./doc/SUPPORTED_LIST.md).
 
-You can use a list of defaults provided by this plugin, in-case you don't want to specify configuration
-for each language.
+You can use a list of defaults provided by this plugin, in-case you don't want to specify configuration for each
+language.
 
 ```lua
 local languages = require('efmls-configs.defaults').languages()
@@ -153,14 +153,14 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 ```
 
 2. If you do not want to write and maintain the code above, then you can rely on a plugin like
-[lukas-reineke/lsp-format.nvim][lsp-format] which makes it easier to format on save.
+   [lukas-reineke/lsp-format.nvim][lsp-format] which makes it easier to format on save.
 
 ## Troubleshooting
 
 See also `:help efmls-configs-issues` to view docs inside neovim.
 
-Always run `:checkhealth` to see if there are any issue, when you get no response from the linter or formatter
-as you expected.
+Always run `:checkhealth` to see if there are any issue, when you get no response from the linter or formatter as you
+expected.
 
 If you get "no executable found" issues in `:checkhealth`, this means that the linter or formatter was not found in the
 provided filepath. Ensure that it is installed globally or in a valid filepath.
@@ -173,13 +173,15 @@ vendor (composer/bundler) project folder, or installed globally.
 If you use mason, then you don't need to add anything extra for efmls-configs for it to work. But if you are having
 problems setting up then check the following:
 
-1. Make sure you call mason `setup()` before `vim.lsp.config('efm', {...})` (if using nvim 0.10 and below, then make sure it's before lspconfig `setup()`)
+1. Make sure you call mason `setup()` before `vim.lsp.config('efm', {...})` (if using nvim 0.10 and below, then make
+   sure it's before lspconfig `setup()`)
 2. Run `:!which <tool>` to check if the path is provided by mason
 
 ## Alternatives
 
 - ALE - [https://github.com/dense-analysis/ale](https://github.com/dense-analysis/ale)
-- diagnostic-languageserver - [https://github.com/iamcco/diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver)
+- diagnostic-languageserver -
+  [https://github.com/iamcco/diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver)
 - guard.nvim - [https://github.com/nvimdev/guard.nvim](https://github.com/nvimdev/guard.nvim)
 - nvim-lint - [https://github.com/mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - formatter.nvim - [https://github.com/mhartington/formatter.nvim](https://github.com/mhartington/formatter.nvim)
