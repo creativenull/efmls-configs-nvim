@@ -16,8 +16,8 @@ return {
   lintCommand = command,
   lintStdin = true,
   lintFormats = {
-    '%.%#%l:%c%.%#%trror%\\s%#%m',
-    '%.%#%l:%c%.%#%tarning%\\s%#%m',
+    '%\\s%#%l:%c %# %trror  %m',
+    '%\\s%#%l:%c %# %tarning  %m',
   },
   lintIgnoreExitCode = true,
   rootMarkers = {
