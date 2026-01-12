@@ -15,7 +15,10 @@ return {
   lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
-  lintFormats = { '%-P%f', '%\\s%#%l:%c %# %trror  %m', '%\\s%#%l:%c %# %tarning  %m', '%-Q,%-G%.%#' },
+  lintFormats = {
+    '%.%#%l:%c%.%#%trror%\\s%#%m',
+    '%.%#%l:%c%.%#%tarning%\\s%#%m',
+  },
   lintIgnoreExitCode = true,
   rootMarkers = {
     '.eslintrc',
