@@ -14,7 +14,9 @@ M.findFileInProject = function(filename)
   -- Get current working directory
   local uv = vim.loop or vim.uv
   local cwd = uv.cwd()
-  if not cwd then return nil end
+  if not cwd then
+    return nil
+  end
 
   -- Find file in current directory or parent directories
   local current_dir = cwd
@@ -43,7 +45,9 @@ end
 M.readFileContents = function(filepath)
   -- Read the file contents
   local lines = vim.fn.readfile(filepath)
-  if not lines then return nil end
+  if not lines then
+    return nil
+  end
 
   return lines
 end
