@@ -76,6 +76,12 @@ local redpen = require('efmls-configs.linters.redpen')
 local textlint = require('efmls-configs.linters.textlint')
 ```
 
+`typos` [https://github.com/crate-ci/typos](https://github.com/crate-ci/typos)
+
+```lua
+local typos = require('efmls-configs.linters.typos')
+```
+
 `vale` [https://github.com/ValeLint/vale](https://github.com/ValeLint/vale)
 
 ```lua
