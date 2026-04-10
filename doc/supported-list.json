@@ -664,6 +664,10 @@
         "url": "https://textlint.github.io/"
       },
       {
+        "name": "typos",
+        "url": "https://github.com/crate-ci/typos"
+      },
+      {
         "name": "vale",
         "url": "https://github.com/ValeLint/vale"
       },
