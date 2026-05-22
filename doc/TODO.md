@@ -182,7 +182,7 @@ Languages to support, list based on ALE with LSP servers omitted:
   + [X] [alex](https://github.com/wooorm/alex)
   + [X] [fecs](http://fecs.baidu.com/)
   + [ ] [html-beautify](https://beautifier.io/)
-  + [ ] [htmlhint](http://htmlhint.com/)
+  + [x] [htmlhint](http://htmlhint.com/)
   + [X] [prettier](https://github.com/prettier/prettier)
   + [X] [proselint](http://proselint.com/)
   + [ ] [tidy](http://www.html-tidy.org/)

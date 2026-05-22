@@ -378,6 +378,10 @@
       {
         "name": "djlint",
         "url": "https://djlint.com/"
+      },
+      {
+        "name": "htmlhint",
+        "url": "https://htmlhint.com/"
       }
     ],
     "formatters": [
