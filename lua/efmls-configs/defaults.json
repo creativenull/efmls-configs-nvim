@@ -19,6 +19,7 @@
     {
       "languages": ["html"],
       "alias": "HTML",
+      "linters": ["htmlhint"],
       "formatters": ["prettier"]
     },
     {
