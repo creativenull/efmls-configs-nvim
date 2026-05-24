@@ -14,7 +14,7 @@ check the docs: [`:help efmls-configs-defaults`](../README.md#default-configurat
 | CSS/SCSS/LESS/SASS | `stylelint` | `prettier` |
 | JavaScript/JSX TypeScript/TSX | `eslint` | `prettier` |
 | Go | `golangci_lint` |  |
-| HTML |  | `prettier` |
+| HTML | `htmlhint` | `prettier` |
 | Lua | `luacheck` | `stylua` |
 | Nix |  | `alejandra` |
 | PHP | `phpcs` | `phpcbf` |
@@ -608,6 +608,12 @@ local fourmolu = require('efmls-configs.formatters.fourmolu')
 
 ```lua
 local djlint = require('efmls-configs.linters.djlint')
+```
+
+`htmlhint` [https://htmlhint.com/](https://htmlhint.com/)
+
+```lua
+local htmlhint = require('efmls-configs.linters.htmlhint')
 ```
 
 #### Formatters
