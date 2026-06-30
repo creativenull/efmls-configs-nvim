@@ -686,6 +686,12 @@ local fecs = require('efmls-configs.linters.fecs')
 local js_standard = require('efmls-configs.linters.js_standard')
 ```
 
+`oxlint` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxlint = require('efmls-configs.linters.oxlint')
+```
+
 `xo` [https://github.com/sindresorhus/xo](https://github.com/sindresorhus/xo)
 
 ```lua
@@ -736,6 +742,12 @@ local fecs = require('efmls-configs.formatters.fecs')
 local js_standard = require('efmls-configs.formatters.js_standard')
 ```
 
+`oxfmt` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxfmt = require('efmls-configs.formatters.oxfmt')
+```
+
 `prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
 
 ```lua
@@ -774,12 +786,26 @@ local xo = require('efmls-configs.formatters.xo')
 
 ### Javascriptreact
 
+#### Linters
+
+`oxlint` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxlint = require('efmls-configs.linters.oxlint')
+```
+
 #### Formatters
 
 `deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
 
 ```lua
 local deno_fmt = require('efmls-configs.formatters.deno_fmt')
+```
+
+`oxfmt` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxfmt = require('efmls-configs.formatters.oxfmt')
 ```
 
 ### Json
@@ -1500,6 +1526,12 @@ local eslint = require('efmls-configs.linters.eslint')
 local eslint_d = require('efmls-configs.linters.eslint_d')
 ```
 
+`oxlint` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxlint = require('efmls-configs.linters.oxlint')
+```
+
 `xo` [https://github.com/sindresorhus/xo](https://github.com/sindresorhus/xo)
 
 ```lua
@@ -1544,6 +1576,12 @@ local eslint_d = require('efmls-configs.formatters.eslint_d')
 local fecs = require('efmls-configs.formatters.fecs')
 ```
 
+`oxfmt` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxfmt = require('efmls-configs.formatters.oxfmt')
+```
+
 `prettier` [https://github.com/prettier/prettier](https://github.com/prettier/prettier)
 
 ```lua
@@ -1582,12 +1620,26 @@ local xo = require('efmls-configs.formatters.xo')
 
 ### Typescriptreact
 
+#### Linters
+
+`oxlint` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxlint = require('efmls-configs.linters.oxlint')
+```
+
 #### Formatters
 
 `deno_fmt` [https://docs.deno.com/runtime/manual/tools/formatter](https://docs.deno.com/runtime/manual/tools/formatter)
 
 ```lua
 local deno_fmt = require('efmls-configs.formatters.deno_fmt')
+```
+
+`oxfmt` [https://oxc.rs](https://oxc.rs)
+
+```lua
+local oxfmt = require('efmls-configs.formatters.oxfmt')
 ```
 
 ### Typst
@@ -1687,4 +1739,3 @@ local zlint = require('efmls-configs.linters.zlint')
 ```lua
 local beautysh = require('efmls-configs.formatters.beautysh')
 ```
-

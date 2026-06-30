@@ -434,6 +434,10 @@
         "url": "http://standardjs.com/"
       },
       {
+        "name": "oxlint",
+        "url": "https://oxc.rs"
+      },
+      {
         "name": "xo",
         "url": "https://github.com/sindresorhus/xo"
       }
@@ -468,6 +472,10 @@
         "url": "http://standardjs.com/"
       },
       {
+        "name": "oxfmt",
+        "url": "https://oxc.rs"
+      },
+      {
         "name": "prettier",
         "url": "https://github.com/prettier/prettier"
       },
@@ -494,10 +502,20 @@
     ]
   },
   "javascriptreact": {
+    "linters": [
+      {
+        "name": "oxlint",
+        "url": "https://oxc.rs"
+      }
+    ],
     "formatters": [
       {
         "name": "deno_fmt",
         "url": "https://docs.deno.com/runtime/manual/tools/formatter"
+      },
+      {
+        "name": "oxfmt",
+        "url": "https://oxc.rs"
       }
     ]
   },
@@ -1074,6 +1092,10 @@
         "url": "https://github.com/mantoni/eslint_d.js"
       },
       {
+        "name": "oxlint",
+        "url": "https://oxc.rs"
+      },
+      {
         "name": "xo",
         "url": "https://github.com/sindresorhus/xo"
       }
@@ -1104,6 +1126,10 @@
         "url": "http://fecs.baidu.com/"
       },
       {
+        "name": "oxfmt",
+        "url": "https://oxc.rs"
+      },
+      {
         "name": "prettier",
         "url": "https://github.com/prettier/prettier"
       },
@@ -1130,10 +1156,20 @@
     ]
   },
   "typescriptreact": {
+    "linters": [
+      {
+        "name": "oxlint",
+        "url": "https://oxc.rs"
+      }
+    ],
     "formatters": [
       {
         "name": "deno_fmt",
         "url": "https://docs.deno.com/runtime/manual/tools/formatter"
+      },
+      {
+        "name": "oxfmt",
+        "url": "https://oxc.rs"
       }
     ]
   },
