@@ -13,6 +13,6 @@ return {
   lintSource = sourceText(linter),
   lintCommand = command,
   lintStdin = true,
-  lintFormat = { '%.%#:%l :: %m' },
+  lintFormats = { '%.%#:%l :: %m' },
   rootMarkers = {},
 }
