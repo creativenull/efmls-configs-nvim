@@ -610,7 +610,7 @@ local fourmolu = require('efmls-configs.formatters.fourmolu')
 local djlint = require('efmls-configs.linters.djlint')
 ```
 
-`htmlhint` [https://htmlhint.com/](https://htmlhint.com/)
+`htmlhint` [https://htmlhint.com](https://htmlhint.com)
 
 ```lua
 local htmlhint = require('efmls-configs.linters.htmlhint')
@@ -870,6 +870,16 @@ local rome = require('efmls-configs.formatters.rome')
 
 ```lua
 local biome = require('efmls-configs.formatters.biome')
+```
+
+### Julia
+
+#### Formatters
+
+`runic` [https://github.com/fredrikekre/Runic.jl](https://github.com/fredrikekre/Runic.jl)
+
+```lua
+local runic = require('efmls-configs.formatters.runic')
 ```
 
 ### Kdl
@@ -1739,3 +1749,4 @@ local zlint = require('efmls-configs.linters.zlint')
 ```lua
 local beautysh = require('efmls-configs.formatters.beautysh')
 ```
+

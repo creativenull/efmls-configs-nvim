@@ -381,7 +381,7 @@
       },
       {
         "name": "htmlhint",
-        "url": "https://htmlhint.com/"
+        "url": "https://htmlhint.com"
       }
     ],
     "formatters": [
@@ -562,6 +562,14 @@
       {
         "name": "biome",
         "url": "https://biomejs.dev/"
+      }
+    ]
+  },
+  "julia": {
+    "formatters": [
+      {
+        "name": "runic",
+        "url": "https://github.com/fredrikekre/Runic.jl"
       }
     ]
   },
