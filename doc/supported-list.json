@@ -565,6 +565,14 @@
       }
     ]
   },
+  "julia": {
+    "formatters": [
+      {
+        "name": "runic",
+        "url": "https://github.com/fredrikekre/Runic.jl"
+      }
+    ]
+  },
   "kdl": {
     "formatters": [
       {
@@ -1248,3 +1256,4 @@
     ]
   }
 }
+

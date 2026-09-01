@@ -872,6 +872,16 @@ local rome = require('efmls-configs.formatters.rome')
 local biome = require('efmls-configs.formatters.biome')
 ```
 
+### Julia
+
+#### Formatters
+
+`runic` [https://github.com/fredrikekre/Runic.jl](https://github.com/fredrikekre/Runic.jl)
+
+```lua
+local runic = require('efmls-configs.formatters.runic')
+```
+
 ### Kdl
 
 #### Formatters
@@ -1739,3 +1749,4 @@ local zlint = require('efmls-configs.linters.zlint')
 ```lua
 local beautysh = require('efmls-configs.formatters.beautysh')
 ```
+
