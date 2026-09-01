@@ -610,7 +610,7 @@ local fourmolu = require('efmls-configs.formatters.fourmolu')
 local djlint = require('efmls-configs.linters.djlint')
 ```
 
-`htmlhint` [https://htmlhint.com](https://htmlhint.com/)
+`htmlhint` [https://htmlhint.com/](https://htmlhint.com/)
 
 ```lua
 local htmlhint = require('efmls-configs.linters.htmlhint')
