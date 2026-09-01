@@ -381,7 +381,7 @@
       },
       {
         "name": "htmlhint",
-        "url": "https://htmlhint.com"
+        "url": "https://htmlhint.com/"
       }
     ],
     "formatters": [
@@ -1256,3 +1256,4 @@
     ]
   }
 }
+
